@@ -1,0 +1,51 @@
+{
+  "name": "悟空",
+  "short_name": "悟空",
+  "id": "./index.html",
+  "description": "悟空实时机会、市场信号、Telegram 同步与风险工作台",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html?v=121",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "browser"],
+  "orientation": "portrait",
+  "background_color": "#070b12",
+  "theme_color": "#070b12",
+  "categories": ["finance", "productivity", "utilities"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./icons/wukong-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/wukong-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "实时总览",
+      "short_name": "总览",
+      "url": "./index.html?v=121#overviewGroup",
+      "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "市场信号",
+      "short_name": "信号",
+      "url": "./index.html?v=121#marketGroup",
+      "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "下载安装",
+      "short_name": "下载",
+      "url": "./install.html?v=121",
+      "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "app": "悟空",
+  "exchange": "gate",
+  "generatedAt": "2026-05-22T11:11:19.109009+00:00",
+  "mode": "dry-run",
+  "canSubmitOrder": false,
+  "manualConfirmationRequired": true,
+  "keySafetyState": "candidate",
+  "keyRotationRequired": false,
+  "manualLiveReadiness": [
+    {
+      "name": "新 Key",
+      "ok": true,
+      "detail": "必须撤销旧 Key 并换新 Key"
+    },
+    {
+      "name": "IP 白名单",
+      "ok": false,
+      "detail": "等待配置固定出口 IP 白名单"
+    },
+    {
+      "name": "单笔限额",
+      "ok": true,
+      "detail": "最大名义 50U，最大保证金 5U，单笔风险 2.75U"
+    },
+    {
+      "name": "每日熔断",
+      "ok": true,
+      "detail": "每日亏损 5U / 连亏 2 笔停止"
+    },
+    {
+      "name": "手动确认",
+      "ok": true,
+      "detail": "manual 模式已配置"
+    }
+  ],
+  "riskBudget": {
+    "accountEquityUsdt": 100.0,
+    "leverage": 10.0,
+    "maxNotionalUsdt": 50.0,
+    "maxMarginUsdt": 5.0,
+    "riskPerTradeUsdt": 2.75,
+    "dailyMaxLossUsdt": 5.0,
+    "consecutiveLossLimit": 2,
+    "confirmationMode": "manual",
+    "baseStopLossPct": 2.4,
+    "maxStopLossPct": 5.5
+  },
+  "orderEndpointEnabled": false,
+  "signalTradeGate": {
+    "signalActive": true,
+    "state": "armed-blocked",
+    "reason": "入仓信号存在，但实盘订单提交被风控阻断",
+    "autoOpenWhenSignalAppears": false,
+    "autoCloseWhenSignalDisappears": true,
+    "realOrderSyncEnabled": false,
+    "manualConfirmationRequired": true,
+    "primary": {
+      "ticker": "ONDO",
+      "section": "earlyEntryRadar",
+      "stage": "等待回踩",
+      "score": 84.0
+    },
+    "queue": [
+      {
+        "ticker": "ONDO",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 84.0
+      },
+      {
+        "ticker": "PENGU",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 78.0
+      },
+      {
+        "ticker": "AKT",
+        "section": "entryWindow",
+        "stage": "小仓试错",
+        "score": 62.0
+      },
+      {
+        "ticker": "QNT",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 62.0
+      },
+      {
+        "ticker": "MANTA",
+        "section": "entryWindow",
+        "stage": "小仓试错",
+        "score": 61.0
+      },
+      {
+        "ticker": "2Z",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 60.0
+      },
+      {
+        "ticker": "NXPC",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 59.0
+      },
+      {
+        "ticker": "JELLYJELLY",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 58.0
+      }
+    ]
+  },
+  "paperTrade": {
+    "enabled": true,
+    "state": "auto-paper-open",
+    "reason": "入仓信号出现，已自动生成纸交易计划；不会提交真实订单",
+    "autoOpenWhenSignalAppears": true,
+    "autoCloseWhenSignalDisappears": true,
+    "plan": {
+      "market": "ONDO_USDT",
+      "side": "long-watch",
+      "leverage": 10.0,
+      "maxMarginUsdt": 5.0,
+      "maxNotionalUsdt": 50.0,
+      "riskPerTradeUsdt": 2.75,
+      "stopLossPct": 2.4,
+      "maxStopLossPct": 5.5,
+      "takeProfitTiers": [
+        {
+          "triggerPct": 3.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 7.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 12.0,
+          "closePct": 50
+        }
+      ],
+      "sourceSignal": {
+        "ticker": "ONDO",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 84.0
+      },
+      "submitRealOrder": false
+    }
+  },
+  "telegramConfirm": {
+    "command": "/confirm_live",
+    "enabled": false,
+    "state": "preflight-only",
+    "reason": "Telegram 一键确认只返回实盘预检结果，不会自动提交 Gate 订单",
+    "requires": [
+      "新 Key",
+      "IP 白名单",
+      "单笔限额",
+      "每日熔断",
+      "手动确认"
+    ]
+  },
+  "exitRule": {
+    "takeProfitTiers": [
+      {
+        "triggerPct": 3.5,
+        "closePct": 25
+      },
+      {
+        "triggerPct": 7.5,
+        "closePct": 25
+      },
+      {
+        "triggerPct": 12.0,
+        "closePct": 50
+      }
+    ],
+    "baseStopLossPct": 2.4,
+    "maxStopLossPct": 5.5
+  },
+  "protectionPolicy": {
+    "name": "开仓附带 → 开仓后补挂 → 软件层兜底",
+    "layers": [
+      {
+        "id": "entryAttach",
+        "name": "开仓附带",
+        "state": "planned",
+        "detail": "下单时优先随开仓请求附带原生止盈止损，让仓位成交即带保护",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      },
+      {
+        "id": "postEntryNative",
+        "name": "开仓后补挂",
+        "state": "planned",
+        "detail": "如果交易所拒绝附带保护参数，先保留开仓，再补挂原生 OCO / 条件保护单",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      },
+      {
+        "id": "softwareFallback",
+        "name": "软件层兜底",
+        "state": "armed",
+        "detail": "原生保护单失败时，由主循环执行分批止盈、固定止损、追踪止盈和超时离场",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      }
+    ],
+    "executionOrder": [
+      "entryAttach",
+      "postEntryNative",
+      "softwareFallback"
+    ],
+    "neverNakedPosition": true
+  },
+  "blockers": [
+    "未配置 Gate IP 白名单"
+  ],
+  "samplePlan": {
+    "market": "BTC_USDT",
+    "side": "buy",
+    "orderType": "limit",
+    "timeInForce": "gtc",
+    "maxNotionalUsdt": 50.0,
+    "maxMarginUsdt": 5.0,
+    "riskPerTradeUsdt": 2.75,
+    "takeProfit": [
+      "第一档 +3.5% 平 25%",
+      "第二档 +7.5% 平 25%",
+      "第三档 +12% 平 50%"
+    ],
+    "stopLoss": "基础止损 2.4%，最多放宽到 5.5%",
+    "protectionFlow": [
+      "第一层：开仓请求直接附带原生止盈止损",
+      "第二层：若附带参数被拒，开仓后补挂原生 OCO / 条件保护单",
+      "第三层：若原生保护失败，软件层执行分批止盈、固定止损、追踪止盈、超时离场"
+    ],
+    "signalLinkedExecution": "入仓信号存在，但实盘订单提交被风控阻断",
+    "paperTrade": "入仓信号出现，已自动生成纸交易计划；不会提交真实订单",
+    "risk": "只生成计划，不发送到 Gate"
+  }
+}

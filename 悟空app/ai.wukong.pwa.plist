@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>ai.wukong.pwa</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/python3</string>
+		<string>/Users/wangbo/.hermes/wukong_pwa/start_wukong_pwa.py</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/wangbo/.hermes/wukong_pwa</string>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StartInterval</key>
+	<integer>300</integer>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>StandardOutPath</key>
+	<string>/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_launch.log</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_launch.error.log</string>
+</dict>
+</plist>

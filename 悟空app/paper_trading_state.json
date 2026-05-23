@@ -1,0 +1,50 @@
+{
+  "app": "悟空",
+  "mode": "auto-paper-trading",
+  "generatedAt": "2026-05-22T11:11:17.227147+00:00",
+  "state": "running",
+  "reason": "入仓信号存在，纸交易引擎自动运行；真实订单提交关闭",
+  "realTradingEnabled": false,
+  "canSubmitOrder": false,
+  "orderEndpointEnabled": false,
+  "positions": [
+    {
+      "market": "ONDO_USDT",
+      "side": "long-watch",
+      "state": "open",
+      "openedAt": "2026-05-22T10:59:53.664004+00:00",
+      "updatedAt": "2026-05-22T11:11:17.227147+00:00",
+      "entryPrice": 0.42583716,
+      "lastPrice": 0.42650345,
+      "leverage": 10.0,
+      "maxMarginUsdt": 5.0,
+      "maxNotionalUsdt": 50.0,
+      "riskPerTradeUsdt": 2.75,
+      "stopLossPct": 2.4,
+      "maxStopLossPct": 5.5,
+      "takeProfitTiers": [
+        {
+          "triggerPct": 3.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 7.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 12.0,
+          "closePct": 50
+        }
+      ],
+      "unrealizedPct": 0.1565,
+      "unrealizedUsdt": 0.0783,
+      "submitRealOrder": false
+    }
+  ],
+  "history": [],
+  "summary": {
+    "openPositions": 1,
+    "closedTrades": 0,
+    "totalUnrealizedUsdt": 0.0783
+  }
+}

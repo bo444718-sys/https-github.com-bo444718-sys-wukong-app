@@ -1,0 +1,23 @@
+{
+  "name": "wukong-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "悟空 Android/iOS wrapper for the live Wukong PWA.",
+  "scripts": {
+    "sync:files": "python3 sync_wukong_files.py",
+    "cap:sync": "npm run sync:files && npx cap sync android",
+    "android:debug": "npm run cap:sync && cd android && ./gradlew assembleDebug",
+    "android:release": "npm run cap:sync && cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/core": "^7.4.4",
+    "@capacitor/ios": "^7.4.4",
+    "@capacitor/splash-screen": "^7.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.4",
+    "typescript": "^6.0.3"
+  }
+}

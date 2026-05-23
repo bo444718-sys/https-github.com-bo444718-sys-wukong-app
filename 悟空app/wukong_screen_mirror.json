@@ -1,0 +1,50 @@
+{
+  "source": "wechat-image-6565fe576bd7406cc393416e3e9ef11b",
+  "updatedAt": "2026-05-12T06:50:00+08:00",
+  "title": "悟空",
+  "subtitle": "WUKONG · Binance 合约研究台",
+  "description": "用 Binance 合约 OI、资金费率、成交量、价格位置和 DEX/社媒扩散，寻找可能提前启动的高波动机会。只做信号和复盘，不替你负责下单。",
+  "tags": ["OI BUILD", "FUNDING", "DEX REPEAT", "VOLUME", "SIGNAL"],
+  "calendar": {
+    "label": "10X AI 纸面日历",
+    "returnText": "+59.0%",
+    "detail": "12 天 · 91 笔"
+  },
+  "status": [
+    {"title": "行情生成", "value": "8 分钟前"},
+    {"title": "币种数", "value": "5555"},
+    {"title": "主判断", "value": "Binance OI"},
+    {"title": "App 刷新", "value": "05-12 06:50"}
+  ],
+  "notice": "公开测试提醒：这里只做早期资金结构、链上/社媒扩散和合约数据观察，不构成投资建议。数据可能延迟、缺失或误判，合约波动很大，请自己控制仓位和止损。",
+  "overviewCards": [
+    {"title": "入场窗口", "value": "6", "note": "更接近可盯入场", "tone": "good"},
+    {"title": "早发现雷达", "value": "12", "note": "更早提示，不等于买点", "tone": "good"},
+    {"title": "确认/回踩候选", "value": "3", "note": "已启动或等二次确认", "tone": "warm"},
+    {"title": "信号切换", "value": "12", "note": "刚触发/刚退役会保留", "tone": "hot"},
+    {"title": "多次出现", "value": "12", "note": "反复被扫到，先复核", "tone": "warm"},
+    {"title": "OI异动", "value": "13", "note": "价格未放完但 OI 已动", "tone": "good"},
+    {"title": "风险区", "value": "3", "note": "过热/公告/回避", "tone": "hot"},
+    {"title": "我的关注", "value": "1", "note": "手动加入的币不会丢", "tone": "good"}
+  ],
+  "sidebar": {
+    "research": ["总览", "AI 复盘", "入场窗口", "早发现雷达", "确认/回踩候选", "信号轨迹", "机会雷达", "启动复盘", "风险区"],
+    "personal": ["我的关注", "币种搜索"],
+    "publicSections": [
+      {"title": "入场窗口", "value": "6"},
+      {"title": "早发现雷达", "value": "12"},
+      {"title": "早期雷达", "value": "9"},
+      {"title": "我的关注", "value": "0"},
+      {"title": "确认/回踩候选", "value": "3"},
+      {"title": "复盘警示", "value": "12"},
+      {"title": "多次出现", "value": "12"},
+      {"title": "OI异动", "value": "12"},
+      {"title": "已启动复盘", "value": "12"}
+    ]
+  },
+  "priorityRead": {
+    "title": "今日优先扫读",
+    "count": "13",
+    "description": "把入场窗口、早发现雷达和确认候选合并做一层首页摘要。"
+  }
+}

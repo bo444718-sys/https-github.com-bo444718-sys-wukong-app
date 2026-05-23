@@ -1,0 +1,45 @@
+name: Wukong
+options:
+  bundleIdPrefix: ai.wukong
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    PRODUCT_NAME: "悟空"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  Wukong:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources/MichillAppleApp
+      - path: Resources
+    info:
+      path: iOS/Info.plist
+      properties:
+        CFBundleDisplayName: "悟空"
+        CFBundleName: "悟空"
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ai.wukong.app
+        CODE_SIGN_STYLE: Automatic
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+schemes:
+  Wukong:
+    build:
+      targets:
+        Wukong: all
+    run:
+      config: Debug
+    archive:
+      config: Release

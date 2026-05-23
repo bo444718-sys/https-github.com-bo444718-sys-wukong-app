@@ -1,0 +1,29 @@
+# Keep this repository focused on the Wukong app.
+*
+!.gitignore
+!悟空app/
+!悟空app/**
+
+# Local secrets and machine state.
+悟空app/.env*
+!悟空app/.env.*.example
+悟空app/*.log
+悟空app/*.pid
+悟空app/.wukong*
+悟空app/.DS_Store
+悟空app/.pycache/
+悟空app/.pycache-*/
+
+# Build outputs and dependency caches.
+悟空app/.build/
+悟空app/.build-*/
+悟空app/.build-cache/
+悟空app/.playwright-cli/
+悟空app/node_modules/
+悟空app/android/.gradle/
+悟空app/android/build/
+悟空app/android/app/build/
+悟空app/Wukong.zip
+
+# macOS/editor noise.
+.DS_Store

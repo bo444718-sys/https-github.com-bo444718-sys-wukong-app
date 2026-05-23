@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070b12">
+  <meta name="description" content="悟空实时机会、市场信号、Telegram 同步与风险工作台">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="悟空">
+  <title>悟空</title>
+  <link rel="manifest" href="./manifest.webmanifest?v=121">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./icons/wukong-192.png">
+  <link rel="apple-touch-icon" href="./icons/wukong-180.png">
+  <link rel="stylesheet" href="./styles.css?v=121">
+</head>
+<body>
+  <div class="global-refresh-line" aria-hidden="true"><span id="globalRefreshLine"></span></div>
+  <main class="app-shell section-gated">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Wukong Live</p>
+        <h1>悟空</h1>
+        <p class="app-subtitle">实时机会、风险过滤、Gate 行情和扫码下载，一个页面看清。</p>
+      </div>
+      <aside class="mission-beacon" aria-label="专业状态灯">
+        <span id="missionPulse"></span>
+        <div>
+          <strong id="missionState">启动中</strong>
+          <small id="missionDetail">等待首次同步</small>
+        </div>
+      </aside>
+      <button id="refreshButton" class="icon-button" type="button" aria-label="刷新">
+        <span aria-hidden="true">↻</span>
+      </button>
+    </header>
+    <section class="command-alert" aria-label="指挥提醒">
+      <div>
+        <span id="commandTone">指挥提醒</span>
+        <strong id="commandTitle">等待首次同步</strong>
+        <small id="commandBody">页面会自动刷新，并在数据到达后给出主结论。</small>
+      </div>
+      <p id="commandNext">实盘开单保持关闭。</p>
+    </section>
+    <section class="live-tape" aria-label="实时情报带" hidden>
+      <div class="live-tape-title">
+        <span>Live Tape</span>
+        <strong>实时情报带</strong>
+      </div>
+      <div id="liveTapeItems" class="live-tape-items" aria-live="polite">
+        <article data-tone="waiting"><span>主线</span><strong>等待同步</strong><small>自动刷新中</small></article>
+        <article data-tone="waiting"><span>合约</span><strong>等待</strong><small>OI / Alpha</small></article>
+        <article data-tone="waiting"><span>风险</span><strong>监控</strong><small>实盘关闭</small></article>
+        <article data-tone="waiting"><span>分发</span><strong>Telegram</strong><small>等待回执</small></article>
+        <article data-tone="waiting"><span>版本</span><strong>v121</strong><small>缓存检查</small></article>
+      </div>
+    </section>
+    <section class="entry-checklist" aria-label="入场复核清单" hidden>
+      <div class="entry-checklist-head">
+        <div>
+          <span>Entry Review</span>
+          <strong id="entryReviewTitle">入场复核清单</strong>
+        </div>
+        <p id="entryReviewSummary">等待第一候选进入队列。</p>
+      </div>
+      <div id="entryReviewSteps" class="entry-review-steps" aria-live="polite">
+        <article data-state="waiting"><span>01</span><strong>价格</strong><small>等待同步</small></article>
+        <article data-state="waiting"><span>02</span><strong>OI</strong><small>等待同步</small></article>
+        <article data-state="waiting"><span>03</span><strong>信号</strong><small>等待同步</small></article>
+        <article data-state="waiting"><span>04</span><strong>风控</strong><small>实盘关闭</small></article>
+        <article data-state="waiting"><span>05</span><strong>动作</strong><small>只观察</small></article>
+      </div>
+    </section>
+    <section class="risk-protocol" aria-label="风险处置清单" hidden>
+      <div class="risk-protocol-head">
+        <div>
+          <span>Risk Protocol</span>
+          <strong id="riskProtocolTitle">风险处置清单</strong>
+        </div>
+        <p id="riskProtocolSummary">等待风险雷达同步。</p>
+      </div>
+      <div id="riskProtocolSteps" class="risk-protocol-steps" aria-live="polite">
+        <article data-state="waiting"><span>01</span><strong>等级</strong><small>监控中</small></article>
+        <article data-state="waiting"><span>02</span><strong>禁止</strong><small>实盘开单</small></article>
+        <article data-state="waiting"><span>03</span><strong>允许</strong><small>观察</small></article>
+        <article data-state="waiting"><span>04</span><strong>复核</strong><small>30秒</small></article>
+        <article data-state="waiting"><span>05</span><strong>同步</strong><small>Telegram</small></article>
+      </div>
+    </section>
+
+    <nav class="top-section-map" aria-label="版块总览">
+      <button type="button" data-group="overviewGroup">
+        <span>01</span>
+        <strong>实时总览</strong>
+        <small id="navOverviewMeta">连接中</small>
+      </button>
+      <button type="button" data-group="decisionGroup">
+        <span>02</span>
+        <strong>决策中心</strong>
+        <small id="navDecisionMeta">等待数据</small>
+      </button>
+      <button type="button" data-group="marketGroup">
+        <span>03</span>
+        <strong>市场信号</strong>
+        <small id="navMarketMeta">等待信号</small>
+      </button>
+      <button type="button" data-group="telegramGroup">
+        <span>04</span>
+        <strong>Telegram</strong>
+        <small id="navTelegramMeta">等待回执</small>
+      </button>
+      <button type="button" data-group="installGroup">
+        <span>05</span>
+        <strong>我的</strong>
+        <small id="navInstallMeta">检查中</small>
+      </button>
+      <button type="button" data-group="filesGroup">
+        <span>06</span>
+        <strong>文件同步</strong>
+        <small id="navFilesMeta">等待清单</small>
+      </button>
+    </nav>
+    <section class="ops-dock" aria-label="运行状态">
+      <div>
+        <span>自动更新</span>
+        <strong id="topSyncState">连接中</strong>
+      </div>
+      <div>
+        <span>上次刷新</span>
+        <strong id="topRefreshedAt">--</strong>
+      </div>
+      <div>
+        <span>下次同步</span>
+        <strong id="topNextSync">30秒</strong>
+      </div>
+      <div>
+        <span>执行模式</span>
+        <strong id="topExecutionMode">实盘关闭</strong>
+      </div>
+      <button id="topRefreshButton" class="mini-button" type="button">立即刷新</button>
+    </section>
+    <section class="pro-guard" aria-label="专业运行护栏">
+      <div class="freshness-line">
+        <span id="freshnessLabel">数据心跳</span>
+        <strong id="freshnessScore">等待同步</strong>
+      </div>
+      <div class="sync-meter" aria-label="自动同步进度">
+        <span id="syncProgressBar"></span>
+      </div>
+      <div class="guard-strip">
+        <div><span>数据新鲜度</span><strong id="dataFreshnessGuard">--</strong></div>
+        <div><span>风险护栏</span><strong id="riskGuard">监控中</strong></div>
+        <div><span>开单权限</span><strong id="executionGuard">关闭</strong></div>
+        <div><span>自动更新</span><strong id="autoUpdateGuard">30秒</strong></div>
+      </div>
+    </section>
+    <section class="analyst-cockpit" aria-label="职业运行驾驶舱" hidden>
+      <div class="cockpit-head">
+        <div>
+          <span>Professional Mode</span>
+          <strong>职业运行驾驶舱</strong>
+        </div>
+        <p id="cockpitSummary">正在汇总实时机会、风险、同步和执行边界。</p>
+      </div>
+      <div class="cockpit-grid">
+        <div>
+          <span>运行评分</span>
+          <strong id="professionalScore">--</strong>
+          <small id="professionalScoreNote">等待数据</small>
+        </div>
+        <div>
+          <span>机会队列</span>
+          <strong id="opportunityQueue">--</strong>
+          <small id="opportunityQueueNote">优先候选 / 合约启动</small>
+        </div>
+        <div>
+          <span>风险等级</span>
+          <strong id="riskLevel">监控中</strong>
+          <small id="riskLevelNote">过热、退市、回避优先显示</small>
+        </div>
+        <div>
+          <span>同步链路</span>
+          <strong id="syncChain">--</strong>
+          <small id="syncChainNote">APP / 网页 / Telegram</small>
+        </div>
+      </div>
+      <div class="decision-gates" aria-label="决策闸门">
+        <div><span>数据闸门</span><strong id="dataGate">等待</strong></div>
+        <div><span>信号闸门</span><strong id="signalGate">观察</strong></div>
+        <div><span>风控闸门</span><strong id="riskGate">监控</strong></div>
+        <div><span>执行闸门</span><strong id="tradeGate">实盘关闭</strong></div>
+      </div>
+    </section>
+    <section class="update-sla" aria-label="自动更新自检" hidden>
+      <div>
+        <span>更新循环</span>
+        <strong id="updateCycle">准备中</strong>
+        <small id="updateCycleNote">30秒自动刷新</small>
+      </div>
+      <div>
+        <span>网络守卫</span>
+        <strong id="networkGuard">检测中</strong>
+        <small id="networkGuardNote">在线后自动补刷新</small>
+      </div>
+      <div>
+        <span>陈旧守卫</span>
+        <strong id="staleGuard">检测中</strong>
+        <small id="staleGuardNote">超过10分钟会提示</small>
+      </div>
+      <div>
+        <span>版本守卫</span>
+        <strong id="releaseGuard">v121</strong>
+        <small id="releaseGuardNote">缓存和二维码同步</small>
+      </div>
+    </section>
+    <section class="ops-matrix" aria-label="实时运行矩阵" hidden>
+      <div class="ops-matrix-head">
+        <div>
+          <span>Live Ops Matrix</span>
+          <strong>实时运行矩阵</strong>
+        </div>
+        <p id="opsMatrixSummary">等待首次同步，系统会自动检查数据、刷新、分发和版本。</p>
+      </div>
+      <div class="ops-matrix-grid">
+        <article>
+          <span>链路状态</span>
+          <strong id="opsMatrixLink">连接中</strong>
+          <small id="opsMatrixLinkNote">实时源 / 快照</small>
+        </article>
+        <article>
+          <span>刷新节奏</span>
+          <strong id="opsMatrixRefresh">30秒</strong>
+          <small id="opsMatrixRefreshNote">自动巡航</small>
+        </article>
+        <article>
+          <span>分发同步</span>
+          <strong id="opsMatrixDistribution">等待</strong>
+          <small id="opsMatrixDistributionNote">APP / Telegram / 下载</small>
+        </article>
+        <article>
+          <span>风险纪律</span>
+          <strong id="opsMatrixRisk">监控中</strong>
+          <small id="opsMatrixRiskNote">实盘关闭</small>
+        </article>
+        <article>
+          <span>版本一致</span>
+          <strong id="opsMatrixVersion">v121</strong>
+          <small id="opsMatrixVersionNote">缓存与二维码同步</small>
+        </article>
+      </div>
+    </section>
+    <section class="sync-pipeline" aria-label="自动同步流水线" hidden>
+      <div class="sync-pipeline-head">
+        <div>
+          <span>Auto Sync Pipeline</span>
+          <strong>自动同步流水线</strong>
+        </div>
+        <p id="pipelineSummary">等待系统开始自动同步。</p>
+      </div>
+      <div class="pipeline-track">
+        <article data-state="waiting">
+          <span>01</span>
+          <strong>拉取</strong>
+          <small id="pipelineFetchStatus">等待</small>
+          <em id="pipelineFetchNote">公开源 / 快照</em>
+        </article>
+        <article data-state="waiting">
+          <span>02</span>
+          <strong>校验</strong>
+          <small id="pipelineValidateStatus">等待</small>
+          <em id="pipelineValidateNote">新鲜度 / 版本</em>
+        </article>
+        <article data-state="waiting">
+          <span>03</span>
+          <strong>风控</strong>
+          <small id="pipelineRiskStatus">监控</small>
+          <em id="pipelineRiskNote">风险优先</em>
+        </article>
+        <article data-state="waiting">
+          <span>04</span>
+          <strong>分发</strong>
+          <small id="pipelineDispatchStatus">等待</small>
+          <em id="pipelineDispatchNote">Telegram / 下载</em>
+        </article>
+        <article data-state="waiting">
+          <span>05</span>
+          <strong>缓存</strong>
+          <small id="pipelineCacheStatus">等待</small>
+          <em id="pipelineCacheNote">PWA / 手机端</em>
+        </article>
+      </div>
+    </section>
+    <section class="cruise-log" aria-label="实时巡航日志" hidden>
+      <div class="cruise-log-head">
+        <div>
+          <span>Live Ops Log</span>
+          <strong>实时巡航日志</strong>
+        </div>
+        <p id="cruiseLogSummary">等待首次自动同步记录。</p>
+      </div>
+      <div id="cruiseLogList" class="cruise-log-list" aria-live="polite">
+        <article data-tone="waiting"><span>--</span><strong>等待同步</strong><small>页面会自动刷新并生成巡航记录</small></article>
+      </div>
+    </section>
+    <section class="operator-brief" aria-label="操作员简报" hidden>
+      <div class="operator-verdict">
+        <span>主结论</span>
+        <strong id="operatorVerdict">等待数据</strong>
+      </div>
+      <div>
+        <span>第一关注</span>
+        <strong id="operatorPrimary">--</strong>
+        <small id="operatorPrimaryNote">等待候选</small>
+      </div>
+      <div>
+        <span>下一步</span>
+        <strong id="operatorNext">观察</strong>
+        <small id="operatorNextNote">不追高，不自动开单</small>
+      </div>
+      <div>
+        <span>禁止事项</span>
+        <strong id="operatorBlock">实盘关闭</strong>
+        <small id="operatorTrust">可信度等待同步</small>
+      </div>
+    </section>
+    <section class="confidence-strip" aria-label="可信度拆解" hidden>
+      <div>
+        <span>数据源</span>
+        <strong id="confidenceData">等待</strong>
+        <small id="confidenceDataNote">实时 / 快照 / Gate</small>
+      </div>
+      <div>
+        <span>信号证据</span>
+        <strong id="confidenceSignal">观察</strong>
+        <small id="confidenceSignalNote">优先候选与合约启动</small>
+      </div>
+      <div>
+        <span>风控纪律</span>
+        <strong id="confidenceRisk">监控</strong>
+        <small id="confidenceRiskNote">风险优先于机会</small>
+      </div>
+      <div>
+        <span>同步证明</span>
+        <strong id="confidenceSync">--</strong>
+        <small id="confidenceSyncNote">APP / 网页 / Telegram</small>
+      </div>
+    </section>
+    <section class="audit-trail" aria-label="运行审计轨迹" hidden>
+      <div>
+        <span>最近刷新</span>
+        <strong id="auditRefresh">--</strong>
+        <small id="auditRefreshNote">等待自动同步</small>
+      </div>
+      <div>
+        <span>数据来源</span>
+        <strong id="auditSource">连接中</strong>
+        <small id="auditSourceNote">实时优先，失败回快照</small>
+      </div>
+      <div>
+        <span>决策状态</span>
+        <strong id="auditDecision">等待</strong>
+        <small id="auditDecisionNote">风控优先</small>
+      </div>
+      <div>
+        <span>下一次同步</span>
+        <strong id="auditNext">30秒</strong>
+        <small id="auditNextNote">前台恢复会补刷新</small>
+      </div>
+    </section>
+    <section class="discipline-rail" aria-label="交易纪律栏" hidden>
+      <div>
+        <span>当前模式</span>
+        <strong id="disciplineMode">自动巡航</strong>
+      </div>
+      <div>
+        <span>允许动作</span>
+        <strong id="disciplineAllowed">观察 / 纸交易</strong>
+      </div>
+      <div>
+        <span>禁止动作</span>
+        <strong id="disciplineBlocked">实盘自动开单</strong>
+      </div>
+      <div>
+        <span>同步节奏</span>
+        <strong id="disciplineCadence">30秒循环</strong>
+      </div>
+    </section>
+    <div id="sectionGateHint" class="section-gate-hint">
+      <strong>请选择上方版块</strong>
+      <span>默认只保留状态摘要，点击版块后显示对应内容。</span>
+    </div>
+
+    <section id="overviewGroup" class="module-group overview-group" aria-labelledby="overviewGroupTitle" hidden>
+      <div class="group-heading">
+        <span>01</span>
+        <div>
+          <h2 id="overviewGroupTitle">实时总览</h2>
+          <p>同步状态、版本、技能和核心计数集中在这里。</p>
+        </div>
+      </div>
+
+    <section class="status-band" aria-label="实时状态">
+      <div>
+        <span class="label">行情生成</span>
+        <strong id="generatedAt">--</strong>
+      </div>
+      <div>
+        <span class="label">App刷新</span>
+        <strong id="refreshedAt">--</strong>
+      </div>
+      <div>
+        <span class="label">状态</span>
+        <strong id="syncState">连接中</strong>
+      </div>
+      <div>
+        <span class="label">下次同步</span>
+        <strong id="nextSync">30秒</strong>
+      </div>
+    </section>
+
+    <section class="trade-desk" aria-label="职业交易总览">
+      <div class="desk-primary">
+        <div class="desk-kicker">
+          <span>Primary Signal</span>
+          <strong id="deskMode">观察模式</strong>
+        </div>
+        <div class="desk-symbol-line">
+          <strong id="deskTicker">等待同步</strong>
+          <span id="deskStage">--</span>
+        </div>
+        <p id="deskNote">同步后显示当前最值得优先观察的币种和处理动作。</p>
+        <div class="desk-metrics">
+          <div><span id="deskChange">--</span><small>24h</small></div>
+          <div><span id="deskOi">--</span><small>OI</small></div>
+          <div><span id="deskScore">--</span><small>信号分</small></div>
+          <div><span id="deskRisk">实盘关闭</span><small>执行</small></div>
+        </div>
+      </div>
+      <div class="desk-side">
+        <div class="desk-side-head">
+          <strong>观察队列</strong>
+          <span id="deskQueueMeta">--</span>
+        </div>
+        <div id="deskSignalRows" class="desk-signal-rows">
+          <article><span>--</span><strong>等待数据</strong><small>自动同步中</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sync-board" aria-label="同步看板">
+      <div>
+        <span class="label">实时源</span>
+        <strong id="liveSource">连接中</strong>
+        <small id="liveSourceNote">等待 Michill 公开行情</small>
+      </div>
+      <div>
+        <span class="label">本地快照</span>
+        <strong id="snapshotFreshness">--</strong>
+        <small id="snapshotMode">等待快照</small>
+      </div>
+      <div>
+        <span class="label">文件清单</span>
+        <strong id="fileSyncFreshness">--</strong>
+        <small id="fileSyncMode">APP / 网页 / Telegram</small>
+      </div>
+      <div>
+        <span class="label">Telegram</span>
+        <strong id="telegramSyncState">已接入</strong>
+        <small id="telegramSyncNote">入场、合约、优先级自动推送</small>
+      </div>
+    </section>
+
+    <section class="update-panel" aria-label="APP更新中心">
+      <div class="section-heading">
+        <div>
+          <h2>APP 更新中心</h2>
+          <p id="updateStatus">正在检查版本和缓存。</p>
+        </div>
+        <button id="forceUpdateButton" class="mini-button" type="button">刷新到最新版</button>
+      </div>
+      <div class="update-grid">
+        <div><strong id="appVersion">v121</strong><span>当前版本</span></div>
+        <div><strong id="cacheStatus">检查中</strong><span>缓存状态</span></div>
+        <div><strong id="pageMode">在线</strong><span>页面状态</span></div>
+      </div>
+    </section>
+
+    <section class="release-panel" aria-label="版本日志">
+      <div class="section-heading">
+        <div>
+          <h2>版本日志</h2>
+          <p>最近更新一眼看懂，便于确认手机端是否已经同步。</p>
+        </div>
+        <span id="releaseVersion">v121</span>
+      </div>
+      <div class="release-list">
+        <article><strong>v121</strong><span>新增 Binance / OKX / Gate 交易所 API 版块，现货、合约、资金费率和同步状态集中查看。</span></article>
+        <article><strong>v119</strong><span>界面整理：总览改成职业交易台，主机会、观察队列、风险和执行状态一屏读完。</span></article>
+        <article><strong>v118</strong><span>自检修复：本地文件打开不再拦截脚本，顶部 6 个版块点击后只显示当前版块。</span></article>
+        <article><strong>v117</strong><span>自检修复：健康报告直接执行公网深度自检并显示结果，不再只提示手动命令。</span></article>
+        <article><strong>v116</strong><span>自检修复：隐私页链接加入版本号，公网小资源做 SHA256 对齐，Android APK 校验文件大小。</span></article>
+        <article><strong>v115</strong><span>自检修复：移除公开签名包入口，文件同步排除压缩包，并把 Manifest 图标纳入发布和验收。</span></article>
+        <article><strong>v114</strong><span>自检修复：顶部版块按钮提升到手机可点击尺寸，浏览器验收新增二维码图片和点击区域检查。</span></article>
+        <article><strong>v113</strong><span>自检修复：手机、桌面和公网浏览器验收会逐个打开 6 个顶部版块，文件同步默认展开，点开即看清。</span></article>
+        <article><strong>v112</strong><span>自检修复：公网自检会读取真实 JS、Manifest、安装配置、快照和文件清单内容，确认下载端不是旧缓存。</span></article>
+        <article><strong>v111</strong><span>自检修复：深度自检新增快照与文件清单新鲜度校验，健康报告直接显示同步是否过期。</span></article>
+        <article><strong>v110</strong><span>自检修复：新增手机浏览器自动验收脚本，并接入一键自动修复流程。</span></article>
+        <article><strong>v109</strong><span>自检修复：新增一键自动修复发布脚本，统一完成生成、发布、重启、快照刷新和深度自检。</span></article>
+        <article><strong>v108</strong><span>自检修复：深度自检新增 Android release APK 文件一致和 Telegram 快照安装链接版本校验。</span></article>
+        <article><strong>v107</strong><span>自检修复：深度自检新增运行目录一致性校验，健康报告直接显示自检结果。</span></article>
+        <article><strong>v106</strong><span>自检修复：新增一键自检脚本，自动验证版本、二维码、安装配置、文件清单和公网下载状态。</span></article>
+        <article><strong>v105</strong><span>自检修复：健康检查新增 iPhone/Android 下载访问验证，并从同步与发布面移除 debug 安装包。</span></article>
+        <article><strong>v104</strong><span>自检修复：修正 Telegram 运行脚本旧目录、排除日志文件进入同步清单，并把下载说明统一到当前项目路径。</span></article>
+        <article><strong>v103</strong><span>自检修复：健康检查和安装说明统一输出带版本的下载地址，后台、二维码和手机端安装入口保持一致。</span></article>
+        <article><strong>v102</strong><span>自检修复：Android APK 下载链接和二维码加入版本参数，避免安装包更新后下载到旧缓存。</span></article>
+        <article><strong>v101</strong><span>自检修复：iPhone 安装描述文件链接加入版本参数，避免系统或浏览器缓存旧配置文件。</span></article>
+        <article><strong>v100</strong><span>自检修复：shell.js 从自身版本参数读取缓存版本，减少安装页和隐私页升级时的版本漏改风险。</span></article>
+        <article><strong>v99</strong><span>自检修复：shell.js 纳入网络优先更新，下载页和隐私页的缓存注册脚本不会被旧缓存锁住。</span></article>
+        <article><strong>v98</strong><span>自检修复：下载页和隐私页单独打开时也注册 PWA 缓存，首次安装路径支持离线刷新。</span></article>
+        <article><strong>v97</strong><span>自检修复：顶部版块点击写入历史，手机返回/前进会恢复上一个版块，不再出现空白状态。</span></article>
+        <article><strong>v96</strong><span>自检修复：监听地址栏 hash 变化，外部深链、系统恢复和手动切换会同步打开对应版块。</span></article>
+        <article><strong>v95</strong><span>自检修复：无效版块链接自动回到实时总览，并为顶部版块补齐 aria-controls。</span></article>
+        <article><strong>v94</strong><span>自检修复：顶部版块按钮同步 aria-pressed 状态，辅助访问和自动化检查更清楚。</span></article>
+        <article><strong>v93</strong><span>自检修复：外链安全守卫只在 rel 变化时写入，修复浏览器启动阶段属性循环。</span></article>
+        <article><strong>v92</strong><span>自检修复：外链统一补齐 noopener noreferrer，动态内容中的新窗口链接自动加固。</span></article>
+        <article><strong>v91</strong><span>自检修复：增强 innerHTML 即时清洗，动态内容写入时同步移除异常标签、事件属性和非安全链接。</span></article>
+        <article><strong>v90</strong><span>自检修复：新增动态内容清洗器，自动移除异常标签、事件属性和非安全链接，保护实时数据渲染。</span></article>
+        <article><strong>v89</strong><span>自检修复：Service Worker 离线缓存忽略版本参数，断网刷新也能加载 CSS、JS 和二维码。</span></article>
+        <article><strong>v88</strong><span>自检修复：文件同步排除临时编译缓存，文件版块只显示正式悟空文件。</span></article>
+        <article><strong>v87</strong><span>自检修复：修正 body 状态字段与 Telegram 指令按钮冲突，点击顶部版块不会再把页面替换成复制状态。</span></article>
+        <article><strong>v86</strong><span>自检修复：切换顶部版块改为按钮控制，只显示当前版块，文件同步面板补齐容错。</span></article>
+        <article><strong>v84</strong><span>自检修复：安装页、隐私页和主页面统一补齐 Android/Apple Web App 能力元信息。</span></article>
+        <article><strong>v83</strong><span>自检修复：二维码改用统一深色，隐私页补齐 PWA 元信息，Manifest 快捷图标补齐类型。</span></article>
+        <article><strong>v82</strong><span>自检修复：统一页面与 Manifest 主题色，补齐描述和手机格式识别设置，安装观感更一致。</span></article>
+        <article><strong>v81</strong><span>自检修复：补齐 PWA Manifest 的稳定 App ID、语言、分类和快捷入口，提升手机安装更新稳定性。</span></article>
+        <article><strong>v80</strong><span>自检修复：PWA 启动地址加入版本号，大下载文件改为按需下载，手机端缓存更稳。</span></article>
+        <article><strong>v79</strong><span>自检修复：前端改用本地同步快照，消除外部 API CORS 噪音，并补齐 favicon。</span></article>
+        <article><strong>v78</strong><span>把交易终端样式放到最终优先级，顶部运行栏更薄，机会、早发现和风险数字按交易色区分。</span></article>
+        <article><strong>v77</strong><span>总览改成交易台布局：隐藏重复版块标题，左侧同步状态、右侧核心指标，首屏更像交易所终端。</span></article>
+        <article><strong>v76</strong><span>继续压缩交易所终端首屏：品牌栏、状态栏和手机导航更紧凑，核心数据更早出现。</span></article>
+        <article><strong>v75</strong><span>改成专业交易所终端布局：顶部交易标签、紧凑状态栏、双栏市场工作台，默认打开实时总览。</span></article>
+        <article><strong>v74</strong><span>继续整理首屏和版块内容：隐藏状态灯、提示说明和次要按钮，保留核心导航与关键数据。</span></article>
+        <article><strong>v73</strong><span>动态列表缩短，只渲染最关键的前几条，去掉冗余说明文字。</span></article>
+        <article><strong>v72</strong><span>每个版块默认只留 1-2 个核心区域，页面从信息墙改成单列工作台。</span></article>
+        <article><strong>v71</strong><span>版块内部精简，只保留关键主面板，隐藏重复和次要信息。</span></article>
+        <article><strong>v70</strong><span>补齐数据源隐藏版块容错，极简首屏运行更稳定。</span></article>
+        <article><strong>v69</strong><span>首屏极简整理：隐藏长提醒和护栏，把版块入口改成顶部标签，页面更整齐。</span></article>
+        <article><strong>v68</strong><span>补齐 API 失败分支容错，隐藏版块不再干扰首屏和点击操作。</span></article>
+        <article><strong>v67</strong><span>修复隐藏版块复制状态容错，避免后台控件影响页面。</span></article>
+        <article><strong>v66</strong><span>精简后台刷新链，只更新首屏摘要和当前版块，避免隐藏长面板干扰页面。</span></article>
+        <article><strong>v65</strong><span>修复隐藏规则优先级，确保首屏只显示摘要和版块入口，点击后才展开内容。</span></article>
+        <article><strong>v64</strong><span>增加版块隐藏双保险，修复清爽模式下所有内容同时展开的问题。</span></article>
+        <article><strong>v63</strong><span>重整首屏信息层级，保留状态摘要和顶部版块入口，详细内容点击版块后再显示。</span></article>
+        <article><strong>v62</strong><span>新增风险处置清单，自动说明风险等级、禁止动作、允许动作、复核节奏和同步去向。</span></article>
+        <article><strong>v61</strong><span>新增入场复核清单，自动拆解第一候选的价格、OI、信号、风控和动作。</span></article>
+        <article><strong>v60</strong><span>新增实时巡航日志，自动记录行情、风控、候选、分发和缓存动作。</span></article>
+        <article><strong>v59</strong><span>新增实时情报带，顶部自动显示主线候选、合约启动、风险、分发和版本状态。</span></article>
+        <article><strong>v58</strong><span>新增自动同步流水线，实时展示拉取、校验、风控、分发和缓存状态。</span></article>
+        <article><strong>v57</strong><span>新增实时运行矩阵，一屏显示链路、刷新、分发、风险和版本一致性。</span></article>
+        <article><strong>v56</strong><span>新增全局刷新进度线，顶部实时显示 30 秒自动同步周期。</span></article>
+        <article><strong>v55</strong><span>新增指挥提醒条，顶部自动生成当前最重要的操作结论。</span></article>
+        <article><strong>v54</strong><span>新增专业状态灯，顶部直接显示当前模式、评分、风险和执行边界。</span></article>
+        <article><strong>v53</strong><span>新增交易纪律栏，明确当前模式、允许动作、禁止动作和同步节奏。</span></article>
+        <article><strong>v52</strong><span>新增运行审计轨迹，记录最近刷新、数据来源、决策状态和下一次同步。</span></article>
+        <article><strong>v51</strong><span>新增可信度拆解，显示数据源、信号证据、风控纪律和同步证明。</span></article>
+        <article><strong>v50</strong><span>新增操作员简报，顶部直接给出主结论、第一关注、下一步和禁止事项。</span></article>
+        <article><strong>v49</strong><span>新增自动更新自检，显示更新循环、网络守卫、陈旧守卫和版本守卫。</span></article>
+        <article><strong>v48</strong><span>新增职业运行驾驶舱，顶部直接显示机会、风险、同步和决策闸门。</span></article>
+        <article><strong>v47</strong><span>优化自动同步进度条，加载后始终显示运行状态。</span></article>
+        <article><strong>v46</strong><span>新增数据心跳、同步进度条和专业运行护栏。</span></article>
+        <article><strong>v45</strong><span>顶部版块入口改为实时导航面板，自动显示各版块状态。</span></article>
+        <article><strong>v44</strong><span>新增顶部运行状态台，自动更新状态常驻显示。</span></article>
+        <article><strong>v43</strong><span>新增交易所接入中心、合约启动雷达和纸交易模拟单。</span></article>
+      </div>
+    </section>
+
+    <section class="skill-strip" aria-label="悟空技能">
+      <div><strong>实时同步</strong><span>30秒 + 前台恢复</span></div>
+      <div><strong>机会扫描</strong><span id="skillOpportunities">--</span></div>
+      <div><strong>风险过滤</strong><span id="skillRisk">--</span></div>
+      <div><strong>Telegram</strong><span>推送 + 快照</span></div>
+    </section>
+
+    <section class="metric-strip" aria-label="核心计数">
+      <div><span id="tickers">--</span><small>币种</small></div>
+      <div><span id="entryCount">--</span><small>入场</small></div>
+      <div><span id="earlyCount">--</span><small>早发现</small></div>
+      <div><span id="riskCount">--</span><small>风险</small></div>
+    </section>
+    </section>
+
+    <section id="decisionGroup" class="module-group decision-group" aria-labelledby="decisionGroupTitle" hidden>
+      <div class="group-heading">
+        <span>02</span>
+        <div>
+          <h2 id="decisionGroupTitle">决策中心</h2>
+          <p>先读摘要、复盘、优先级、搜索和自选统一放在一个版块。</p>
+        </div>
+      </div>
+
+    <section class="brief-panel" aria-label="今日先读">
+      <div class="section-heading">
+        <div>
+          <h2>今日先读</h2>
+          <p>自动合并机会、风险和关注状态。</p>
+        </div>
+        <div class="brief-actions">
+          <span id="briefStamp">--</span>
+          <button id="copyBrief" class="mini-button" type="button">复制</button>
+          <a class="mini-button" href="tg://resolve?domain=verney_test_wukong6_bot">Telegram</a>
+        </div>
+      </div>
+      <div id="briefList" class="brief-list"></div>
+    </section>
+
+    <section class="review-panel" aria-label="AI复盘">
+      <div class="section-heading">
+        <div>
+          <h2>AI 复盘</h2>
+          <p id="reviewStatus">等待复盘数据。</p>
+        </div>
+        <span id="reviewStamp">--</span>
+      </div>
+      <div class="review-grid">
+        <div><strong id="paperReturn">--</strong><span>纸面收益</span></div>
+        <div><strong id="paperTrades">--</strong><span>纸面笔数</span></div>
+        <div><strong id="hit30Count">--</strong><span>涨超30%</span></div>
+        <div><strong id="reviewReady">--</strong><span>可复盘</span></div>
+      </div>
+      <p id="reviewHeadline" class="review-headline">同步后显示 AI 复盘摘要。</p>
+    </section>
+
+    <section class="source-panel" aria-label="数据源状态">
+      <div class="section-heading">
+        <div>
+          <h2>数据源状态</h2>
+          <p>行情、社媒、DEX 和 Alpha 的同步新鲜度。</p>
+        </div>
+        <span id="sourceStamp">--</span>
+      </div>
+      <div id="sourceList" class="source-list"></div>
+    </section>
+
+    <section class="priority-panel" aria-label="今日重点">
+      <div>
+        <span class="label">今日重点</span>
+        <strong id="priorityTicker">等待同步</strong>
+        <p id="priorityNote">同步后显示最值得先看的入场候选。</p>
+      </div>
+      <div class="priority-side">
+        <span id="priorityMove">--</span>
+        <small>24h / OI / 分数</small>
+      </div>
+    </section>
+
+    <section class="priority-list-panel" aria-label="优先级 Top 5">
+      <div class="section-heading">
+        <div>
+          <h2>优先级 Top 5</h2>
+          <p>按阶段、信号分和 OI 强度自动排序。</p>
+        </div>
+        <span id="priorityListCount">--</span>
+      </div>
+      <div id="priorityList" class="priority-list"></div>
+    </section>
+
+    <section class="action-plan-panel" aria-label="下一步行动清单">
+      <div class="section-heading">
+        <div>
+          <h2>下一步行动</h2>
+          <p>只做观察提醒，不自动下单。</p>
+        </div>
+        <span id="actionPlanCount">--</span>
+      </div>
+      <div id="actionPlanList" class="action-plan-list"></div>
+    </section>
+
+    <section class="search-panel" aria-label="币种快速搜索">
+      <div class="section-heading">
+        <div>
+          <h2>币种搜索</h2>
+          <p>输入 ticker，快速定位所在分区和当前状态。</p>
+        </div>
+        <span id="searchResultCount">--</span>
+      </div>
+      <label class="search-box">
+        <span>搜索</span>
+        <input id="tokenSearch" type="search" inputmode="latin" autocomplete="off" placeholder="例如 IMX / HYPE / BTC">
+      </label>
+      <div id="searchResults" class="search-results"></div>
+    </section>
+
+    <section class="watch-panel" aria-label="我的关注">
+      <div class="section-heading">
+        <div>
+          <h2>我的关注</h2>
+          <p>本机保存，随实时数据自动刷新。</p>
+        </div>
+        <span id="watchCount">0 个</span>
+      </div>
+      <div id="watchList" class="watch-list"></div>
+    </section>
+    </section>
+
+    <section id="marketGroup" class="module-group market-group" aria-labelledby="marketGroupTitle" hidden>
+      <div class="group-heading">
+        <span>03</span>
+        <div>
+          <h2 id="marketGroupTitle">市场信号</h2>
+          <p>入仓信号、已开单详情、交易所 API、合约启动、风险、X 和 Alpha 集中查看。</p>
+        </div>
+      </div>
+
+    <section class="entry-signal-panel" aria-label="入仓信号币种">
+      <div class="section-heading">
+        <div>
+          <h2>入仓信号币种</h2>
+          <p>信号闸门队列，按分数和阶段自动排序。</p>
+        </div>
+        <span id="entrySignalStatus">等待同步</span>
+      </div>
+      <div id="entrySignalList" class="entry-signal-list"></div>
+    </section>
+
+    <section class="open-order-panel" aria-label="已经开单详情">
+      <div class="section-heading">
+        <div>
+          <h2>已开单详情</h2>
+          <p>自动纸交易已开仓位，真实订单提交保持关闭。</p>
+        </div>
+        <span id="openOrderStatus">等待纸仓</span>
+      </div>
+      <div id="openOrderList" class="open-order-list"></div>
+    </section>
+
+    <section class="ema-cross-panel" aria-label="4小时 EMA21 上穿 EMA55">
+      <div class="section-heading">
+        <div>
+          <h2>4H EMA21 上穿 EMA55</h2>
+          <p>Binance USDT 合约 4 小时级别均线金叉扫描。</p>
+        </div>
+        <span id="emaCrossStatus">等待扫描</span>
+      </div>
+      <div id="emaCrossList" class="ema-cross-list"></div>
+    </section>
+
+    <section class="exchange-api-panel" aria-label="Binance OKX Gate API">
+      <div class="section-heading">
+        <div>
+          <h2>交易所 API</h2>
+          <p>Binance / OKX / Gate 公开行情，现货、合约与资金费率每分钟同步。</p>
+        </div>
+        <span id="exchangeApiStatus">同步中</span>
+      </div>
+      <div class="exchange-api-summary">
+        <div><strong id="exchangeApiVenues">--</strong><span>在线交易所</span></div>
+        <div><strong id="exchangeApiPairs">--</strong><span>跟踪币种</span></div>
+        <div><strong id="exchangeApiFreshness">--</strong><span>快照新鲜度</span></div>
+      </div>
+      <div id="exchangeApiList" class="exchange-api-list"></div>
+    </section>
+
+    <section class="exchange-panel" aria-label="交易所 API 接入中心">
+      <div class="section-heading">
+        <div>
+          <h2>交易所 API 接入中心</h2>
+          <p id="exchangeStatus">正在检查公开行情和执行通道。</p>
+        </div>
+        <span id="exchangeMode">模拟</span>
+      </div>
+      <div class="exchange-summary">
+        <div><strong id="exchangeOnline">--</strong><span>在线源</span></div>
+        <div><strong id="gatePrivateState">未绑定</strong><span>Gate Key</span></div>
+        <div><strong id="paperModeState">开启</strong><span>纸交易</span></div>
+      </div>
+      <div id="gatePrivateBox" class="gate-private-box"></div>
+      <div id="exchangeList" class="exchange-list"></div>
+    </section>
+
+    <section class="contract-launch-panel" aria-label="合约启动雷达">
+      <div class="section-heading">
+        <div>
+          <h2>合约启动雷达</h2>
+          <p>从 OI 异动、入场窗口和 Alpha 映射里挑出优先观察对象。</p>
+        </div>
+        <span id="contractLaunchCount">--</span>
+      </div>
+      <div id="contractLaunchList" class="contract-launch-list"></div>
+    </section>
+
+    <section class="paper-trade-panel" aria-label="纸交易模拟单">
+      <div class="section-heading">
+        <div>
+          <h2>纸交易模拟单</h2>
+          <p id="paperTradeStatus">只生成模拟订单，不调用交易所私有 API。</p>
+        </div>
+        <span id="paperTradeMode">安全模式</span>
+      </div>
+      <div id="paperTradePlan" class="paper-trade-plan"></div>
+    </section>
+
+    <section class="signal-trail-panel" aria-label="信号轨迹">
+      <div class="section-heading">
+        <div>
+          <h2>信号轨迹</h2>
+          <p>最近升级、退役和转入风险的币种变化。</p>
+        </div>
+        <span id="signalTrailCount">--</span>
+      </div>
+      <div id="signalTrailList" class="signal-trail-list"></div>
+    </section>
+
+    <section class="risk-radar-panel" aria-label="风险雷达">
+      <div class="section-heading">
+        <div>
+          <h2>风险雷达</h2>
+          <p>过热、公告风险和刚退役回避集中显示。</p>
+        </div>
+        <span id="riskRadarCount">--</span>
+      </div>
+      <div id="riskRadarList" class="risk-radar-list"></div>
+    </section>
+
+    <section class="x-panel" aria-label="推特信号">
+      <div class="section-heading">
+        <div>
+          <h2>X / 推特信号</h2>
+          <p id="xStatus">等待同步社媒热度。</p>
+        </div>
+        <span id="xMode">同步中</span>
+      </div>
+      <div class="x-summary">
+        <div><strong id="xPosts">--</strong><span>帖子</span></div>
+        <div><strong id="xTickers">--</strong><span>币种</span></div>
+        <div><strong id="xTopTicker">--</strong><span>最热</span></div>
+      </div>
+      <div id="xList" class="x-list"></div>
+    </section>
+
+    <section class="alpha-panel" aria-label="Binance Alpha">
+      <div class="section-heading">
+        <div>
+          <h2>Binance Alpha</h2>
+          <p id="alphaStatus">等待同步 Alpha 板块。</p>
+        </div>
+        <span id="alphaMode">同步中</span>
+      </div>
+      <div class="alpha-summary">
+        <div><strong id="alphaTokens">--</strong><span>Alpha CA</span></div>
+        <div><strong id="alphaMapped">--</strong><span>已映射</span></div>
+        <div><strong id="alphaCoverage">--</strong><span>覆盖率</span></div>
+        <div><strong id="alphaTopTicker">--</strong><span>重点</span></div>
+      </div>
+      <div id="alphaList" class="alpha-list"></div>
+    </section>
+
+    <nav class="tabs" aria-label="数据分区">
+      <button class="tab is-active" data-section="entryWindow">入场窗口</button>
+      <button class="tab" data-section="earlyEntryRadar">早发现</button>
+      <button class="tab" data-section="opportunities">确认候选</button>
+      <button class="tab" data-section="risk">风险区</button>
+    </nav>
+
+    <section class="workspace" aria-live="polite">
+      <div class="section-heading">
+        <h2 id="sectionTitle">入场窗口</h2>
+        <span id="sectionCount">0</span>
+      </div>
+      <div id="tokenList" class="token-list"></div>
+    </section>
+
+    <section class="gate-panel" aria-label="Gate API">
+      <div class="section-heading">
+        <div>
+          <h2>Gate API</h2>
+          <p>现货 + USDT 合约公开行情，每分钟同步。</p>
+        </div>
+        <span id="gateStatus">连接中</span>
+      </div>
+      <div id="gateList" class="gate-list"></div>
+    </section>
+    </section>
+
+    <section id="telegramGroup" class="module-group telegram-group" aria-labelledby="telegramGroupTitle" hidden>
+      <div class="group-heading">
+        <span>04</span>
+        <div>
+          <h2 id="telegramGroupTitle">Telegram 同步</h2>
+          <p>推送回执、机器人指令和每分钟队列集中管理。</p>
+        </div>
+      </div>
+
+    <section class="telegram-panel">
+      <div>
+        <h2>Telegram 已接入</h2>
+        <p id="telegramReceipt">等待 Telegram 推送回执。</p>
+      </div>
+      <a class="text-button" href="tg://resolve?domain=verney_test_wukong6_bot">打开</a>
+    </section>
+
+    <section class="telegram-receipt-panel" aria-label="Telegram 回执明细">
+      <div class="section-heading">
+        <div>
+          <h2>Telegram 回执明细</h2>
+          <p id="telegramReceiptMeta">等待推送统计。</p>
+        </div>
+        <span id="telegramReceiptTotal">--</span>
+      </div>
+      <div class="telegram-receipt-grid">
+        <div><strong id="telegramReceiptEntry">--</strong><span>入场</span></div>
+        <div><strong id="telegramReceiptContract">--</strong><span>合约启动</span></div>
+        <div><strong id="telegramReceiptPriority">--</strong><span>优先级</span></div>
+        <div><strong id="telegramReceiptRisk">--</strong><span>风险</span></div>
+      </div>
+    </section>
+
+    <section class="telegram-command-panel" aria-label="Telegram 操作台">
+      <div class="section-heading">
+        <div>
+          <h2>Telegram 操作台</h2>
+          <p>复制指令后到机器人里继续查看、搜索和问答。</p>
+        </div>
+        <span id="telegramCommandStatus">待操作</span>
+      </div>
+      <div class="telegram-command-grid">
+        <button type="button" data-command="/summary">实时摘要</button>
+        <button type="button" data-command="/entry">入场币种</button>
+        <button type="button" data-command="/contract">合约启动</button>
+        <button type="button" data-command="/priority">优先级</button>
+        <button type="button" data-command="/risk">风险区</button>
+        <button type="button" data-command="/alpha">Alpha</button>
+        <button type="button" data-command="/next">下一步</button>
+        <button type="button" data-command="/ask 现在最值得观察的三个币是什么？">Codex 问答</button>
+      </div>
+    </section>
+
+    <section class="telegram-queue-panel" aria-label="Telegram 推送队列">
+      <div class="section-heading">
+        <div>
+          <h2>Telegram 推送队列</h2>
+          <p>入场、合约启动、风险和优先级会随每分钟同步推送。</p>
+        </div>
+        <span id="telegramQueueCount">--</span>
+      </div>
+      <div id="telegramQueueList" class="telegram-queue-list"></div>
+    </section>
+    </section>
+
+    <section id="installGroup" class="module-group install-group" aria-labelledby="installGroupTitle" hidden>
+      <div class="group-heading">
+        <span>05</span>
+        <div>
+          <h2 id="installGroupTitle">我的</h2>
+          <p>API 接口、安装下载、分享链接、二维码和下载自检统一在这里。</p>
+        </div>
+      </div>
+
+    <section class="api-account-panel" aria-label="我的 API 接口">
+      <div class="section-heading">
+        <div>
+          <h2>API 接口</h2>
+          <p>交易所 Key 只保存在本机后端，前端只显示验证状态和实盘准入。</p>
+        </div>
+        <span id="myApiState">检查中</span>
+      </div>
+      <div class="api-account-summary">
+        <div><strong id="myApiGate">--</strong><span>Gate</span></div>
+        <div><strong id="myApiVenues">--</strong><span>公开源</span></div>
+        <div><strong id="myApiLive">--</strong><span>实盘准入</span></div>
+        <div><strong id="myApiPaper">--</strong><span>纸交易</span></div>
+      </div>
+      <div id="myApiList" class="api-account-list"></div>
+      <div class="api-account-note">
+        <span>本机配置</span>
+        <strong>/Users/wangbo/Documents/New project/悟空app/.env.gate</strong>
+      </div>
+    </section>
+
+    <section class="install-assist-panel" aria-label="设备安装助手">
+      <div class="section-heading">
+        <div>
+          <h2>设备安装助手</h2>
+          <p id="installAssistNote">正在识别当前设备。</p>
+        </div>
+        <span id="installAssistDevice">检测中</span>
+      </div>
+      <div class="install-assist-grid">
+        <div><strong id="installAssistPlatform">--</strong><span>当前设备</span></div>
+        <div><strong id="installAssistMode">--</strong><span>推荐方式</span></div>
+        <div><strong id="installAssistState">--</strong><span>安装状态</span></div>
+      </div>
+      <div class="install-assist-actions">
+        <a id="installAssistPrimary" class="text-button" href="./install.html?v=121">推荐安装</a>
+        <a class="text-button secondary" href="./install.html?v=121">下载中心</a>
+      </div>
+    </section>
+
+    <section class="download-panel" aria-label="下载入口">
+      <div>
+        <h2>下载悟空</h2>
+        <p>安卓直接安装 APK；苹果用 Safari 添加到主屏幕。</p>
+      </div>
+      <div class="download-actions">
+        <a class="text-button" href="./downloads/wukong-android-release.apk?v=121" download>Android</a>
+        <button id="iosInstallHelp" class="text-button" type="button">iPhone</button>
+        <a class="text-button secondary" href="./install.html?v=121">下载页</a>
+        <a class="text-button secondary" href="./privacy.html?v=121">隐私</a>
+      </div>
+    </section>
+
+    <section class="share-panel" aria-label="分享下载">
+      <div class="section-heading">
+        <div>
+          <h2>分享下载</h2>
+          <p>复制链接后可直接发送给 Telegram、微信或其他用户。</p>
+        </div>
+        <span id="shareStatus">待复制</span>
+      </div>
+      <div class="share-grid">
+        <button type="button" data-share-link="ios">复制苹果链接</button>
+        <button type="button" data-share-link="android">复制安卓链接</button>
+        <button type="button" data-share-link="web">复制网页端</button>
+        <button type="button" data-share-link="all">复制全部</button>
+        <a id="shareTelegramDownload" href="https://t.me/share/url" target="_blank" rel="noopener noreferrer">发到 Telegram</a>
+      </div>
+    </section>
+
+    <section class="download-health-panel" aria-label="下载自检">
+      <div class="section-heading">
+        <div>
+          <h2>下载自检</h2>
+          <p>每分钟检查安装文件和二维码是否在线。</p>
+        </div>
+        <span id="downloadHealthStatus">检查中</span>
+      </div>
+      <div id="downloadHealthList" class="download-health-list"></div>
+    </section>
+
+    <section class="qr-panel" aria-label="扫码下载">
+      <div class="section-heading">
+        <div>
+          <h2>扫码下载</h2>
+          <p>给别人安装时，直接让对方扫对应二维码。</p>
+        </div>
+      </div>
+      <div class="qr-grid">
+        <a class="qr-card" href="./install.html?v=121">
+          <img src="./qr/wukong-ios-qr.png?v=121" alt="悟空苹果下载二维码">
+          <strong>苹果 / iPhone</strong>
+          <span>Safari 添加到主屏幕</span>
+        </a>
+        <a class="qr-card" href="./downloads/wukong-android-release.apk?v=121" download>
+          <img src="./qr/wukong-android-qr.png?v=121" alt="悟空安卓下载二维码">
+          <strong>安卓 / Android</strong>
+          <span>扫码直接下载 APK</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="installPanel" class="install-panel" hidden>
+      <p>可安装到主屏幕。</p>
+      <button id="installButton" type="button">安装悟空</button>
+    </section>
+    </section>
+
+    <section id="filesGroup" class="module-group files-group" aria-labelledby="filesGroupTitle" hidden>
+      <div class="group-heading">
+        <span>06</span>
+        <div>
+          <h2 id="filesGroupTitle">文件同步</h2>
+          <p>APP、网页端和 Telegram 共享的文件清单。</p>
+        </div>
+      </div>
+
+    <details class="file-sync-panel" open>
+      <summary>
+        <span>文件同步</span>
+        <strong id="fileSyncCount">--</strong>
+      </summary>
+      <div id="fileSyncRoles" class="file-roles"></div>
+      <div id="fileSyncList" class="file-list"></div>
+    </details>
+    </section>
+  </main>
+  <nav class="bottom-tabbar" aria-label="底部主导航">
+    <button type="button" data-group="overviewGroup">
+      <span aria-hidden="true">⌂</span>
+      <strong>首页</strong>
+    </button>
+    <button type="button" data-group="decisionGroup">
+      <span aria-hidden="true">□</span>
+      <strong>任务</strong>
+    </button>
+    <button type="button" data-group="marketGroup">
+      <span aria-hidden="true">△</span>
+      <strong>信号</strong>
+    </button>
+    <button type="button" data-group="installGroup">
+      <span aria-hidden="true">○</span>
+      <strong>我的</strong>
+    </button>
+  </nav>
+  <script src="./ema_cross_4h_bootstrap.js?v=121"></script>
+  <script src="./app.js?v=121"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+{
+  "app": "悟空",
+  "exchange": "gate",
+  "generatedAt": "2026-05-23T10:06:55.194320+00:00",
+  "configured": true,
+  "authenticated": true,
+  "keyMasked": "2e56...ad5c",
+  "keyFingerprint": "e366fb49a342",
+  "secretFingerprint": "aca6426bd754",
+  "keySafetyState": "candidate",
+  "keyRotationRequired": false,
+  "secretRotationRequired": false,
+  "tradingMode": "paper",
+  "requestedTradingMode": "paper",
+  "liveTradingEnabled": false,
+  "liveTradingRequested": false,
+  "liveTradingUnlocked": false,
+  "liveTradingBlockedReason": "",
+  "orderEndpointEnabled": false,
+  "manualLiveCandidate": true,
+  "manualConfirmationRequired": true,
+  "riskBudget": {
+    "accountEquityUsdt": 100.0,
+    "leverage": 10.0,
+    "maxNotionalUsdt": 50.0,
+    "maxMarginUsdt": 5.0,
+    "riskPerTradeUsdt": 2.75,
+    "dailyMaxLossUsdt": 5.0,
+    "consecutiveLossLimit": 2,
+    "confirmationMode": "manual",
+    "baseStopLossPct": 2.4,
+    "maxStopLossPct": 5.5
+  },
+  "exitRule": {
+    "takeProfitTiers": [
+      {
+        "triggerPct": 3.5,
+        "closePct": 25
+      },
+      {
+        "triggerPct": 7.5,
+        "closePct": 25
+      },
+      {
+        "triggerPct": 12.0,
+        "closePct": 50
+      }
+    ],
+    "baseStopLossPct": 2.4,
+    "maxStopLossPct": 5.5
+  },
+  "protectionPolicy": {
+    "name": "开仓附带 → 开仓后补挂 → 软件层兜底",
+    "layers": [
+      {
+        "id": "entryAttach",
+        "name": "开仓附带",
+        "state": "planned",
+        "detail": "下单时优先随开仓请求附带原生止盈止损，让仓位成交即带保护",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      },
+      {
+        "id": "postEntryNative",
+        "name": "开仓后补挂",
+        "state": "planned",
+        "detail": "如果交易所拒绝附带保护参数，先保留开仓，再补挂原生 OCO / 条件保护单",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      },
+      {
+        "id": "softwareFallback",
+        "name": "软件层兜底",
+        "state": "armed",
+        "detail": "原生保护单失败时，由主循环执行分批止盈、固定止损、追踪止盈和超时离场",
+        "appliesTo": [
+          "spot",
+          "futures"
+        ]
+      }
+    ],
+    "neverNakedPosition": true,
+    "softwareFallbackEnabled": true
+  },
+  "riskControls": [
+    {
+      "name": "Key 安全",
+      "state": "ready",
+      "detail": "Key/Secret 未命中已暴露清单"
+    },
+    {
+      "name": "单笔限额",
+      "state": "ready",
+      "detail": "最大名义 50U / 保证金 5U / 单笔亏损 2.75U"
+    },
+    {
+      "name": "每日熔断",
+      "state": "ready",
+      "detail": "日亏损 5U 熔断，连续亏损 2 笔停止"
+    },
+    {
+      "name": "止盈止损",
+      "state": "ready",
+      "detail": "+3.5%/25%, +7.5%/25%, +12%/50%; SL 2.4%-5.5%"
+    },
+    {
+      "name": "三层保护",
+      "state": "ready",
+      "detail": "开仓附带 → 补挂原生保护 → 软件兜底"
+    },
+    {
+      "name": "手动确认",
+      "state": "ready",
+      "detail": "手动确认模式已配置"
+    }
+  ],
+  "nextActions": [
+    "撤销聊天中暴露过的 Gate Key",
+    "创建新 Key，并只开放必要交易权限",
+    "设置 Gate IP 白名单",
+    "配置单笔限额和每日亏损熔断",
+    "先跑至少 24 小时纸交易，再进入手动确认实盘"
+  ],
+  "manualLiveReadiness": [
+    {
+      "name": "新 Key",
+      "ok": true,
+      "detail": "必须撤销旧 Key 并换新 Key"
+    },
+    {
+      "name": "IP 白名单",
+      "ok": false,
+      "detail": "等待配置固定出口 IP 白名单"
+    },
+    {
+      "name": "单笔限额",
+      "ok": true,
+      "detail": "最大名义 50U，最大保证金 5U，单笔风险 2.75U"
+    },
+    {
+      "name": "每日熔断",
+      "ok": true,
+      "detail": "每日亏损 5U / 连亏 2 笔停止"
+    },
+    {
+      "name": "手动确认",
+      "ok": true,
+      "detail": "manual 模式已配置"
+    }
+  ],
+  "message": "Gate 私有 API 已验证；当前仅允许读取账户和纸交易",
+  "balances": [
+    {
+      "currency": "USDT",
+      "available": "0",
+      "locked": "0"
+    }
+  ],
+  "errors": []
+}

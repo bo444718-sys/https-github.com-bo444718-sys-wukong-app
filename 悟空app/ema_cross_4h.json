@@ -1,0 +1,40 @@
+{
+  "app": "悟空",
+  "source": "Binance USDT perpetual klines",
+  "mode": "public-readonly",
+  "generatedAt": "2026-05-23T10:05:40.432882+00:00",
+  "interval": "4h",
+  "rule": "EMA21 上穿 EMA55",
+  "symbolsScanned": 527,
+  "matches": 2,
+  "durationSeconds": 24.55,
+  "items": [
+    {
+      "ticker": "BANK",
+      "symbol": "BANKUSDT",
+      "pair": "BANK/USDT",
+      "interval": "4h",
+      "close": 0.04066,
+      "changeLastCandlePct": 3.7245,
+      "ema21": 0.038162605,
+      "ema55": 0.0380150283,
+      "emaSpreadPct": 0.3882,
+      "candleCloseTime": "2026-05-23T11:59:59.999000+00:00",
+      "signal": "4H EMA21 上穿 EMA55"
+    },
+    {
+      "ticker": "HANA",
+      "symbol": "HANAUSDT",
+      "pair": "HANA/USDT",
+      "interval": "4h",
+      "close": 0.03958,
+      "changeLastCandlePct": 1.5132,
+      "ema21": 0.0348450391,
+      "ema55": 0.0348416029,
+      "emaSpreadPct": 0.0099,
+      "candleCloseTime": "2026-05-23T11:59:59.999000+00:00",
+      "signal": "4H EMA21 上穿 EMA55"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,107 @@
+{
+  "app": "悟空",
+  "generatedAt": "2026-05-22T11:12:17.418035+00:00",
+  "profile": "professional-auto-trading-framework",
+  "fileScan": {
+    "count": 198,
+    "requiredReady": true
+  },
+  "executionModes": [
+    {
+      "name": "auto-paper",
+      "enabled": true,
+      "detail": "信号出现自动纸交易，信号消失自动关闭"
+    },
+    {
+      "name": "telegram-confirm-preflight",
+      "enabled": true,
+      "detail": "Telegram 一键确认只做预检，不提交订单"
+    },
+    {
+      "name": "live-api-ready-shell",
+      "enabled": true,
+      "detail": "Gate 私有 API 已可读，实盘提交端点保持锁定"
+    },
+    {
+      "name": "unattended-live-order",
+      "enabled": false,
+      "detail": "无人值守实盘自动下单关闭"
+    }
+  ],
+  "modules": [
+    {
+      "name": "市场数据",
+      "ready": true,
+      "state": "ready",
+      "detail": "Binance / OKX / Gate 公开行情快照"
+    },
+    {
+      "name": "信号引擎",
+      "ready": true,
+      "state": "armed-blocked",
+      "detail": "入仓信号存在，但实盘订单提交被风控阻断"
+    },
+    {
+      "name": "自动纸交易",
+      "ready": true,
+      "state": "running",
+      "detail": "入仓信号存在，纸交易引擎自动运行；真实订单提交关闭"
+    },
+    {
+      "name": "Gate 私有 API",
+      "ready": true,
+      "state": "authenticated",
+      "detail": "Gate 私有 API 已验证；当前仅允许读取账户和纸交易"
+    },
+    {
+      "name": "风控预算",
+      "ready": true,
+      "state": "ready",
+      "detail": "100U / 10X / 5U 保证金 / 50U 名义仓位"
+    },
+    {
+      "name": "Telegram 控制台",
+      "ready": true,
+      "state": "idle",
+      "detail": "支持 /paper 与 /confirm_live"
+    },
+    {
+      "name": "文件同步",
+      "ready": true,
+      "state": "ready",
+      "detail": "109 文件"
+    },
+    {
+      "name": "实盘 API 提交",
+      "ready": false,
+      "state": "locked",
+      "detail": "订单端点关闭；只允许预检和人工确认流程"
+    }
+  ],
+  "liveReadiness": {
+    "authenticated": true,
+    "canSubmitOrder": false,
+    "orderEndpointEnabled": false,
+    "manualConfirmationRequired": true,
+    "blockers": [
+      "未配置 Gate IP 白名单"
+    ]
+  },
+  "riskBudget": {
+    "accountEquityUsdt": 100.0,
+    "leverage": 10.0,
+    "maxNotionalUsdt": 50.0,
+    "maxMarginUsdt": 5.0,
+    "riskPerTradeUsdt": 2.75,
+    "dailyMaxLossUsdt": 5.0,
+    "consecutiveLossLimit": 2,
+    "confirmationMode": "manual",
+    "baseStopLossPct": 2.4,
+    "maxStopLossPct": 5.5
+  },
+  "paperSummary": {
+    "openPositions": 1,
+    "closedTrades": 0,
+    "totalUnrealizedUsdt": 0.0783
+  }
+}

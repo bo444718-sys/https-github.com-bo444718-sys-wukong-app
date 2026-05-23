@@ -1,0 +1,1017 @@
+{
+  "app": "悟空",
+  "generatedAt": "2026-05-23T10:05:16.541052+00:00",
+  "root": "/Users/wangbo/Documents/New project/悟空app",
+  "fileCount": 111,
+  "totalBytes": 91510195,
+  "roles": {
+    "资源": 20,
+    "Telegram": 10,
+    "同步数据": 14,
+    "文档": 7,
+    "自动化": 24,
+    "网页下载端": 33,
+    "Apple App": 3
+  },
+  "files": [
+    {
+      "path": ".DS_Store",
+      "role": "资源",
+      "bytes": 14340,
+      "modifiedAt": "2026-05-22T06:27:10.217089+00:00",
+      "sha256": "5cc920510bb452e9b4bf5fae14a0cd12db50c8438b1b3344959e131743b63d80",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".env.gate.example",
+      "role": "资源",
+      "bytes": 563,
+      "modifiedAt": "2026-05-22T10:07:10.163026+00:00",
+      "sha256": "9a694e0830071c7f4b8ea54e10ad7f65143fa1848c7021f318bd9afa3358a7ed",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".env.telegram.example",
+      "role": "Telegram",
+      "bytes": 405,
+      "modifiedAt": "2026-05-11T20:13:51.132565+00:00",
+      "sha256": "6f0071c888366540ef85b03b7529498928231cbafdc159239adebbfb2471da86",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".wukong_pwa.pid.json",
+      "role": "同步数据",
+      "bytes": 40,
+      "modifiedAt": "2026-05-22T10:02:44.485876+00:00",
+      "sha256": "e02fbc529a520ed27030bc435d2785ef053e853a46258ed1c98d1c83148cbce5",
+      "mime": "application/json",
+      "preview": "{\n  \"server\": 46428,\n  \"tunnel\": 35950\n}"
+    },
+    {
+      "path": ".wukong_pwa_last_sent_url",
+      "role": "资源",
+      "bytes": 59,
+      "modifiedAt": "2026-05-22T10:02:45.737228+00:00",
+      "sha256": "64c95133f2f9eef3bdf9cd8d6220448f52a26139606ac47fa767891ca32a8bdd",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".wukong_pwa_server.pid",
+      "role": "资源",
+      "bytes": 6,
+      "modifiedAt": "2026-05-22T06:24:10.603091+00:00",
+      "sha256": "27432cadd5fc64b84707dc8ceb50d6149099b9baa9a0749466e88df53c68671c",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".wukong_telegram_bot.pid",
+      "role": "Telegram",
+      "bytes": 6,
+      "modifiedAt": "2026-05-22T11:12:30.986088+00:00",
+      "sha256": "ac079e60f7b9152fcbc55fef02ca5e48914e4ef911c1d5d28479571511f631c7",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": ".wukong_telegram_state.json",
+      "role": "Telegram",
+      "bytes": 2112,
+      "modifiedAt": "2026-05-23T09:53:50.622229+00:00",
+      "sha256": "908db2e22f63c71101b54a583bbfc5ca5e506b19eaae81edcb2072a9816bd15d",
+      "mime": "application/json",
+      "preview": "{\n  \"offset\": 0,\n  \"chat_id\": \"\",\n  \"watchlist\": [\n    \"SKYAI\",\n    \"SKY\",\n    \"PENGU\",\n    \"COS\",\n    \"LAB\",\n    \"ENA\",\n    \"ARB\",\n    \"PIPPIN\",\n    \"INJ\",\n    \"JCT\",\n    \"HYPE\",\n    \"ZORA\",\n    \"ME\",\n    \"1000CHEEMS\",\n    \"BOME\",\n    \"PROM\",\n    \"PLAY\",\n    \"FET\",\n    \"ZEREBRO\",\n    \"MYX\",\n    \"TIA\",\n    \"TRUST\",\n    \"BLUAI\",\n    \"WCT\","
+    },
+    {
+      "path": "ANDROID_IOS_DOWNLOAD.md",
+      "role": "文档",
+      "bytes": 1389,
+      "modifiedAt": "2026-05-23T09:54:13.271508+00:00",
+      "sha256": "e645bf140f522d81f20fc24cae50f9fbf7b4ea3395731a121e7158007cfc3e9a",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 Android / Apple 下载使用\n\n当前可直接使用：\n\n- Apple / iPhone：打开 PWA 链接后，在 Safari 里“添加到主屏幕”。\n- Android：可安装 APK，或打开同一个 PWA 链接后在 Chrome 里“安装应用”。\n\n当前安装中心：\n\nhttps://stays-luxury-location-firm.trycloudflare.com/install.html?v=121\n\niPhone / Apple 安装：\n\nhttps://stays-luxury-location-firm.trycloudflare.com/install.html?v=121\n\nAndroid APK 直接下载：\n\nhttps://stays-luxury-location-firm.trycloudflare.com/downloads/wukong-android-release.apk?v=121\n\nAndroid APK 构建：\n\n```bash\ncd \"/Users/wangbo/Documents/New project/悟空app\"\nnpm run android:debug\n```\n\n构建产物：\n"
+    },
+    {
+      "path": "AppStore/APP_STORE_RELEASE.md",
+      "role": "文档",
+      "bytes": 1569,
+      "modifiedAt": "2026-05-13T17:21:14.416661+00:00",
+      "sha256": "e8ef75bff0b4c635841a38e80b17fca6b89462a2656ae15d731b024612899545",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 App Store 发布流程\n\n当前项目已准备好 iOS 工程、图标、隐私清单、导出配置和商店文案。\n\n## 当前机器状态\n\n- 缺少完整 Xcode：当前 `xcodebuild` 指向 Command Line Tools。\n- 缺少 Apple Distribution 签名证书：`security find-identity` 未发现有效证书。\n- 因此当前机器不能直接生成 App Store `.ipa` 或提交审核。\n\n## 上架前需要\n\n1. 安装完整 Xcode。\n2. 运行：\n\n```bash\nsudo xcode-select -s /Applications/Xcode.app/Contents/Developer\n```\n\n3. 在 Xcode 登录 Apple Developer 账号。\n4. 在 App Store Connect 创建 App：\n   - 名称：悟空\n   - Bundle ID：`ai.wukong.app`\n   - SKU：`wukong-ios-001`\n5. 把 `AppStore/ExportOptions-AppStore.plist` 里的 `REPLACE_WITH_APPLE_TEAM_ID` 改为 Apple Team ID。\n\n## 构建上传\n"
+    },
+    {
+      "path": "AppStore/ExportOptions-AppStore.plist",
+      "role": "自动化",
+      "bytes": 483,
+      "modifiedAt": "2026-05-13T16:34:50.889864+00:00",
+      "sha256": "8535a435aa1c47c06e4b7fe65bd77dbf8d0eaede3149d762f192c873d6ee222a",
+      "mime": "application/octet-stream",
+      "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>destination</key>\n\t<string>export</string>\n\t<key>method</key>\n\t<string>app-store-connect</string>\n\t<key>signingStyle</key>\n\t<string>automatic</string>\n\t<key>stripSwiftSymbols</key>\n\t<true/>\n\t<key>teamID</key>\n\t<string>REPLACE_WITH_APPLE_TEAM_ID</string>\n\t<key>uploadSymbols</key>\n\t<true/>\n</dict>\n</plist>"
+    },
+    {
+      "path": "AppStore/metadata-zh-CN.md",
+      "role": "文档",
+      "bytes": 1595,
+      "modifiedAt": "2026-05-13T16:36:54.010385+00:00",
+      "sha256": "3aa4e21ab70f9f86902ac3f74bec38edef1ddc98f613b4bce0d9db0f1e5f7ace",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 App Store 上架资料\n\n## App 名称\n悟空\n\n## 副标题\n加密市场机会与风险研究台\n\n## 分类\n财务 / 工具\n\n## 简短介绍\n悟空把公开市场数据、Gate 行情、Binance Alpha、X/推特热度、风险过滤和 Telegram 同步集中到一个移动研究台，每分钟自动刷新。\n\n## 详细描述\n悟空是一个面向加密市场公开数据研究的移动应用。它整合币种机会窗口、早发现雷达、确认候选、风险区、Gate 行情、Binance Alpha 映射、X/推特社媒热度和 Telegram 推送，让用户在手机上快速查看实时变化。\n\n主要功能：\n- 每分钟同步公开市场快照\n- 入场窗口、早发现雷达、确认候选和风险区\n- Gate 现货与 USDT 合约行情\n- Binance Alpha CA 覆盖和映射候选\n- X/推特社媒热度摘要\n- Telegram 推送和继续操作\n- 本机关注列表和币种搜索\n\n免责声明：悟空仅用于公开研究信号和复盘，不提供投资建议，不保证收益。加密资产波动很大，请自行控制风险。\n"
+    },
+    {
+      "path": "DISTRIBUTION.md",
+      "role": "文档",
+      "bytes": 3719,
+      "modifiedAt": "2026-05-10T19:13:42.768577+00:00",
+      "sha256": "9da6515fb4f312b9ad001fb1ee23c97224cc823841d21f947cc5aa1d0c19b636",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 / Wukong 正式分发方案\n\n目标：让任何 Apple 用户可以下载“悟空”。\n\n## 悟空下载地址\n\n以下两个地址必须由 Apple Developer 账号创建，当前本地无法伪造：\n\n- 悟空 App Store 下载地址：待 App Store Connect 审核通过后生成。\n- 悟空 TestFlight 下载地址：待上传 iPhone build 并开启测试后生成。\n\n## 推荐路线：App Store\n\n适用范围：iPhone、iPad、Mac、Apple Silicon Mac。\n\n必须条件：\n\n- Apple Developer Program 账号。\n- App Store Connect 中创建 App 记录。\n- 唯一 Bundle ID，例如 `ai.wukong.scanner`。\n- 使用 Xcode 对 iOS/macOS target 进行 Archive。\n- 上传 build 到 App Store Connect。\n- 填写隐私、年龄分级、截图、描述、审核备注。\n- 提交 Apple App Review。\n\n当前状态：\n\n- SwiftUI 客户端源码已完成。"
+    },
+    {
+      "path": "GATE_KEY_ROTATION.md",
+      "role": "文档",
+      "bytes": 737,
+      "modifiedAt": "2026-05-22T08:43:15.311568+00:00",
+      "sha256": "b98f653b01b5d9fdc7a11306d9dc97b51345de4755bc89fd5dd11374bc54f7ed",
+      "mime": "application/octet-stream",
+      "preview": "# Gate Key Rotation\n\n## 目的\n\n当前聊天中出现过的 Gate Key 只能用于只读验证和 dry-run，不允许实盘下单。\n\n## 换 Key 步骤\n\n1. 在 Gate 撤销旧 Key。\n2. 创建新的未暴露 Key。\n3. 只开放必要交易权限。\n4. 设置 IP 白名单。\n5. 把新 Key 写入本机后端文件：\n\n```bash\n/Users/wangbo/Documents/New project/悟空app/.env.gate\n```\n\n字段模板见 `.env.gate.example`。\n\n## 实盘准入\n\n系统会自动检查：\n\n- 新 Key 未命中已暴露指纹\n- Gate 私有 API 可认证\n- IP 白名单已配置\n- 单笔限额已配置"
+    },
+    {
+      "path": "IPHONE_INSTALL.md",
+      "role": "文档",
+      "bytes": 1175,
+      "modifiedAt": "2026-05-16T04:42:58.802701+00:00",
+      "sha256": "a77f197ac5b2354c5f821f98ddb25e60edb1cf22aebc128ddcd22a691afb8267",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 iPhone 真机安装\n\n当前机器只安装了 Command Line Tools，没有完整 Xcode，因此不能直接把 iOS App 签名并安装到 iPhone。\n\n已安装辅助工具：\n\n- `xcodegen`：生成 Xcode 工程。\n- `ios-deploy`：备用真机安装通道。\n- `libimobiledevice`：备用设备识别通道。\n\n当前检测结果：镜像/投屏可用，但命令行没有检测到可安装的 iPhone 设备。iOS 真机安装需要 USB 信任连接，或 Xcode 已完成无线调试配对。\n\n已准备好的装机入口：\n\n```bash\ncd \"/Users/wangbo/Documents/New project/悟空app\"\n./install_to_iphone.sh\n```\n\n运行条件：\n\n- 安装完整 Xcode。\n- 执行 `sudo xcode-select -s /Applications/Xcode.app/Contents/Developer`。\n- iPhone 解锁并信任这台 Mac。\n- Xcode 已登录 Apple ID，或设置 `APPLE_TEAM_ID`。\n\n可选环境变量：\n"
+    },
+    {
+      "path": "PWA/app.js",
+      "role": "网页下载端",
+      "bytes": 120065,
+      "modifiedAt": "2026-05-23T09:54:13.269294+00:00",
+      "sha256": "a2b6d3d9c90858859f924d70a91fa9c03dfecda6aa0260403e03b5ac2c5103b9",
+      "mime": "text/javascript",
+      "preview": "const API_BASE = \"https://michill.ai\";\nconst GATE_BASE = \"https://api.gateio.ws/api/v4\";\nconst SNAPSHOT_URL = \"./wukong_latest_snapshot.json\";\nconst EXCHANGE_SNAPSHOT_URL = \"./exchange_markets.json\";\nconst GATE_PRIVATE_STATUS_URL = \"./gate_private_status.json\";\nconst GATE_TRADE_PREFLIGHT_URL = \"./gate_trade_preflight.json\";\nconst PAPER_TRADING_STATE_URL = \"./paper_trading_state.json\";\nconst PROFESSIONAL_SYSTEM_URL = \"./professional_trade_system.json\";\nconst EMA_CROSS_4H_URL = \"./ema_cross_4h.json\";\nconst GATE_SNAPSHOT_URL = \"./gate_markets.json\";\nconst X_SOCIAL_URL = \"./x_social.json\";\nconst ALPHA_URL = \"./binance_alpha.json\";\nconst TELEGRAM_STATUS_URL = \"./telegram_status.json\";\nconst REFRESH_MS = 30_000;\nconst GATE_PAIRS = [\"BTC_USDT\", \"ETH_USDT\", \"SOL_USDT\", \"BNB_USDT\"];\nconst WATCHLIST_KEY = \"wukong.watchlist.v1\";\nconst APP_VERSION = \"121\";\nconst LOCAL_FILE_MODE = window.location.pro"
+    },
+    {
+      "path": "PWA/binance_alpha.json",
+      "role": "网页下载端",
+      "bytes": 6672,
+      "modifiedAt": "2026-05-23T09:55:01.494371+00:00",
+      "sha256": "4bbcdedc8fee3f8aff7ee796f13d2dd1c0c31bee8fe40b4bd4c7ea7e30643f3f",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance Alpha\",\n  \"mode\": \"snapshot\",\n  \"updatedAt\": \"2026-05-23T09:55:01.493555+00:00\",\n  \"alphaFetchedAt\": \"2026-05-23T09:01:44.587Z\",\n  \"summary\": {\n    \"tokens\": 646,\n    \"mappedTickers\": 604,\n    \"coveragePct\": 93.5,\n    \"cache\": \"data/cache/binance-alpha-token-list.json\",\n    \"dexCandidates\": 36,\n    \"repeatCandidates\": 7,\n    \"verifiedInWatch\": 0,\n    \"topTicker\": \"BTC\"\n  },\n  \"tokens\": [\n    {\n      \"ticker\": \"BTC\",\n      \"section\": \"mainstreamReference\",\n      \"stage\": \"回避\",\n      \"note\": \"扩散接力\",\n      \"change24h\": -3.362,\n      \"oi1h\": 0.4921324142563757,\n      \"heatScore\": 4211,\n      \"alphaScore\": 1926.0,\n      \"identityStatus\": \"unmapped\",\n      \"historyHits\": 450,"
+    },
+    {
+      "path": "PWA/downloads/wukong-android-release.apk",
+      "role": "网页下载端",
+      "bytes": 88025383,
+      "modifiedAt": "2026-05-13T16:47:01.482162+00:00",
+      "sha256": "c582ccaafd69b39a6bf7338950fc855784c178359c3d589d8c7ac55a69dc7249",
+      "mime": "application/vnd.android.package-archive",
+      "preview": ""
+    },
+    {
+      "path": "PWA/downloads/wukong-ios-install.mobileconfig",
+      "role": "网页下载端",
+      "bytes": 6444,
+      "modifiedAt": "2026-05-23T10:05:15.859966+00:00",
+      "sha256": "3d6070b3d15e9ff74e9a1f8a6f46da11d1dc0c12df7dc9b637aa4ab11f60e617",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": "PWA/downloads/wukong-ios-install.mobileconfig.b64.txt",
+      "role": "网页下载端",
+      "bytes": 8592,
+      "modifiedAt": "2026-05-23T10:05:15.860421+00:00",
+      "sha256": "ad7d78f514efb1dc856d2eb8bd0f55efadb01b8981ba715f32d47778caa9edc2",
+      "mime": "text/plain",
+      "preview": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHBsaXN0IFBVQkxJQyAiLS8vQXBwbGUvL0RURCBQTElTVCAxLjAvL0VOIiAiaHR0cDovL3d3dy5hcHBsZS5jb20vRFREcy9Qcm9wZXJ0eUxpc3QtMS4wLmR0ZCI+CjxwbGlzdCB2ZXJzaW9uPSIxLjAiPgo8ZGljdD4KCTxrZXk+UGF5bG9hZENvbnRlbnQ8L2tleT4KCTxhcnJheT4KCQk8ZGljdD4KCQkJPGtleT5GdWxsU2NyZWVuPC9rZXk+CgkJCTx0cnVlLz4KCQkJPGtleT5JY29uPC9rZXk+CgkJCTxkYXRhPgoJCQlpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTFFBQUFDMENBSUFBQUN5cjVGbEFBQUFBWE5TCgkJCVIwSUFyczRjNlFBQUFFUmxXRWxtVFUwQUtnQUFBQWdBQVlkcEFBUUFBQUFCQUFBQUdnQUEKCQkJQUFBQUE2QUJBQU1BQUFBQkFBRUFBS0FDQUFRQUFBQUJBQUFBdEtBREFBUUFBQUFCQUFBQQoJCQl0QUFBQUFCVzFaWjVBQUFNMjBsRVFWUjRBZTFjWWM0ZE5ReWtxQmVvMVArQXhDazRDOGZqCgkJCUxKd0NDYmdKUVN0WlZodzdkbUluenI3d284cG00L0hNZUY3ZTF4YjQ4dTM3dHgvdVA5ZUIKCQkJbGdNL3RqYnYzblhnZndkdU9HNE9XQWR1T0Zocjdvc2JqcHNCMW9FYkR0YWErK0tHNDJhQQoJCQlkZUNHZzdYbXZyamh1QmxnSGZqS3ZubmRpei8vL3QxTDAyKy8vT0VGbFJubnk0di9oTlF4CgkJ"
+    },
+    {
+      "path": "PWA/ema_cross_4h.json",
+      "role": "网页下载端",
+      "bytes": 1032,
+      "modifiedAt": "2026-05-23T09:54:52.708589+00:00",
+      "sha256": "17e25dd1edbbe99b7fb3d234af7737e4b57bc0ee42a5edd5dd6cf2886783c490",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-23T09:54:52.706883+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 2,\n  \"durationSeconds\": 14.07,\n  \"items\": [\n    {\n      \"ticker\": \"BANK\",\n      \"symbol\": \"BANKUSDT\",\n      \"pair\": \"BANK/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.04063,\n      \"changeLastCandlePct\": 3.648,\n      \"ema21\": 0.0381598777,\n      \"ema55\": 0.0380139569,\n      \"emaSpreadPct\": 0.3839,\n      \"candleCloseTime\": \"2026-05-23T11:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    },\n    {\n      \"ticker\": \"HANA\",\n      \"symbol\": \"HANAUSDT\",\n      \"pair\": \"HANA/USDT\","
+    },
+    {
+      "path": "PWA/ema_cross_4h_bootstrap.js",
+      "role": "网页下载端",
+      "bytes": 819,
+      "modifiedAt": "2026-05-23T09:54:52.709470+00:00",
+      "sha256": "aeb9bac104f54a67d594994cf3167d006e9998161683d0588616ccfca5d64538",
+      "mime": "text/javascript",
+      "preview": "window.WUKONG_EMA_CROSS_4H = {\"app\":\"悟空\",\"source\":\"Binance USDT perpetual klines\",\"mode\":\"public-readonly\",\"generatedAt\":\"2026-05-23T09:54:52.706883+00:00\",\"interval\":\"4h\",\"rule\":\"EMA21 上穿 EMA55\",\"symbolsScanned\":527,\"matches\":2,\"durationSeconds\":14.07,\"items\":[{\"ticker\":\"BANK\",\"symbol\":\"BANKUSDT\",\"pair\":\"BANK/USDT\",\"interval\":\"4h\",\"close\":0.04063,\"changeLastCandlePct\":3.648,\"ema21\":0.0381598777,\"ema55\":0.0380139569,\"emaSpreadPct\":0.3839,\"candleCloseTime\":\"2026-05-23T11:59:59.999000+00:00\",\"signal\":\"4H EMA21 上穿 EMA55\"},{\"ticker\":\"HANA\",\"symbol\":\"HANAUSDT\",\"pair\":\"HANA/USDT\",\"interval\":\"4h\",\"close\":0.03967,\"changeLastCandlePct\":1.744,\"ema21\":0.0348532209,\"ema55\":0.0348448172,\"emaSpreadPct\":0.0241,\"candleCloseTime\":\"2026-05-23T11:59:59.999000+00:00\",\"signal\":\"4H EMA21 上穿 EMA55\"}],\"errors\":[]};"
+    },
+    {
+      "path": "PWA/exchange_markets.json",
+      "role": "网页下载端",
+      "bytes": 24871,
+      "modifiedAt": "2026-05-23T09:55:00.728126+00:00",
+      "sha256": "7371c602c4c8326e5178346a0f0ada87990746b8ddbc230b09ab6eb9a2310c50",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-23T09:54:52.277031+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+    },
+    {
+      "path": "PWA/favicon.ico",
+      "role": "网页下载端",
+      "bytes": 15464,
+      "modifiedAt": "2026-05-16T01:41:55.483785+00:00",
+      "sha256": "f57a9dafcf23f7062d82cd45e0a27aef3d41168477e03aa06166186f7cbc0c5f",
+      "mime": "image/x-icon",
+      "preview": ""
+    },
+    {
+      "path": "PWA/gate_markets.json",
+      "role": "网页下载端",
+      "bytes": 4782,
+      "modifiedAt": "2026-05-23T09:55:00.728498+00:00",
+      "sha256": "22455538ffa6dbb646dae55b69ce3f2eb2b36c0f6303537950e441b664a455c1",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-23T09:54:52.277031+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {\n        \"currency_pair\": \"BTC_USDT\",\n        \"last\": \"74727.3\",\n        \"lowest_ask\": \"74727.3\",\n        \"lowest_size\": \"2.278912\",\n        \"highest_bid\": \"74727.2\",\n        \"highest_size\": \"3.171146\",\n        \"change_percentage\": \"-3.38\",\n        \"base_volume\": \"9133.024167\",\n        \"quote_volume\": \"693290455.4486185\",\n        \"high_24h\": \"77575.6\",\n        \"low_24h\": \"74291.1\"\n      },\n      \"futures\": {\n        \"last\": \"74693.4\",\n        \"low_24h\": \"74226.6\",\n        \"high_24h\": \"77549\",\n        \"volume_24h\": \"707761962\",\n        \"change_percentage\": \"-3.38\",\n        \"change_price\": \"-2612.7\",\n        \"funding_rate_indicative\": \"0.000096\","
+    },
+    {
+      "path": "PWA/gate_private_status.json",
+      "role": "网页下载端",
+      "bytes": 4218,
+      "modifiedAt": "2026-05-23T09:55:01.220646+00:00",
+      "sha256": "b0ecf300281eaf0ee6c3d2c8bf0f381adee4710f9cfad946a31fe0f2f708f745",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-23T09:55:00.806118+00:00\",\n  \"configured\": true,\n  \"authenticated\": true,\n  \"keyMasked\": \"2e56...ad5c\",\n  \"keyFingerprint\": \"e366fb49a342\",\n  \"secretFingerprint\": \"aca6426bd754\",\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"secretRotationRequired\": false,\n  \"tradingMode\": \"paper\",\n  \"requestedTradingMode\": \"paper\",\n  \"liveTradingEnabled\": false,\n  \"liveTradingRequested\": false,\n  \"liveTradingUnlocked\": false,\n  \"liveTradingBlockedReason\": \"\",\n  \"orderEndpointEnabled\": false,\n  \"manualLiveCandidate\": true,\n  \"manualConfirmationRequired\": true,\n  \"riskBudget\": {\n    \"accountEquityUsdt\": 100.0,\n    \"leverage\": 10.0,\n    \"maxNotionalUsdt\": 50.0,\n    \"maxMarginUsdt\": 5.0,\n    \"riskPerTradeUsdt\": 2.75,\n    \"dailyMaxLossUsdt\": 5.0,"
+    },
+    {
+      "path": "PWA/gate_trade_preflight.json",
+      "role": "网页下载端",
+      "bytes": 6482,
+      "modifiedAt": "2026-05-22T11:11:19.111060+00:00",
+      "sha256": "ac014eb445349db45be1af6e9e5344aedf8c6cd6ce8e93324d1e1506fb95de5b",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-22T11:11:19.109009+00:00\",\n  \"mode\": \"dry-run\",\n  \"canSubmitOrder\": false,\n  \"manualConfirmationRequired\": true,\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"manualLiveReadiness\": [\n    {\n      \"name\": \"新 Key\",\n      \"ok\": true,\n      \"detail\": \"必须撤销旧 Key 并换新 Key\"\n    },\n    {\n      \"name\": \"IP 白名单\",\n      \"ok\": false,\n      \"detail\": \"等待配置固定出口 IP 白名单\"\n    },\n    {\n      \"name\": \"单笔限额\",\n      \"ok\": true,\n      \"detail\": \"最大名义 50U，最大保证金 5U，单笔风险 2.75U\"\n    },\n    {\n      \"name\": \"每日熔断\",\n      \"ok\": true,"
+    },
+    {
+      "path": "PWA/icons/wukong-180.png",
+      "role": "网页下载端",
+      "bytes": 3441,
+      "modifiedAt": "2026-05-11T21:15:26+00:00",
+      "sha256": "f1d2da41e5379cf4e494c4559c9c97accf69fdb052c55da043d5a89dd6b2f7d0",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "PWA/icons/wukong-192.png",
+      "role": "网页下载端",
+      "bytes": 3724,
+      "modifiedAt": "2026-05-11T21:15:26+00:00",
+      "sha256": "9650d8b5986a9932e061fb1aab7bbe611f4e78a36ff4bcadb7ad0acb24ce37f0",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "PWA/icons/wukong-512.png",
+      "role": "网页下载端",
+      "bytes": 12799,
+      "modifiedAt": "2026-05-11T21:15:26+00:00",
+      "sha256": "f5780bfe39eb9dfdd45022115be113873457186e32e77ed2059544a56e652748",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "PWA/index.html",
+      "role": "网页下载端",
+      "bytes": 54421,
+      "modifiedAt": "2026-05-23T09:54:13.266789+00:00",
+      "sha256": "4ba9fa964195b075f5af70687ddf0de9bfc711f59999ca6b551b88d08072ce32",
+      "mime": "text/html",
+      "preview": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n  <meta name=\"theme-color\" content=\"#070b12\">\n  <meta name=\"description\" content=\"悟空实时机会、市场信号、Telegram 同步与风险工作台\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <meta name=\"mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\n  <meta name=\"apple-mobile-web-app-title\" content=\"悟空\">\n  <title>悟空</title>\n  <link rel=\"manifest\" href=\"./manifest.webmanifest?v=121\">\n  <link rel=\"icon\" href=\"./favicon.ico\" sizes=\"any\">\n  <link rel=\"icon\" type=\"image/png\" href=\"./icons/wukong-192.png\">\n  <link rel=\"apple-touch-icon\" href=\"./icons/wukong-180.png\">\n  <link rel=\"stylesheet\" href=\"./styles.css?v=121\">\n</head>"
+    },
+    {
+      "path": "PWA/install.html",
+      "role": "网页下载端",
+      "bytes": 4491,
+      "modifiedAt": "2026-05-23T09:54:13.267219+00:00",
+      "sha256": "b1bfd17618a7a5a42e77f4c1c977b935692fd506fcdf4a7162a336c06dccc7cf",
+      "mime": "text/html",
+      "preview": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n  <meta name=\"theme-color\" content=\"#070b12\">\n  <meta name=\"description\" content=\"悟空苹果、安卓、网页统一下载入口\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <meta name=\"mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\n  <meta name=\"apple-mobile-web-app-title\" content=\"悟空\">\n  <title>下载悟空</title>\n  <link rel=\"manifest\" href=\"./manifest.webmanifest?v=121\">\n  <link rel=\"icon\" href=\"./favicon.ico\" sizes=\"any\">\n  <link rel=\"icon\" type=\"image/png\" href=\"./icons/wukong-192.png\">\n  <link rel=\"apple-touch-icon\" href=\"./icons/wukong-180.png\">\n  <link rel=\"stylesheet\" href=\"./styles.css?v=121\">\n</head>\n<body>\n  <"
+    },
+    {
+      "path": "PWA/manifest.webmanifest",
+      "role": "网页下载端",
+      "bytes": 1462,
+      "modifiedAt": "2026-05-23T09:54:13.267821+00:00",
+      "sha256": "bcdd9a6df1f9cdcb7b95ab5119f6d6e8fa02de175d2ba458ab0fbbeed41f6080",
+      "mime": "application/manifest+json",
+      "preview": "{\n  \"name\": \"悟空\",\n  \"short_name\": \"悟空\",\n  \"id\": \"./index.html\",\n  \"description\": \"悟空实时机会、市场信号、Telegram 同步与风险工作台\",\n  \"lang\": \"zh-CN\",\n  \"dir\": \"ltr\",\n  \"start_url\": \"./index.html?v=121\",\n  \"scope\": \"./\",\n  \"display\": \"standalone\",\n  \"display_override\": [\"standalone\", \"browser\"],\n  \"orientation\": \"portrait\",\n  \"background_color\": \"#070b12\",\n  \"theme_color\": \"#070b12\",\n  \"categories\": [\"finance\", \"productivity\", \"utilities\"],\n  \"prefer_related_applications\": false,\n  \"icons\": [\n    {\n      \"src\": \"./icons/wukong-192.png\",\n      \"sizes\": \"192x192\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    },\n    {\n      \"src\": \"./icons/wukong-512.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\""
+    },
+    {
+      "path": "PWA/paper_trading_state.json",
+      "role": "网页下载端",
+      "bytes": 1239,
+      "modifiedAt": "2026-05-22T11:11:17.227936+00:00",
+      "sha256": "6bafd04c73732fa9cc42210ecf0138e0e092957c8d6606f7bf1120b625a5b6e0",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n  \"state\": \"running\",\n  \"reason\": \"入仓信号存在，纸交易引擎自动运行；真实订单提交关闭\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [\n    {\n      \"market\": \"ONDO_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"open\",\n      \"openedAt\": \"2026-05-22T10:59:53.664004+00:00\",\n      \"updatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n      \"entryPrice\": 0.42583716,\n      \"lastPrice\": 0.42650345,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,\n          \"closePct\": 25"
+    },
+    {
+      "path": "PWA/privacy.html",
+      "role": "网页下载端",
+      "bytes": 2963,
+      "modifiedAt": "2026-05-23T09:54:13.267520+00:00",
+      "sha256": "45e6f24710503bc6a69b0e3b2cd65458acc4797166010cde9bbf68cc167280da",
+      "mime": "text/html",
+      "preview": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"theme-color\" content=\"#070b12\">\n  <meta name=\"description\" content=\"悟空隐私政策\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <meta name=\"mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\n  <meta name=\"apple-mobile-web-app-title\" content=\"悟空\">\n  <title>悟空隐私政策</title>\n  <link rel=\"manifest\" href=\"./manifest.webmanifest?v=121\">\n  <link rel=\"icon\" href=\"./favicon.ico\" sizes=\"any\">\n  <link rel=\"apple-touch-icon\" href=\"./icons/wukong-180.png\">\n  <style>\n    body {\n      margin: 0;\n      background: #070b12;\n      color: #eef9ff;\n      font-family: -apple-system, BlinkMacSystemFont, \"PingFang SC\", \"Helvetic"
+    },
+    {
+      "path": "PWA/professional_trade_system.json",
+      "role": "网页下载端",
+      "bytes": 2710,
+      "modifiedAt": "2026-05-22T11:12:17.418678+00:00",
+      "sha256": "490023d1a7c8f81c2d4fce10c09b222c8885e77045f93cdd980516315952318d",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"generatedAt\": \"2026-05-22T11:12:17.418035+00:00\",\n  \"profile\": \"professional-auto-trading-framework\",\n  \"fileScan\": {\n    \"count\": 198,\n    \"requiredReady\": true\n  },\n  \"executionModes\": [\n    {\n      \"name\": \"auto-paper\",\n      \"enabled\": true,\n      \"detail\": \"信号出现自动纸交易，信号消失自动关闭\"\n    },\n    {\n      \"name\": \"telegram-confirm-preflight\",\n      \"enabled\": true,\n      \"detail\": \"Telegram 一键确认只做预检，不提交订单\"\n    },\n    {\n      \"name\": \"live-api-ready-shell\",\n      \"enabled\": true,\n      \"detail\": \"Gate 私有 API 已可读，实盘提交端点保持锁定\"\n    },\n    {\n      \"name\": \"unattended-live-order\",\n      \"enabled\": false,\n      \"detail\": \"无人值守实盘自动下单关闭\""
+    },
+    {
+      "path": "PWA/qr/download-links.txt",
+      "role": "网页下载端",
+      "bytes": 292,
+      "modifiedAt": "2026-05-23T10:05:15.933141+00:00",
+      "sha256": "56b33a025447a9ef5c2fe13138673f5e40171c44b5e693089f40a28a0b3498f4",
+      "mime": "text/plain",
+      "preview": "Apple/iPhone: https://memphis-assist-nor-charleston.trycloudflare.com/install.html?v=121\nAndroid APK: https://memphis-assist-nor-charleston.trycloudflare.com/downloads/wukong-android-release.apk?v=121\nInstall center: https://memphis-assist-nor-charleston.trycloudflare.com/install.html?v=121"
+    },
+    {
+      "path": "PWA/qr/wukong-android-qr.png",
+      "role": "网页下载端",
+      "bytes": 3384,
+      "modifiedAt": "2026-05-23T10:05:15.933006+00:00",
+      "sha256": "9b417ad260d02db041deae3c565b96b9b5d752acd3be580e037cc6b3698000b2",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "PWA/qr/wukong-ios-qr.png",
+      "role": "网页下载端",
+      "bytes": 2628,
+      "modifiedAt": "2026-05-23T10:05:15.920956+00:00",
+      "sha256": "c46fd37d925df00a5ccf0b1ad71ff2fbf2206550ea6043757c30159306a2c27f",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "PWA/shell.js",
+      "role": "网页下载端",
+      "bytes": 274,
+      "modifiedAt": "2026-05-23T09:57:52.220654+00:00",
+      "sha256": "bd5f98184524ffb5ebdacaf5971e8dc4e3deedf8c190b3eb1f4a39c5951a8f39",
+      "mime": "text/javascript",
+      "preview": "const WUKONG_SHELL_VERSION = new URL(document.currentScript?.src || window.location.href).searchParams.get(\"v\") || \"121\";\n\nif (window.location.protocol !== \"file:\" && \"serviceWorker\" in navigator) {\n  navigator.serviceWorker.register(`./sw.js?v=${WUKONG_SHELL_VERSION}`);\n}"
+    },
+    {
+      "path": "PWA/styles.css",
+      "role": "网页下载端",
+      "bytes": 108102,
+      "modifiedAt": "2026-05-23T09:53:17.338810+00:00",
+      "sha256": "e131b4bed57629964340c38f70fbb6fda9d888c6e139c7ecd9facf54fdc821c7",
+      "mime": "text/css",
+      "preview": ":root {\n  color-scheme: dark;\n  --bg: #061622;\n  --panel: #0c2233;\n  --line: #21445f;\n  --text: #eef9ff;\n  --muted: #9fc4d9;\n  --accent: #61d4ff;\n  --warning: #ffbe5c;\n  --danger: #ff756c;\n  --ok: #8cf2c5;\n  --x: #d7f1ff;\n  --alpha: #ffe08a;\n}\n\n* {\n  box-sizing: border-box;\n}\n\n[hidden] {\n  display: none !important;\n}\n\nhtml,\nbody {\n  min-height: 100%;\n}\n"
+    },
+    {
+      "path": "PWA/sw.js",
+      "role": "网页下载端",
+      "bytes": 2929,
+      "modifiedAt": "2026-05-23T09:53:47.714405+00:00",
+      "sha256": "9e734a5ba054d4b4dc1e7a87683500c95361fff3ea801aa4e7f6e2cf889cb483",
+      "mime": "text/javascript",
+      "preview": "const CACHE = \"wukong-pwa-v121\";\nconst ASSETS = [\n  \"./\",\n  \"./index.html\",\n  \"./install.html\",\n  \"./privacy.html\",\n  \"./styles.css\",\n  \"./app.js\",\n  \"./shell.js\",\n  \"./manifest.webmanifest\",\n  \"./favicon.ico\",\n  \"./wukong_latest_snapshot.json\",\n  \"./exchange_markets.json\",\n  \"./gate_private_status.json\",\n  \"./gate_markets.json\",\n  \"./ema_cross_4h.json\",\n  \"./ema_cross_4h_bootstrap.js\",\n  \"./x_social.json\",\n  \"./binance_alpha.json\",\n  \"./telegram_status.json\",\n  \"./wukong_file_sync.json\",\n  \"./qr/wukong-ios-qr.png\",\n  \"./qr/wukong-android-qr.png\",\n  \"./icons/wukong-180.png\",\n  \"./icons/wukong-192.png\",\n  \"./icons/wukong-512.png\"\n];\n"
+    },
+    {
+      "path": "PWA/telegram_status.json",
+      "role": "网页下载端",
+      "bytes": 370,
+      "modifiedAt": "2026-05-23T09:55:01.506243+00:00",
+      "sha256": "984775fea84b06ef99b4aef5032978f5f34e6b27e0c280e26703bdc97a51072c",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"idle\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-23T09:55:01.505473+00:00\",\n  \"marketGeneratedAt\": \"2026-05-23T09:52:55.901Z\",\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [],\n  \"messageChunks\": 0,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 22,\n    \"priority\": 4,\n    \"risk\": 6\n  },\n  \"queueTotal\": 32,\n  \"error\": \"\"\n}"
+    },
+    {
+      "path": "PWA/wukong_latest_snapshot.json",
+      "role": "网页下载端",
+      "bytes": 1231295,
+      "modifiedAt": "2026-05-23T09:57:52.224883+00:00",
+      "sha256": "ad6885009aff643c21fb601d4ab418ce0ef791143647b79c7d1b133f8cf83446",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-23T09:54:52.202689+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-23T09:52:55.901Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-23 17:52\\nApp推送：05-23 17:54:52\\n\\n币种数：8013\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：2\\n风险样本：6\\nBinance Alpha：CA 646 · 已映射 604\\nAI纸面日历：-51.7% · 172笔\\n\\nAI复盘：进入视野 648 · 可复盘 220 · 涨超30% 92\\n\\n今日系统看见 648 个币，可复盘样本 220 个，涨超 10% 的样本 172 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. BAN | 重点候选 | 合约启动\\n   24h +16.2% · OI1h +0.7% · OI6h +7.3% · 费率 5e-05 · 分 55 · 价 0.08708\\n2. JCT | 重点候选 | 合约启动\\n   24h +12.9% · OI1h +0.7% · OI6h -2.8% · 费率 7.841e-05 · 分 55 · 价 0.00400475\\n3. MYX | 等待回踩 | 合约启动\\n   24h +10.6% · OI1h +0.5% · OI6h +9.0% · 费率 5e-05 · 分 76 · 价 0.19913381\\n4. NEAR | 回避 | 扩散接力\\n   24h -7.6% · OI1h +0.1% · OI6h +0.0% · 费率 0.0001 · 分 65 · 价 2.08479369\\n5. SKY | 等待回踩 | 合约启动\\n   24h -1.5% · OI1h +0.8% · OI6h -3.1% · 费率 -8.1"
+    },
+    {
+      "path": "PWA/x_social.json",
+      "role": "网页下载端",
+      "bytes": 2089,
+      "modifiedAt": "2026-05-23T09:55:01.436080+00:00",
+      "sha256": "5310748f8efafe79639b03c0497d60bb6148a505b4d1b94a49eee5d338bf3037",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"X / Twitter\",\n  \"mode\": \"snapshot\",\n  \"updatedAt\": \"2026-05-23T09:55:01.435269+00:00\",\n  \"snapshotFetchedAt\": \"2026-05-01T14:23:27.147Z\",\n  \"summary\": {\n    \"posts\": 390,\n    \"tickers\": 24,\n    \"topTicker\": \"TAG\",\n    \"message\": \"未配置 X_BEARER_TOKEN，当前使用悟空已有公开快照。\"\n  },\n  \"topTickers\": [\n    {\n      \"ticker\": \"TAG\",\n      \"posts\": 20,\n      \"section\": \"riskWinnersReview\",\n      \"stage\": \"回避\",\n      \"change24h\": 24.272,\n      \"heatScore\": 2327,\n      \"note\": \"观察中\",\n      \"searchUrl\": \"https://x.com/search?q=%24TAG%20crypto&src=typed_query&f=live\"\n    },\n    {\n      \"ticker\": \"UB\",\n      \"posts\": 20,\n      \"section\": \"riskWinnersReview\",\n      \"stage\": \"回避\","
+    },
+    {
+      "path": "PWA_INSTALL.md",
+      "role": "网页下载端",
+      "bytes": 1489,
+      "modifiedAt": "2026-05-23T09:54:13.270096+00:00",
+      "sha256": "def97d0876cea27427d986d7d8d55d8fc5639bcc0f6911ed86a76229e11df95e",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 iPhone 临时安装链接\n\n当前可用链接：\n\nhttps://conferences-engines-cope-foundation.trycloudflare.com/install.html?v=121\n\niPhone 安装方式：\n\n1. 在 iPhone Safari 打开上面的链接。\n2. 点击分享按钮。\n3. 选择“添加到主屏幕”。\n4. 名称填写“悟空”。\n5. 从主屏幕打开“悟空”。\n\n说明：\n\n- 这是 PWA 版本，可以像 App 一样从主屏幕打开。\n- 数据每 30 秒从 Michill、Gate、本地同步快照和 Telegram 状态更新。\n- 当前安装链接带 `v=121`，用于强制刷新手机端缓存和安装配置。\n- 这个链接由 Cloudflare Quick Tunnel 提供，适合当前装机测试；终端里的 tunnel 进程停止后链接会失效。\n- App Store/TestFlight 真正下载地址仍需要完整 Xcode、Apple Developer 签名和 Apple 审核流程。\n\n重新生成临时安装链接：\n\n```bash\ncd \"/Users/wangbo/Documents/New project/悟空app\"\npython3 start_wukong_pwa.py\n```"
+    },
+    {
+      "path": "Package.swift",
+      "role": "Apple App",
+      "bytes": 376,
+      "modifiedAt": "2026-05-10T19:13:02.631936+00:00",
+      "sha256": "fab83a7a9277760a51cffe09d2deddb90bb7807aa2cc22a20c1793478476388f",
+      "mime": "application/octet-stream",
+      "preview": "// swift-tools-version: 6.1\n\nimport PackageDescription\n\nlet package = Package(\n    name: \"Wukong\",\n    platforms: [\n        .macOS(.v14),\n        .iOS(.v17)\n    ],\n    products: [\n        .executable(name: \"Wukong\", targets: [\"Wukong\"])\n    ],\n    targets: [\n        .executableTarget(\n            name: \"Wukong\",\n            path: \"Sources/MichillAppleApp\"\n        )\n    ]\n)"
+    },
+    {
+      "path": "README.md",
+      "role": "文档",
+      "bytes": 7233,
+      "modifiedAt": "2026-05-23T09:54:13.270370+00:00",
+      "sha256": "b543dbef30676b483313bc6e0e095ede485bab2e8ed54c2c91f06409dac6e9e7",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 / Wukong\n\n一个原生 SwiftUI Apple 客户端，App 名称为“悟空”，复刻并重组 `https://michill.ai/#opportunities-panel` 的公开研究台。\n\n## 已覆盖功能\n\n- 总览：入场窗口、早发现雷达、确认/回踩候选、信号切换、OI 异动、风险区等核心计数。\n- AI 复盘：读取公开报告、样本计数、共同特征、多维交叉组合与风险提示。\n- 行情分区：入场窗口、早发现雷达、确认/回踩候选、信号轨迹、机会雷达、启动复盘、风险区。\n- 币种搜索：调用 `/api/summary/ticker/:ticker` 查询历史轨迹。\n- 我的关注：本机保存关注列表，不写回服务器。\n- 详情页：展示价格、资金费率、OI 窗口、交易层闸门、入场/早发现信号、OI/量能/费率证据。\n- AI 纸面日历摘要：读取 `/api/ai-trading-calendar`。\n- 实时更新：启动后立即读取公开 API，并每 30 秒自动刷新一次，界面显示最近 App 刷新时间。\n- 前台恢复同步：App 从后台回到前台时，如果数据超过 10 秒未刷新，会主动补一次同步。\n- 技能中心：展示实时同步、机会扫描、风险过滤、Telegram 联动、本机关注和搜索轨迹等能力状态。\n\n## 运行\n\n```bash\ncd \"/Users/wangbo/Documents/New project/悟空app\"\nCLANG_MODULE_CACHE_PATH=\"$PWD/.build-cache/clang\" \\\nSWIFTPM_HOME=\"$PWD/.build-cache/swiftpm\" \\\nswift run --scratch-path \"$PWD/.build\"\n```\n\n当前机器没有完整 Xcode，只有 Command Line Tools；项目已通过 `swift build` 编译验证。安装 Xcode 后，可以直接打开这个 Swift Package，或把 `Sources/MichillAppleApp/main.swift` 放"
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/Contents.json",
+      "role": "同步数据",
+      "bytes": 1149,
+      "modifiedAt": "2026-05-13T16:34:50.889503+00:00",
+      "sha256": "859727236147b30567a7dcce45c0a7a7c567bcefd32e8c1e618cf9c290b1a73e",
+      "mime": "application/json",
+      "preview": "{\n  \"images\": [\n    {\n      \"filename\": \"icon-20@40.png\",\n      \"idiom\": \"iphone\",\n      \"scale\": \"2x\",\n      \"size\": \"20x20\"\n    },\n    {\n      \"filename\": \"icon-20@60.png\",\n      \"idiom\": \"iphone\",\n      \"scale\": \"3x\",\n      \"size\": \"20x20\"\n    },\n    {\n      \"filename\": \"icon-29@58.png\",\n      \"idiom\": \"iphone\",\n      \"scale\": \"2x\",\n      \"size\": \"29x29\"\n    },\n    {\n      \"filename\": \"icon-29@87.png\",\n      \"idiom\": \"iphone\",\n      \"scale\": \"3x\",\n      \"size\": \"29x29\"\n    },\n    {\n      \"filename\": \"icon-40@80.png\","
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-1024@1024.png",
+      "role": "资源",
+      "bytes": 56016,
+      "modifiedAt": "2026-05-13T16:33:47.468258+00:00",
+      "sha256": "872c2da2f8b74d5bea1a69d214dfdfd812f1b49a72de38465676b5e92ec4d217",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-20@40.png",
+      "role": "资源",
+      "bytes": 3561,
+      "modifiedAt": "2026-05-13T16:33:47.299883+00:00",
+      "sha256": "7009a47f5d2c31dc1736d70e12bcbb58dc69049d131c8b26765a368b4a1cc1df",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-20@60.png",
+      "role": "资源",
+      "bytes": 5993,
+      "modifiedAt": "2026-05-13T16:33:47.312957+00:00",
+      "sha256": "75dc39ec99dea281e44ae9cc19264a009e42ace23277afecb7cdedbb23671cc5",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-29@58.png",
+      "role": "资源",
+      "bytes": 5806,
+      "modifiedAt": "2026-05-13T16:33:47.325940+00:00",
+      "sha256": "48c2ea7259cd98afacf3905bfc72cb4ca17ed39d8326979bb7fb1c679856f745",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-29@87.png",
+      "role": "资源",
+      "bytes": 9165,
+      "modifiedAt": "2026-05-13T16:33:47.340466+00:00",
+      "sha256": "71acaa7adb172af61d9fdf18c62e99e380e6387e23255cf7c1c72815a84bc669",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-40@120.png",
+      "role": "资源",
+      "bytes": 13589,
+      "modifiedAt": "2026-05-13T16:33:47.367714+00:00",
+      "sha256": "02799a599d9eea4da2d913b42f8d5569d5026bcd57f00f3788c67b11ecf6532c",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-40@80.png",
+      "role": "资源",
+      "bytes": 8369,
+      "modifiedAt": "2026-05-13T16:33:47.353920+00:00",
+      "sha256": "3876e322e582b154de89e0d0eabf3da02c88a2e614bdfd3032ef54a0c08e9b65",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-60@120.png",
+      "role": "资源",
+      "bytes": 13589,
+      "modifiedAt": "2026-05-13T16:33:47.381739+00:00",
+      "sha256": "02799a599d9eea4da2d913b42f8d5569d5026bcd57f00f3788c67b11ecf6532c",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-60@180.png",
+      "role": "资源",
+      "bytes": 21266,
+      "modifiedAt": "2026-05-13T16:33:47.398063+00:00",
+      "sha256": "c9b33f0cce08e6a7f168f6c4f5095b76ca258fe81f437ccda6bb92eb6aa215a8",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-76@152.png",
+      "role": "资源",
+      "bytes": 17778,
+      "modifiedAt": "2026-05-13T16:33:47.413682+00:00",
+      "sha256": "8ab762c0f5aa3525dacb9db612d50e0e7494e5ede0bd3c2337766b21c49efb09",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/AppIcon.appiconset/icon-83.5@167.png",
+      "role": "资源",
+      "bytes": 19457,
+      "modifiedAt": "2026-05-13T16:33:47.428669+00:00",
+      "sha256": "f0e4ab7944b9be7f042b1d4321eb71cf4a969f29d24243fae660d91ecf0d2291",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "Resources/Assets.xcassets/Contents.json",
+      "role": "同步数据",
+      "bytes": 60,
+      "modifiedAt": "2026-05-13T16:34:50.889251+00:00",
+      "sha256": "f5fb0e1f3a8142892ed092efb5955c1c2cc537003a89ad7bbdb9dade7fe8985f",
+      "mime": "application/json",
+      "preview": "{\n  \"info\": {\n    \"author\": \"xcode\",\n    \"version\": 1\n  }\n}"
+    },
+    {
+      "path": "Resources/PrivacyInfo.xcprivacy",
+      "role": "资源",
+      "bytes": 598,
+      "modifiedAt": "2026-05-13T16:34:50.889699+00:00",
+      "sha256": "3e4a93cbe86acef7dd7e063a28c849992f556e7f52cadc5f37c1e8b0e1b54686",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": "Sources/.DS_Store",
+      "role": "Apple App",
+      "bytes": 6148,
+      "modifiedAt": "2026-05-10T19:25:27.540993+00:00",
+      "sha256": "5dfe275e28e0b521292b3b113441de3ee79cd1a94b2d607b8fd38cc2241d7e98",
+      "mime": "application/octet-stream",
+      "preview": ""
+    },
+    {
+      "path": "Sources/MichillAppleApp/main.swift",
+      "role": "Apple App",
+      "bytes": 82161,
+      "modifiedAt": "2026-05-23T09:52:17.716573+00:00",
+      "sha256": "280d5179e64d0f8d994d01334112ddc58a31abc59af031e727f22e67508aff52",
+      "mime": "application/octet-stream",
+      "preview": "import SwiftUI\n\n@main\nstruct WukongApp: App {\n    var body: some Scene {\n        WindowGroup {\n            DashboardView()\n                #if os(macOS)\n                .frame(minWidth: 1120, minHeight: 760)\n                #endif\n        }\n        #if os(macOS)\n        .windowStyle(.hiddenTitleBar)\n        #endif\n    }\n}\n\n@MainActor\nfinal class DashboardStore: ObservableObject {\n    @Published var dashboard: PublicDashboard?\n    @Published var report: PublicReportEnvelope?\n    @Published var calendar: TradingCalendar?\n    @Published var bridge = WukongBridgeStatus()\n    @Published var tickerSearch: TickerSearchResult?\n    @Published var selectedSection: DashboardSection = .overview\n    @Published var selectedTicker: TokenItem?\n    @Published var screenMirror: WukongScreenMirror?\n    @Published var fileSync: WukongFileSync?"
+    },
+    {
+      "path": "WUKONG_TELEGRAM_BRIDGE.md",
+      "role": "Telegram",
+      "bytes": 593,
+      "modifiedAt": "2026-05-23T09:51:31.521487+00:00",
+      "sha256": "6ba338269ebdd8bf6d149eaab9a615456a8518eb62798fa97e9e35111f1bf108",
+      "mime": "application/octet-stream",
+      "preview": "# 悟空 Telegram / Codex Bridge\n\n这个目录是悟空 Apple App 和现有 Telegram/Codex 机器人的共享工作区。\n\n- 悟空推送模式：push-only，不调用 Telegram getUpdates。\n- 推送频率：每 30 秒。\n- 最新快照：`wukong_latest_snapshot.json`。\n- Telegram 接收和继续操作由现有 Hermes/Codex 网关负责。\n\n当用户在 Telegram 里要求操作悟空时，优先读取 `wukong_latest_snapshot.json`，再根据用户问题给出摘要、风险、候选列表或下一步动作。\n所有内容只作为公开研究信号与复盘，不构成投资建议。"
+    },
+    {
+      "path": "ai.wukong.pwa.plist",
+      "role": "自动化",
+      "bytes": 843,
+      "modifiedAt": "2026-05-11T22:26:54.884934+00:00",
+      "sha256": "684e32807807b72cd0fe6e6e5947cbd9c235b202bd456fdbed6e28ce748b356f",
+      "mime": "application/octet-stream",
+      "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>Label</key>\n\t<string>ai.wukong.pwa</string>\n\t<key>ProgramArguments</key>\n\t<array>\n\t\t<string>/usr/bin/python3</string>\n\t\t<string>/Users/wangbo/.hermes/wukong_pwa/start_wukong_pwa.py</string>\n\t</array>\n\t<key>WorkingDirectory</key>\n\t<string>/Users/wangbo/.hermes/wukong_pwa</string>\n\t<key>RunAtLoad</key>\n\t<true/>\n\t<key>StartInterval</key>\n\t<integer>300</integer>\n\t<key>KeepAlive</key>\n\t<dict>\n\t\t<key>SuccessfulExit</key>\n\t\t<false/>\n\t</dict>\n\t<key>StandardOutPath</key>\n\t<string>/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_launch.log</string>\n\t<key>StandardErrorPath</key>\n\t<string>/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_launch.error.log</string>\n</dict>\n</plist>"
+    },
+    {
+      "path": "ai.wukong.telegram.plist",
+      "role": "Telegram",
+      "bytes": 883,
+      "modifiedAt": "2026-05-11T22:33:19.421401+00:00",
+      "sha256": "580b11cd3ad1d5629ebf63f928e3627ed50ac3deef5917024009a9144d8b67d7",
+      "mime": "application/octet-stream",
+      "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>Label</key>\n\t<string>ai.wukong.telegram</string>\n\t<key>ProgramArguments</key>\n\t<array>\n\t\t<string>/usr/bin/python3</string>\n\t\t<string>/Users/wangbo/.hermes/wukong_telegram/start_wukong_telegram.py</string>\n\t</array>\n\t<key>WorkingDirectory</key>\n\t<string>/Users/wangbo/.hermes/wukong_telegram</string>\n\t<key>RunAtLoad</key>\n\t<true/>\n\t<key>StartInterval</key>\n\t<integer>300</integer>\n\t<key>KeepAlive</key>\n\t<dict>\n\t\t<key>SuccessfulExit</key>\n\t\t<false/>\n\t</dict>\n\t<key>StandardOutPath</key>\n\t<string>/Users/wangbo/.hermes/wukong_telegram/wukong_telegram_launch.log</string>\n\t<key>StandardErrorPath</key>\n\t<string>/Users/wangbo/.hermes/wukong_telegram/wukong_telegram_launch.error.log</string>\n</dict>\n</plist>"
+    },
+    {
+      "path": "app.py",
+      "role": "自动化",
+      "bytes": 21194,
+      "modifiedAt": "2026-05-23T09:53:17.333588+00:00",
+      "sha256": "825ad0d5b01209e91383457d1b917c558ed1b5259aca27d6e9f42d8e195f7033",
+      "mime": "text/x-python",
+      "preview": "\"\"\"\nWukong Live Professional Dashboard\n=================================\n\nRun:\n    pip install -r requirements-dashboard.txt\n    python app.py\n\nOpen:\n    http://127.0.0.1:8050\n\nThis dashboard reads the existing Wukong JSON snapshots first:\n- wukong_latest_snapshot.json\n- PWA/gate_markets.json\n- telegram_status.json\n- wukong_file_sync.json\n- binance_alpha.json\n- x_social.json\n\nIf a data source is missing, the UI degrades gracefully instead of pretending\nthat live trading data exists. Real-order execution remains disabled.\n\"\"\"\n\nfrom __future__ import annotations\n\nfrom collections import Counter\nfrom datetime import datetime, timezone\nimport json"
+    },
+    {
+      "path": "binance_alpha.json",
+      "role": "同步数据",
+      "bytes": 6672,
+      "modifiedAt": "2026-05-23T09:55:01.494518+00:00",
+      "sha256": "4bbcdedc8fee3f8aff7ee796f13d2dd1c0c31bee8fe40b4bd4c7ea7e30643f3f",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance Alpha\",\n  \"mode\": \"snapshot\",\n  \"updatedAt\": \"2026-05-23T09:55:01.493555+00:00\",\n  \"alphaFetchedAt\": \"2026-05-23T09:01:44.587Z\",\n  \"summary\": {\n    \"tokens\": 646,\n    \"mappedTickers\": 604,\n    \"coveragePct\": 93.5,\n    \"cache\": \"data/cache/binance-alpha-token-list.json\",\n    \"dexCandidates\": 36,\n    \"repeatCandidates\": 7,\n    \"verifiedInWatch\": 0,\n    \"topTicker\": \"BTC\"\n  },\n  \"tokens\": [\n    {\n      \"ticker\": \"BTC\",\n      \"section\": \"mainstreamReference\",\n      \"stage\": \"回避\",\n      \"note\": \"扩散接力\",\n      \"change24h\": -3.362,\n      \"oi1h\": 0.4921324142563757,\n      \"heatScore\": 4211,\n      \"alphaScore\": 1926.0,\n      \"identityStatus\": \"unmapped\",\n      \"historyHits\": 450,"
+    },
+    {
+      "path": "capacitor.config.ts",
+      "role": "资源",
+      "bytes": 332,
+      "modifiedAt": "2026-05-11T23:34:09.710185+00:00",
+      "sha256": "db584253bba3b68691e9b3fd9064a15066ca2aea34305775e7159694cc02a1f0",
+      "mime": "video/mp2t",
+      "preview": ""
+    },
+    {
+      "path": "ema_cross_4h.json",
+      "role": "同步数据",
+      "bytes": 1032,
+      "modifiedAt": "2026-05-23T09:54:52.708387+00:00",
+      "sha256": "17e25dd1edbbe99b7fb3d234af7737e4b57bc0ee42a5edd5dd6cf2886783c490",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-23T09:54:52.706883+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 2,\n  \"durationSeconds\": 14.07,\n  \"items\": [\n    {\n      \"ticker\": \"BANK\",\n      \"symbol\": \"BANKUSDT\",\n      \"pair\": \"BANK/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.04063,\n      \"changeLastCandlePct\": 3.648,\n      \"ema21\": 0.0381598777,\n      \"ema55\": 0.0380139569,\n      \"emaSpreadPct\": 0.3839,\n      \"candleCloseTime\": \"2026-05-23T11:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    },\n    {\n      \"ticker\": \"HANA\",\n      \"symbol\": \"HANAUSDT\",\n      \"pair\": \"HANA/USDT\","
+    },
+    {
+      "path": "exchange_markets.json",
+      "role": "同步数据",
+      "bytes": 24871,
+      "modifiedAt": "2026-05-23T09:55:00.727964+00:00",
+      "sha256": "7371c602c4c8326e5178346a0f0ada87990746b8ddbc230b09ab6eb9a2310c50",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-23T09:54:52.277031+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+    },
+    {
+      "path": "gate_private_status.py",
+      "role": "自动化",
+      "bytes": 13935,
+      "modifiedAt": "2026-05-22T09:18:23.940324+00:00",
+      "sha256": "2ae0cacb1f257b7f55a4e7671457c62e960ffcf0f07c11c77bb4958f65bb0227",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Check Gate private API binding status without placing orders.\"\"\"\n\nfrom __future__ import annotations\n\nimport hashlib\nimport hmac\nimport json\nimport os\nimport time\nimport urllib.error\nimport urllib.parse\nimport urllib.request\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nENV_PATHS = [\n    ROOT / \".env.gate\",\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/.env.gate\"),\n    Path(\"/Users/wangbo/.hermes/.env\"),\n]\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"gate_private_status.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/gate_private_status.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/gate_private_status.json\"),"
+    },
+    {
+      "path": "gate_trade_preflight.py",
+      "role": "自动化",
+      "bytes": 9834,
+      "modifiedAt": "2026-05-22T10:20:30.590746+00:00",
+      "sha256": "8afb5d757569b40811d7d30184789a36b3fe3944f2eddfd5a347fbd1f66856b8",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Create a dry-run Gate trade preflight plan without submitting orders.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\nfrom gate_private_status import build_status\nfrom gate_private_status import EXIT_RULE\nfrom gate_private_status import PROTECTION_LAYERS\n\n\nROOT = Path(__file__).resolve().parent\nSNAPSHOT_PATHS = [\n    ROOT / \"PWA\" / \"wukong_latest_snapshot.json\",\n    ROOT / \"wukong_latest_snapshot.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/wukong_latest_snapshot.json\"),\n]\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"gate_trade_preflight.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/gate_trade_preflight.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/gate_trade_preflight.json\"),\n]\n\n"
+    },
+    {
+      "path": "generate_download_qr.py",
+      "role": "自动化",
+      "bytes": 1674,
+      "modifiedAt": "2026-05-23T09:54:13.269799+00:00",
+      "sha256": "c4f2790d81ba7c0de374d345d665efa5b5ccb691d186cc7d2eb8fa2d109fe807",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Generate Wukong Apple and Android download QR codes.\"\"\"\n\nfrom __future__ import annotations\n\nfrom pathlib import Path\n\nimport qrcode\n\n\nROOT = Path(__file__).resolve().parent\nPWA = ROOT / \"PWA\"\nQR_DIR = PWA / \"qr\"\nPWA_URL_PATHS = [\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_url.txt\"),\n    ROOT / \"wukong_pwa_url.txt\",\n]\n\n\ndef current_pwa_url() -> str:\n    for path in PWA_URL_PATHS:\n        try:\n            value = path.read_text(encoding=\"utf-8\").strip()\n        except OSError:\n            continue\n        if value.startswith((\"https://\", \"http://\")):\n            return value.rstrip(\"/\")\n    raise SystemExit(\"Missing current Wukong PWA URL.\")"
+    },
+    {
+      "path": "generate_ios_profile.py",
+      "role": "自动化",
+      "bytes": 2460,
+      "modifiedAt": "2026-05-23T09:54:13.269587+00:00",
+      "sha256": "fc3cd3424f2c5387965e36be6ff759b0c5252a0c42daf41cfa7c1d211c4493ec",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Generate a downloadable iPhone Web Clip profile for Wukong.\"\"\"\n\nfrom __future__ import annotations\n\nimport base64\nimport plistlib\nimport uuid\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPWA = ROOT / \"PWA\"\nPROFILE_PATH = PWA / \"downloads\" / \"wukong-ios-install.mobileconfig\"\nPWA_URL_PATHS = [\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_url.txt\"),\n    ROOT / \"wukong_pwa_url.txt\",\n]\n\n\ndef current_pwa_url() -> str:\n    for path in PWA_URL_PATHS:\n        try:\n            value = path.read_text(encoding=\"utf-8\").strip()\n        except OSError:\n            continue\n        if value.startswith((\"https://\", \"http://\")):\n            return value.rstrip(\"/\")"
+    },
+    {
+      "path": "iOS/Info.plist",
+      "role": "自动化",
+      "bytes": 865,
+      "modifiedAt": "2026-05-11T20:36:31.476744+00:00",
+      "sha256": "4e13d724c1d888be6beee6a994dc084c21ea1ae1f4fd3a95927c234a5b8eebc4",
+      "mime": "application/octet-stream",
+      "preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\n\t<key>CFBundleDevelopmentRegion</key>\n\t<string>$(DEVELOPMENT_LANGUAGE)</string>\n\t<key>CFBundleDisplayName</key>\n\t<string>悟空</string>\n\t<key>CFBundleExecutable</key>\n\t<string>$(EXECUTABLE_NAME)</string>\n\t<key>CFBundleIdentifier</key>\n\t<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>\n\t<key>CFBundleInfoDictionaryVersion</key>\n\t<string>6.0</string>\n\t<key>CFBundleName</key>\n\t<string>悟空</string>\n\t<key>CFBundlePackageType</key>\n\t<string>APPL</string>\n\t<key>CFBundleShortVersionString</key>\n\t<string>1.0</string>\n\t<key>CFBundleVersion</key>\n\t<string>1</string>\n\t<key>UIApplicationSceneManifest</key>\n\t<dict>\n\t\t<key>UIApplicationSupportsMultipleScenes</key>\n\t\t<false/>\n\t</dict>\n</dict>"
+    },
+    {
+      "path": "install_to_iphone.sh",
+      "role": "自动化",
+      "bytes": 2094,
+      "modifiedAt": "2026-05-11T20:40:46.032541+00:00",
+      "sha256": "2c43e85c042e5e39e25c6dc248aa54ba01488c75d4143a6cc7072036686fb918",
+      "mime": "application/x-sh",
+      "preview": "#!/bin/zsh\nset -euo pipefail\n\nROOT=\"$(cd \"$(dirname \"$0\")\" && pwd)\"\ncd \"$ROOT\"\n\nif ! xcodebuild -version >/dev/null 2>&1; then\n  echo \"未检测到完整 Xcode。请先安装 Xcode，并运行：sudo xcode-select -s /Applications/Xcode.app/Contents/Developer\"\n  exit 2\nfi\n\nif ! command -v xcodegen >/dev/null 2>&1; then\n  if command -v brew >/dev/null 2>&1; then\n    brew install xcodegen\n  else\n    echo \"缺少 xcodegen，也没有 Homebrew。请先安装 XcodeGen。\"\n    exit 2\n  fi\nfi\n\nTEAM_ARG=()\nif [[ -n \"${APPLE_TEAM_ID:-}\" ]]; then\n  TEAM_ARG=(DEVELOPMENT_TEAM=\"$APPLE_TEAM_ID\")\nfi\n\nxcodegen generate\n\nDEVICE_ID=\"${IPHONE_DEVICE_ID:-}\""
+    },
+    {
+      "path": "package-lock.json",
+      "role": "同步数据",
+      "bytes": 42307,
+      "modifiedAt": "2026-05-11T23:35:21.619280+00:00",
+      "sha256": "c8724d04fe4313adfe83794a5fa60415f6026a6dff49ced2a605651bbfcffc45",
+      "mime": "application/json",
+      "preview": "{\n  \"name\": \"wukong-mobile\",\n  \"version\": \"1.0.0\",\n  \"lockfileVersion\": 3,\n  \"requires\": true,\n  \"packages\": {\n    \"\": {\n      \"name\": \"wukong-mobile\",\n      \"version\": \"1.0.0\",\n      \"dependencies\": {\n        \"@capacitor/android\": \"^7.4.4\",\n        \"@capacitor/app\": \"^7.1.0\",\n        \"@capacitor/core\": \"^7.4.4\",\n        \"@capacitor/ios\": \"^7.4.4\",\n        \"@capacitor/splash-screen\": \"^7.0.3\"\n      },\n      \"devDependencies\": {\n        \"@capacitor/cli\": \"^7.4.4\",\n        \"typescript\": \"^6.0.3\"\n      }\n    },\n    \"node_modules/@capacitor/android\": {\n      \"version\": \"7.6.4\",\n      \"resolved\": \"https://registry.npmmirror.com/@capacitor/android/-/android-7.6.4.tgz\",\n      \"integrity\": \"sha512-ETk+B1q+kt7H5ArRK+OG478L1LtDQFtFpYbY37M3T8jzYe7BDZEem2QJEsNX6Mszy4hhPkhdOiogohR2YrlDvw==\",\n      \"license\": \"MIT\",\n      \"peerDependencies\": {\n        \"@capacitor/core\": \"^7.6.0\""
+    },
+    {
+      "path": "package.json",
+      "role": "同步数据",
+      "bytes": 728,
+      "modifiedAt": "2026-05-11T23:36:47.271704+00:00",
+      "sha256": "d2ad14b6bb5a9562a5f6a1ff2cc2fd50ed7c5c50c3358c76f500f343876f8501",
+      "mime": "application/json",
+      "preview": "{\n  \"name\": \"wukong-mobile\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"description\": \"悟空 Android/iOS wrapper for the live Wukong PWA.\",\n  \"scripts\": {\n    \"sync:files\": \"python3 sync_wukong_files.py\",\n    \"cap:sync\": \"npm run sync:files && npx cap sync android\",\n    \"android:debug\": \"npm run cap:sync && cd android && ./gradlew assembleDebug\",\n    \"android:release\": \"npm run cap:sync && cd android && ./gradlew assembleRelease\"\n  },\n  \"dependencies\": {\n    \"@capacitor/android\": \"^7.4.4\",\n    \"@capacitor/app\": \"^7.1.0\",\n    \"@capacitor/core\": \"^7.4.4\",\n    \"@capacitor/ios\": \"^7.4.4\",\n    \"@capacitor/splash-screen\": \"^7.0.3\"\n  },\n  \"devDependencies\": {\n    \"@capacitor/cli\": \"^7.4.4\",\n    \"typescript\": \"^6.0.3\"\n  }\n}"
+    },
+    {
+      "path": "paper_trading_state.json",
+      "role": "同步数据",
+      "bytes": 1239,
+      "modifiedAt": "2026-05-22T11:11:17.227680+00:00",
+      "sha256": "6bafd04c73732fa9cc42210ecf0138e0e092957c8d6606f7bf1120b625a5b6e0",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n  \"state\": \"running\",\n  \"reason\": \"入仓信号存在，纸交易引擎自动运行；真实订单提交关闭\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [\n    {\n      \"market\": \"ONDO_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"open\",\n      \"openedAt\": \"2026-05-22T10:59:53.664004+00:00\",\n      \"updatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n      \"entryPrice\": 0.42583716,\n      \"lastPrice\": 0.42650345,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,\n          \"closePct\": 25"
+    },
+    {
+      "path": "project.yml",
+      "role": "资源",
+      "bytes": 1104,
+      "modifiedAt": "2026-05-13T16:34:50.891125+00:00",
+      "sha256": "e0b933c47034868d4455200cbc8e06e03f2f4e2366138dd2729d9c4312771998",
+      "mime": "application/octet-stream",
+      "preview": "name: Wukong\noptions:\n  bundleIdPrefix: ai.wukong\n  deploymentTarget:\n    iOS: \"17.0\"\n    macOS: \"14.0\"\nsettings:\n  base:\n    SWIFT_VERSION: \"6.0\"\n    PRODUCT_NAME: \"悟空\"\n    MARKETING_VERSION: \"1.0\"\n    CURRENT_PROJECT_VERSION: \"1\"\ntargets:\n  Wukong:\n    type: application\n    platform: iOS\n    sources:\n      - path: Sources/MichillAppleApp\n      - path: Resources\n    info:\n      path: iOS/Info.plist\n      properties:\n        CFBundleDisplayName: \"悟空\"\n        CFBundleName: \"悟空\"\n        CFBundleShortVersionString: \"1.0\"\n        CFBundleVersion: \"1\"\n        UIApplicationSceneManifest:\n          UIApplicationSupportsMultipleScenes: false"
+    },
+    {
+      "path": "requirements-dashboard.txt",
+      "role": "同步数据",
+      "bytes": 79,
+      "modifiedAt": "2026-05-14T18:20:14.683877+00:00",
+      "sha256": "675a17e4ff8c329d6eec318af85b6ddb7cb180e825d803a5b1d71d49fd380dfd",
+      "mime": "text/plain",
+      "preview": "dash>=2.17\ndash-bootstrap-components>=1.6\nplotly>=5.22\npandas>=2.0\nnumpy>=1.24"
+    },
+    {
+      "path": "scripts/apple_sign_check.sh",
+      "role": "自动化",
+      "bytes": 1604,
+      "modifiedAt": "2026-05-13T17:21:14.415502+00:00",
+      "sha256": "dc185e7529797b8723d2c01b5216efdd6967c91ccd44518b9a4f1129fff487de",
+      "mime": "application/x-sh",
+      "preview": "#!/bin/zsh\nset -euo pipefail\n\nROOT=\"$(cd \"$(dirname \"$0\")/..\" && pwd)\"\ncd \"$ROOT\"\n\necho \"悟空 Apple 签名检查\"\necho\n\necho \"1. Xcode\"\nif /usr/bin/xcodebuild -version >/dev/null 2>&1; then\n  /usr/bin/xcodebuild -version\nelse\n  echo \"FAIL: 当前没有完整 Xcode，或 xcode-select 没有指向 Xcode.app。\"\n  echo \"FIX : sudo xcode-select -s /Applications/Xcode.app/Contents/Developer\"\nfi\necho\n\necho \"2. Code signing identities\"\nIDS=\"$(security find-identity -v -p codesigning 2>/dev/null || true)\"\necho \"$IDS\"\nif ! echo \"$IDS\" | grep -q \"Apple Distribution\"; then\n  echo \"FAIL: 没有 Apple Distribution 签名证书。\"\n  echo \"FIX : 在 Xcode 登录 Apple Developer 账号，创建或下载 Apple Distribution 证书。\"\nfi\nif ! echo \"$IDS\" | grep -q \"Apple Development\"; then\n  echo \"WARN: 没有 Apple Development 签名证书，真机调试签名也不可用。\"\nfi"
+    },
+    {
+      "path": "scripts/build_app_store.sh",
+      "role": "自动化",
+      "bytes": 1510,
+      "modifiedAt": "2026-05-13T16:34:50.890624+00:00",
+      "sha256": "2211b3262cd37b14e8520ea8c87ce8757ba9ba21d122d7552bb88976d1284dcf",
+      "mime": "application/x-sh",
+      "preview": "#!/bin/zsh\nset -euo pipefail\n\nROOT=\"$(cd \"$(dirname \"$0\")/..\" && pwd)\"\ncd \"$ROOT\"\n\nif ! /usr/bin/xcodebuild -version >/dev/null 2>&1; then\n  echo \"缺少完整 Xcode。请先安装 Xcode，并运行：\"\n  echo \"sudo xcode-select -s /Applications/Xcode.app/Contents/Developer\"\n  exit 2\nfi\n\nif ! security find-identity -v -p codesigning | grep -q \"Apple Distribution\"; then\n  echo \"没有找到 Apple Distribution 签名证书。请先在 Xcode 登录 Apple Developer 账号并创建证书。\"\n  exit 3\nfi\n\nif command -v xcodegen >/dev/null 2>&1; then\n  xcodegen generate\nfi\n\nARCHIVE_PATH=\"$ROOT/build/AppStore/Wukong.xcarchive\"\nEXPORT_PATH=\"$ROOT/build/AppStore/export\"\n\nrm -rf \"$ARCHIVE_PATH\" \"$EXPORT_PATH\"\nmkdir -p \"$EXPORT_PATH\"\n\nxcodebuild archive \\"
+    },
+    {
+      "path": "scripts/build_signed_ios.sh",
+      "role": "自动化",
+      "bytes": 2260,
+      "modifiedAt": "2026-05-13T17:21:14.415977+00:00",
+      "sha256": "27d23e1941fed7f9f48791a231a38dceed65ea152217309ae69c3d36e201d8ee",
+      "mime": "application/x-sh",
+      "preview": "#!/bin/zsh\nset -euo pipefail\n\nROOT=\"$(cd \"$(dirname \"$0\")/..\" && pwd)\"\ncd \"$ROOT\"\n\nMETHOD=\"${1:-app-store}\"\ncase \"$METHOD\" in\n  app-store|ad-hoc|development) ;;\n  *)\n    echo \"用法：$0 [app-store|ad-hoc|development]\"\n    exit 64\n    ;;\nesac\n\nif ! /usr/bin/xcodebuild -version >/dev/null 2>&1; then\n  echo \"缺少完整 Xcode。请先安装 Xcode，并运行：\"\n  echo \"sudo xcode-select -s /Applications/Xcode.app/Contents/Developer\"\n  exit 2\nfi\n\nIDENTITIES=\"$(security find-identity -v -p codesigning 2>/dev/null || true)\"\nif [[ \"$METHOD\" == \"development\" ]]; then\n  REQUIRED_IDENTITY=\"Apple Development\"\nelse\n  REQUIRED_IDENTITY=\"Apple Distribution\"\nfi\nif ! echo \"$IDENTITIES\" | grep -q \"$REQUIRED_IDENTITY\"; then"
+    },
+    {
+      "path": "start_wukong_pwa.py",
+      "role": "网页下载端",
+      "bytes": 10059,
+      "modifiedAt": "2026-05-21T17:29:44.566207+00:00",
+      "sha256": "8e5a4fce1c833836cf36bfdef70221605bb7a8c856d2bc5953c68a47f5451bb0",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Start the Wukong PWA server and a Cloudflare quick tunnel.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport ipaddress\nimport os\nimport re\nimport signal\nimport shutil\nimport subprocess\nimport sys\nimport time\nimport urllib.error\nimport urllib.parse\nimport urllib.request\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPWA_ROOT = ROOT / \"PWA\"\nPID_PATH = ROOT / \".wukong_pwa.pid.json\"\nLOG_PATH = ROOT / \"wukong_pwa_tunnel.log\"\nURL_PATH = ROOT / \"wukong_pwa_url.txt\"\nPENDING_URL_PATH = ROOT / \".wukong_pwa_pending_url\"\nLAST_SENT_URL_PATH = ROOT / \".wukong_pwa_last_sent_url\"\nPORT = int(os.getenv(\"WUKONG_PWA_PORT\", \"8088\"))"
+    },
+    {
+      "path": "start_wukong_telegram.py",
+      "role": "Telegram",
+      "bytes": 1506,
+      "modifiedAt": "2026-05-23T09:51:18.218005+00:00",
+      "sha256": "5e931d4da47321ab36e730a7a39a408106e6fef69d95c2af6561168c430c5cbc",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Start Wukong Telegram push mode as a background process.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nimport signal\nimport subprocess\nimport sys\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPID_PATH = ROOT / \".wukong_telegram_bot.pid\"\nLOG_PATH = ROOT / \"wukong_telegram_bot.log\"\nERROR_LOG_PATH = ROOT / \"wukong_telegram_bot.error.log\"\n\n\ndef pid_is_running(pid: int) -> bool:\n    try:\n        os.kill(pid, 0)\n    except ProcessLookupError:\n        return False\n    except PermissionError:\n        return True\n    return True\n\n"
+    },
+    {
+      "path": "stop_wukong_pwa.py",
+      "role": "网页下载端",
+      "bytes": 901,
+      "modifiedAt": "2026-05-11T21:19:42.067907+00:00",
+      "sha256": "0f55968f09204077e1ba146600bb5c0a639f243d74ce8d12f35f1c32f49f2aca",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Stop Wukong PWA server and Cloudflare quick tunnel.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport signal\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPID_PATH = ROOT / \".wukong_pwa.pid.json\"\n\n\ndef main() -> int:\n    try:\n        pids = json.loads(PID_PATH.read_text(encoding=\"utf-8\"))\n    except Exception:\n        print(\"No Wukong PWA pid file found.\")\n        return 0\n\n    for name, raw_pid in pids.items():\n        try:\n            pid = int(raw_pid)\n            os.kill(pid, signal.SIGTERM)\n            print(f\"Stopped {name}: pid {pid}\")\n        except ProcessLookupError:"
+    },
+    {
+      "path": "stop_wukong_telegram.py",
+      "role": "Telegram",
+      "bytes": 1039,
+      "modifiedAt": "2026-05-11T20:12:57.243587+00:00",
+      "sha256": "ce4152ba63e2f0f1181dd5aca920ed5b3a16c3a5e252498758a84a40abe1a32e",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Stop the background Wukong Telegram push process.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nimport signal\nimport time\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPID_PATH = ROOT / \".wukong_telegram_bot.pid\"\n\n\ndef main() -> int:\n    try:\n        pid = int(PID_PATH.read_text(encoding=\"utf-8\").strip())\n    except Exception:\n        print(\"No Wukong Telegram pid file found.\")\n        return 0\n\n    try:\n        os.kill(pid, signal.SIGTERM)\n    except ProcessLookupError:\n        print(f\"Wukong Telegram process is not running: pid {pid}\")\n        PID_PATH.unlink(missing_ok=True)\n        return 0"
+    },
+    {
+      "path": "sync_binance_alpha.py",
+      "role": "自动化",
+      "bytes": 5513,
+      "modifiedAt": "2026-05-14T04:30:00.633635+00:00",
+      "sha256": "334a74936cb3b78abf88d183237342aa2ad4a0b487be4e5332d9e630d1a3fd06",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Build the Wukong Binance Alpha snapshot from the live Wukong dashboard.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nSNAPSHOT_CANDIDATES = [\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/wukong_latest_snapshot.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/wukong_latest_snapshot.json\"),\n    ROOT / \"PWA\" / \"wukong_latest_snapshot.json\",\n    ROOT / \"wukong_latest_snapshot.json\",\n]\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"binance_alpha.json\",\n    ROOT / \"binance_alpha.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/binance_alpha.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/binance_alpha.json\"),\n]\n\n\ndef load_dashboard() -> dict[str, Any]:\n    for path in SNAPSHOT_CANDIDATES:"
+    },
+    {
+      "path": "sync_ema_cross_4h.py",
+      "role": "自动化",
+      "bytes": 5437,
+      "modifiedAt": "2026-05-23T09:18:28.454170+00:00",
+      "sha256": "a6fb7156d94ebf459eca4ce24a9a269f5b2e97afd6a314dfe743fe19d7994015",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Scan Binance USDT futures for 4H EMA21 crossing above EMA55.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport time\nimport urllib.parse\nimport urllib.request\nfrom concurrent.futures import ThreadPoolExecutor, as_completed\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nOUTPUT_PATHS = [\n    ROOT / \"ema_cross_4h.json\",\n    ROOT / \"PWA\" / \"ema_cross_4h.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/ema_cross_4h.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/ema_cross_4h.json\"),\n]\nBOOTSTRAP_PATHS = [\n    ROOT / \"PWA\" / \"ema_cross_4h_bootstrap.js\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/ema_cross_4h_bootstrap.js\"),\n]\nBASE = \"https://fapi.binance.com\""
+    },
+    {
+      "path": "sync_exchange_api.py",
+      "role": "自动化",
+      "bytes": 6428,
+      "modifiedAt": "2026-05-22T05:59:51.987729+00:00",
+      "sha256": "6a7d2b4d4f55cba708f76f71670f81476d079ec60b4968d41e2e5ddcb352c9c6",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Sync public Binance, OKX, and Gate market data for Wukong surfaces.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport urllib.parse\nimport urllib.request\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nSYMBOLS = [\n    {\"base\": \"BTC\", \"binance\": \"BTCUSDT\", \"okx_spot\": \"BTC-USDT\", \"okx_swap\": \"BTC-USDT-SWAP\", \"gate\": \"BTC_USDT\"},\n    {\"base\": \"ETH\", \"binance\": \"ETHUSDT\", \"okx_spot\": \"ETH-USDT\", \"okx_swap\": \"ETH-USDT-SWAP\", \"gate\": \"ETH_USDT\"},\n    {\"base\": \"SOL\", \"binance\": \"SOLUSDT\", \"okx_spot\": \"SOL-USDT\", \"okx_swap\": \"SOL-USDT-SWAP\", \"gate\": \"SOL_USDT\"},\n    {\"base\": \"BNB\", \"binance\": \"BNBUSDT\", \"okx_spot\": \"BNB-USDT\", \"okx_swap\": \"BNB-USDT-SWAP\", \"gate\": \"BNB_USDT\"},\n]\n\nOUTPUT_PATHS = [\n    ROOT / \"exchange_markets.json\",\n    ROOT / \"PWA\" / \"exchange_markets.json\",\n    Pat"
+    },
+    {
+      "path": "sync_gate_api.py",
+      "role": "自动化",
+      "bytes": 2136,
+      "modifiedAt": "2026-05-13T14:20:00.186069+00:00",
+      "sha256": "3e9f973b90c4085cb61fe4e8ff89811ff5f18ec91253b28239e8fda068c5ee02",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Sync public Gate.io market data for Wukong PWA and app surfaces.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport urllib.parse\nimport urllib.request\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nGATE_BASE = \"https://api.gateio.ws/api/v4\"\nGATE_PAIRS = [\"BTC_USDT\", \"ETH_USDT\", \"SOL_USDT\", \"BNB_USDT\"]\nROOT = Path(__file__).resolve().parent\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"gate_markets.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/gate_markets.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/gate_markets.json\"),\n]\n\n\ndef get_json(path: str, query: dict[str, str]) -> Any:\n    url = f\"{GATE_BASE}{path}?{urllib.parse.urlencode(query)}\"\n    request = urllib.request.Request(url, headers={\"User-Agent\": \"Wukong-Gate-Sync/1.0\"})\n    with urllib.request.urlopen(request, timeout=20) as response:\n        r"
+    },
+    {
+      "path": "sync_wukong_files.py",
+      "role": "自动化",
+      "bytes": 4630,
+      "modifiedAt": "2026-05-22T07:07:20.960652+00:00",
+      "sha256": "d08cd2b36a5dc6ea17598f74211381cfcd6de74b2d48755d762e9cd5db7332e7",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Build a live file inventory for Wukong app and PWA surfaces.\"\"\"\n\nfrom __future__ import annotations\n\nimport hashlib\nimport json\nimport mimetypes\nimport os\nimport time\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\n\nDEFAULT_ROOT = Path(\"/Users/wangbo/Documents/New project/悟空app\")\nROOT = Path(os.getenv(\"WUKONG_PROJECT_ROOT\") or DEFAULT_ROOT)\nif not ROOT.exists():\n    ROOT = Path(__file__).resolve().parent\nHERMES_PWA = Path(\"/Users/wangbo/.hermes/wukong_pwa\")\nHERMES_TELEGRAM = Path(\"/Users/wangbo/.hermes/wukong_telegram\")\nOUTPUT_NAME = \"wukong_file_sync.json\"\n\nSKIP_PARTS = {\n    \".build\",\n    \".build-appstore-check\",\n    \".build-cache\",\n    \".git\",\n    \".playwright-cli\","
+    },
+    {
+      "path": "sync_x_api.py",
+      "role": "自动化",
+      "bytes": 6845,
+      "modifiedAt": "2026-05-14T04:30:00.633141+00:00",
+      "sha256": "002a79832ba26ad5c3930006d7499f11dd6861f20ad4c413a2fe3a490341b957",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Build the Wukong X/Twitter social snapshot.\n\nThe app can run immediately from Wukong's existing public snapshot. If an\nX/Twitter API Bearer Token is present, it also enriches the file with recent\nsearch results from the official API.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport os\nimport sys\nimport urllib.error\nimport urllib.parse\nimport urllib.request\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nSNAPSHOT_CANDIDATES = [\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/wukong_latest_snapshot.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/wukong_latest_snapshot.json\"),\n    ROOT / \"PWA\" / \"wukong_latest_snapshot.json\",\n    ROOT / \"wukong_latest_snapshot.json\",\n]"
+    },
+    {
+      "path": "telegram_status.json",
+      "role": "Telegram",
+      "bytes": 370,
+      "modifiedAt": "2026-05-23T09:55:01.506184+00:00",
+      "sha256": "984775fea84b06ef99b4aef5032978f5f34e6b27e0c280e26703bdc97a51072c",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"idle\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-23T09:55:01.505473+00:00\",\n  \"marketGeneratedAt\": \"2026-05-23T09:52:55.901Z\",\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [],\n  \"messageChunks\": 0,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 22,\n    \"priority\": 4,\n    \"risk\": 6\n  },\n  \"queueTotal\": 32,\n  \"error\": \"\"\n}"
+    },
+    {
+      "path": "telegram_wukong_bot.py",
+      "role": "Telegram",
+      "bytes": 60563,
+      "modifiedAt": "2026-05-23T09:53:17.334395+00:00",
+      "sha256": "6eaf77991f3734b05a031124bd34578b80e09f00c60e4793ce46cd7176cc2f84",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Telegram control plane for Wukong.\n\nFeatures:\n- Pushes Wukong market/review summaries to Telegram every minute.\n- Accepts Telegram commands for refresh, sections, ticker search, watchlist, and AI Q&A.\n- Uses only the Python standard library.\n\nRequired environment:\n- TELEGRAM_BOT_TOKEN\n- TELEGRAM_CHAT_ID\n\nOptional environment:\n- OPENAI_API_KEY or CODEX_API_KEY\n- WUKONG_OPENAI_MODEL, defaults to gpt-4.1-mini\n- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 30\n\nWhen an existing Hermes Telegram gateway is already polling the bot, run this\nscript with --push-only so it only sends messages and never calls getUpdates.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport sys\nimport time"
+    },
+    {
+      "path": "wukong-iphone-install-qr.png",
+      "role": "资源",
+      "bytes": 631,
+      "modifiedAt": "2026-05-11T22:31:14.096556+00:00",
+      "sha256": "52659167f2eae9210fbd1e116d8098dc8de58d5e3f127b3ffad6d22ee70b1565",
+      "mime": "image/png",
+      "preview": ""
+    },
+    {
+      "path": "wukong_auto_repair.py",
+      "role": "自动化",
+      "bytes": 4380,
+      "modifiedAt": "2026-05-21T15:10:45.856693+00:00",
+      "sha256": "4f7a22de28837b3d074df94edb3de4749bc433e5c390b8b5a7ae7ae6f8a541c6",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Regenerate, publish, restart, and self-check the Wukong PWA runtime.\"\"\"\n\nfrom __future__ import annotations\n\nimport shutil\nimport subprocess\nimport sys\nimport time\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPWA = ROOT / \"PWA\"\nHERMES_PWA = Path(\"/Users/wangbo/.hermes/wukong_pwa\")\nPUBLISH = HERMES_PWA / \"PWA\"\nHERMES_TELEGRAM = Path(\"/Users/wangbo/.hermes/wukong_telegram\")\nHERMES_WUKONG = Path(\"/Users/wangbo/.hermes/wukong\")\n\n\ndef run(args: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:\n    return subprocess.run(args, cwd=str(ROOT), text=True, check=check)\n\n\ndef copy_files(files: list[str], source_root: Path, target_root: Path) -> None:\n    target_root.mkdir(parents=True, exist_ok=True)\n    for rel in files:\n        source = source_root / rel"
+    },
+    {
+      "path": "wukong_browser_check.js",
+      "role": "资源",
+      "bytes": 15477,
+      "modifiedAt": "2026-05-23T08:19:07.015367+00:00",
+      "sha256": "cc44dcf460a4d5f4cb1586726903731f32683c8f12b172043017667ecf1012c6",
+      "mime": "text/javascript",
+      "preview": "#!/usr/bin/env node\n\"use strict\";\n\nconst fs = require(\"fs\");\nconst http = require(\"http\");\nconst path = require(\"path\");\nconst { execFileSync } = require(\"child_process\");\n\nconst ROOT = __dirname;\nconst PWA = path.join(ROOT, \"PWA\");\nconst APP_JS = fs.readFileSync(path.join(PWA, \"app.js\"), \"utf8\");\nconst VERSION = (APP_JS.match(/APP_VERSION\\s*=\\s*\"(\\d+)\"/) || [])[1];\nconst PUBLIC_URL_FILES = [\n  \"/Users/wangbo/.hermes/wukong_pwa/wukong_pwa_url.txt\",\n  path.join(ROOT, \"wukong_pwa_url.txt\"),\n];\nconst GROUPS = [\n  [\"overviewGroup\", \"实时总览\"],\n  [\"decisionGroup\", \"决策中心\"],\n  [\"marketGroup\", \"市场信号\"],\n  [\"telegramGroup\", \"Telegram\"],\n  [\"installGroup\", \"我的\"],\n  [\"filesGroup\", \"文件同步\"],\n];\n\nif (!VERSION) {\n  throw new Error(\"PWA/app.js missing APP_VERSION\");\n}"
+    },
+    {
+      "path": "wukong_health.py",
+      "role": "自动化",
+      "bytes": 9047,
+      "modifiedAt": "2026-05-23T09:53:17.334700+00:00",
+      "sha256": "cef5796048090e4616c40a7cbab070513ac3ee5f7bf5f06236043cfe1170db08",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Health report for Wukong PWA, Telegram push, and live data snapshots.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport subprocess\nimport sys\nimport time\nimport urllib.request\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nHERMES = Path(\"/Users/wangbo/.hermes\")\nPWA_VERSION = \"121\"\nMAX_FRESH_SECONDS = 30 * 60\nPWA_URL_PATHS = [HERMES / \"wukong_pwa\" / \"wukong_pwa_url.txt\", ROOT / \"wukong_pwa_url.txt\"]\nSNAPSHOT_PATHS = [HERMES / \"wukong_telegram\" / \"wukong_latest_snapshot.json\", ROOT / \"wukong_latest_snapshot.json\"]\nFILE_SYNC_PATHS = [HERMES / \"wukong_telegram\" / \"wukong_file_sync.json\", HERMES / \"wukong_pwa\" / \"wukong_file_sync.json\", ROOT / \"wukong_file_sync.json\"]\nNO_PROXY_OPENER = urllib.request.build_opener(urllib.request.ProxyHandler({}))\n\n\ndef "
+    },
+    {
+      "path": "wukong_latest_snapshot.json",
+      "role": "同步数据",
+      "bytes": 1231295,
+      "modifiedAt": "2026-05-23T09:57:52.222671+00:00",
+      "sha256": "ad6885009aff643c21fb601d4ab418ce0ef791143647b79c7d1b133f8cf83446",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-23T09:54:52.202689+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-23T09:52:55.901Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-23 17:52\\nApp推送：05-23 17:54:52\\n\\n币种数：8013\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：2\\n风险样本：6\\nBinance Alpha：CA 646 · 已映射 604\\nAI纸面日历：-51.7% · 172笔\\n\\nAI复盘：进入视野 648 · 可复盘 220 · 涨超30% 92\\n\\n今日系统看见 648 个币，可复盘样本 220 个，涨超 10% 的样本 172 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. BAN | 重点候选 | 合约启动\\n   24h +16.2% · OI1h +0.7% · OI6h +7.3% · 费率 5e-05 · 分 55 · 价 0.08708\\n2. JCT | 重点候选 | 合约启动\\n   24h +12.9% · OI1h +0.7% · OI6h -2.8% · 费率 7.841e-05 · 分 55 · 价 0.00400475\\n3. MYX | 等待回踩 | 合约启动\\n   24h +10.6% · OI1h +0.5% · OI6h +9.0% · 费率 5e-05 · 分 76 · 价 0.19913381\\n4. NEAR | 回避 | 扩散接力\\n   24h -7.6% · OI1h +0.1% · OI6h +0.0% · 费率 0.0001 · 分 65 · 价 2.08479369\\n5. SKY | 等待回踩 | 合约启动\\n   24h -1.5% · OI1h +0.8% · OI6h -3.1% · 费率 -8.1"
+    },
+    {
+      "path": "wukong_paper_engine.py",
+      "role": "自动化",
+      "bytes": 6366,
+      "modifiedAt": "2026-05-22T10:57:59.694737+00:00",
+      "sha256": "e3d38d1a64b411ce52e5641d49e4a0801b721acda07b811f83dd1a5702821a27",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Run Wukong automatic paper trading without submitting real orders.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nSTATE_PATH = ROOT / \"paper_trading_state.json\"\nPREFLIGHT_PATH = ROOT / \"PWA\" / \"gate_trade_preflight.json\"\nSNAPSHOT_PATHS = [\n    ROOT / \"PWA\" / \"wukong_latest_snapshot.json\",\n    ROOT / \"wukong_latest_snapshot.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/wukong_latest_snapshot.json\"),\n]\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"paper_trading_state.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/paper_trading_state.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/paper_trading_state.json\"),\n]\n\n\ndef now_iso() -> str:\n    return datetime.now(timezone.utc).isoformat()"
+    },
+    {
+      "path": "wukong_professional_audit.py",
+      "role": "自动化",
+      "bytes": 5599,
+      "modifiedAt": "2026-05-22T11:12:03.816617+00:00",
+      "sha256": "72080e00e86500916c6dfd54214998a722680f3239ac1f877aad93bc34870108",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Create a professional readiness report for the Wukong trading system.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nfrom datetime import datetime, timezone\nfrom pathlib import Path\nfrom typing import Any\n\n\nROOT = Path(__file__).resolve().parent\nOUTPUT_PATHS = [\n    ROOT / \"PWA\" / \"professional_trade_system.json\",\n    Path(\"/Users/wangbo/.hermes/wukong_pwa/PWA/professional_trade_system.json\"),\n    Path(\"/Users/wangbo/.hermes/wukong_telegram/professional_trade_system.json\"),\n]\nEXCLUDE_PARTS = {\n    \"node_modules\",\n    \".gradle\",\n    \"build\",\n    \".git\",\n    \".build\",\n    \".build-appstore-check\",\n    \".build-cache\",\n    \".pycache\",\n    \".pycache-check\",\n    \".playwright-cli\","
+    },
+    {
+      "path": "wukong_pwa_server.py",
+      "role": "自动化",
+      "bytes": 1138,
+      "modifiedAt": "2026-05-13T16:49:33.743283+00:00",
+      "sha256": "d3eded613ba92fb8ab10d2dc6c0024702160d9078cbcae534ece70b277fdd245",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Static server for the Wukong public download site.\"\"\"\n\nfrom __future__ import annotations\n\nimport mimetypes\nfrom http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent / \"PWA\"\nPORT = 8088\n\nmimetypes.add_type(\"application/x-apple-aspen-config\", \".mobileconfig\")\nmimetypes.add_type(\"application/manifest+json\", \".webmanifest\")\n\n\nclass WukongHandler(SimpleHTTPRequestHandler):\n    extensions_map = {\n        **SimpleHTTPRequestHandler.extensions_map,\n        \".mobileconfig\": \"application/x-apple-aspen-config\",\n        \".webmanifest\": \"application/manifest+json\",\n    }\n\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, directory=str(ROOT), **kwargs)\n\n    def end_headers(self) -> None:"
+    },
+    {
+      "path": "wukong_pwa_url.txt",
+      "role": "同步数据",
+      "bytes": 56,
+      "modifiedAt": "2026-05-23T08:42:14.618213+00:00",
+      "sha256": "f17eb53d04f6783317a50bdd1a2f8b814a2774c9d6cf574b14708e60e2ff242d",
+      "mime": "text/plain",
+      "preview": "https://memphis-assist-nor-charleston.trycloudflare.com"
+    },
+    {
+      "path": "wukong_screen_mirror.json",
+      "role": "同步数据",
+      "bytes": 2716,
+      "modifiedAt": "2026-05-11T23:06:12.271575+00:00",
+      "sha256": "5782fe6d147cfb1f67e053e8845c9f186ad016396f5620bfc836722f6128494f",
+      "mime": "application/json",
+      "preview": "{\n  \"source\": \"wechat-image-6565fe576bd7406cc393416e3e9ef11b\",\n  \"updatedAt\": \"2026-05-12T06:50:00+08:00\",\n  \"title\": \"悟空\",\n  \"subtitle\": \"WUKONG · Binance 合约研究台\",\n  \"description\": \"用 Binance 合约 OI、资金费率、成交量、价格位置和 DEX/社媒扩散，寻找可能提前启动的高波动机会。只做信号和复盘，不替你负责下单。\",\n  \"tags\": [\"OI BUILD\", \"FUNDING\", \"DEX REPEAT\", \"VOLUME\", \"SIGNAL\"],\n  \"calendar\": {\n    \"label\": \"10X AI 纸面日历\",\n    \"returnText\": \"+59.0%\",\n    \"detail\": \"12 天 · 91 笔\"\n  },\n  \"status\": [\n    {\"title\": \"行情生成\", \"value\": \"8 分钟前\"},\n    {\"title\": \"币种数\", \"value\": \"5555\"},\n    {\"title\": \"主判断\", \"value\": \"Binance OI\"},\n    {\"title\": \"App 刷新\", \"value\": \"05-12 06:50\"}\n  ],\n  \"notice\": \"公开测试提醒：这里只做早期资金结构、链上/社媒扩散和合约数据观察，不构成投资建议。数据可能延迟、缺失或误判，合约波动很大，请自己控制仓位和止损。\",\n  \"overviewCards\": [\n    {\"title\": \"入场窗口\", \"value\": \"6\", \"note\": \"更接近可盯入场\", \"tone\": \"good\"},\n    {\"title\": \"早发现雷达\", \"value\": \"12\", \"note\": \"更早提示，不等于买点\", \"tone\": \"good\"},\n    {\"title\": \"确认/回踩"
+    },
+    {
+      "path": "wukong_self_check.py",
+      "role": "自动化",
+      "bytes": 22294,
+      "modifiedAt": "2026-05-22T06:53:41.249339+00:00",
+      "sha256": "5463f27f14fee5af1284919eb866fac375414f60a2864f2ae34e5e4ae4c6ea5c",
+      "mime": "text/x-python",
+      "preview": "#!/usr/bin/env python3\n\"\"\"Self-check Wukong release links, cache version, and download inventory.\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport hashlib\nimport json\nimport plistlib\nimport re\nimport struct\nimport subprocess\nimport sys\nimport urllib.error\nimport urllib.request\nimport urllib.parse\nfrom datetime import datetime, timezone\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPWA = ROOT / \"PWA\"\nHERMES_PWA_ROOT = Path(\"/Users/wangbo/.hermes/wukong_pwa\")\nHERMES_PWA = HERMES_PWA_ROOT / \"PWA\"\nHERMES_TELEGRAM = Path(\"/Users/wangbo/.hermes/wukong_telegram\")\nMAX_FRESH_SECONDS = 30 * 60\nSNAPSHOT_PATHS = [\n    ROOT / \"wukong_latest_snapshot.json\","
+    },
+    {
+      "path": "wukong_telegram_runner.sh",
+      "role": "Telegram",
+      "bytes": 129,
+      "modifiedAt": "2026-05-16T04:42:58.801518+00:00",
+      "sha256": "f6181fdb90b8fdf83afbf552bf9e4fa6fd91783facbb6a49813b518e196e67de",
+      "mime": "application/x-sh",
+      "preview": "#!/bin/zsh\ncd \"/Users/wangbo/Documents/New project/悟空app\" || exit 1\nexec /usr/bin/python3 telegram_wukong_bot.py --push-only"
+    },
+    {
+      "path": "x_social.json",
+      "role": "同步数据",
+      "bytes": 2089,
+      "modifiedAt": "2026-05-23T09:55:01.436194+00:00",
+      "sha256": "5310748f8efafe79639b03c0497d60bb6148a505b4d1b94a49eee5d338bf3037",
+      "mime": "application/json",
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"X / Twitter\",\n  \"mode\": \"snapshot\",\n  \"updatedAt\": \"2026-05-23T09:55:01.435269+00:00\",\n  \"snapshotFetchedAt\": \"2026-05-01T14:23:27.147Z\",\n  \"summary\": {\n    \"posts\": 390,\n    \"tickers\": 24,\n    \"topTicker\": \"TAG\",\n    \"message\": \"未配置 X_BEARER_TOKEN，当前使用悟空已有公开快照。\"\n  },\n  \"topTickers\": [\n    {\n      \"ticker\": \"TAG\",\n      \"posts\": 20,\n      \"section\": \"riskWinnersReview\",\n      \"stage\": \"回避\",\n      \"change24h\": 24.272,\n      \"heatScore\": 2327,\n      \"note\": \"观察中\",\n      \"searchUrl\": \"https://x.com/search?q=%24TAG%20crypto&src=typed_query&f=live\"\n    },\n    {\n      \"ticker\": \"UB\",\n      \"posts\": 20,\n      \"section\": \"riskWinnersReview\",\n      \"stage\": \"回避\","
+    }
+  ]
+}
