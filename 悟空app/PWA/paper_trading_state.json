@@ -1,17 +1,18 @@
 {
   "app": "悟空",
   "mode": "auto-paper-trading",
-  "generatedAt": "2026-05-22T11:11:17.227147+00:00",
-  "state": "running",
-  "reason": "入仓信号存在，纸交易引擎自动运行；真实订单提交关闭",
+  "generatedAt": "2026-05-24T09:43:32.417432+00:00",
+  "state": "flat",
+  "reason": "入仓信号消失，纸交易已自动清仓",
   "realTradingEnabled": false,
   "canSubmitOrder": false,
   "orderEndpointEnabled": false,
-  "positions": [
+  "positions": [],
+  "history": [
     {
       "market": "ONDO_USDT",
       "side": "long-watch",
-      "state": "open",
+      "state": "closed",
       "openedAt": "2026-05-22T10:59:53.664004+00:00",
       "updatedAt": "2026-05-22T11:11:17.227147+00:00",
       "entryPrice": 0.42583716,
@@ -38,13 +39,21 @@
       ],
       "unrealizedPct": 0.1565,
       "unrealizedUsdt": 0.0783,
-      "submitRealOrder": false
+      "submitRealOrder": false,
+      "closedAt": "2026-05-24T08:29:21.490115+00:00",
+      "closeReason": "signal_disappeared",
+      "closePrice": 0.42650345,
+      "remainingPct": 100
     }
   ],
-  "history": [],
   "summary": {
-    "openPositions": 1,
-    "closedTrades": 0,
-    "totalUnrealizedUsdt": 0.0783
+    "openPositions": 0,
+    "closedTrades": 1,
+    "totalUnrealizedUsdt": 0,
+    "totalRealizedUsdt": 0.0,
+    "maxPositionAgeSeconds": 21600,
+    "trailingActivationPct": 7.5,
+    "trailingGivebackPct": 3.0,
+    "reentryCooldownSeconds": 1800
   }
 }

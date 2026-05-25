@@ -41,7 +41,7 @@ APP_TITLE = "悟空 · Wukong Live"
 ROOT = Path(__file__).resolve().parent
 REFRESH_MS = 5_000
 PWA_URL = "https://stays-luxury-location-firm.trycloudflare.com"
-PWA_VERSION = "121"
+PWA_VERSION = "122"
 
 COLORS = {
     "bg": "#061622",

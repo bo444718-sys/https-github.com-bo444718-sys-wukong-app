@@ -2,63 +2,63 @@
   "app": "悟空",
   "source": "X / Twitter",
   "mode": "snapshot",
-  "updatedAt": "2026-05-23T10:06:55.826554+00:00",
+  "updatedAt": "2026-05-24T09:43:46.734633+00:00",
   "snapshotFetchedAt": "2026-05-01T14:23:27.147Z",
   "summary": {
     "posts": 390,
     "tickers": 24,
-    "topTicker": "TAG",
+    "topTicker": "B2",
     "message": "未配置 X_BEARER_TOKEN，当前使用悟空已有公开快照。"
   },
   "topTickers": [
+    {
+      "ticker": "B2",
+      "posts": 20,
+      "section": "risingAttention",
+      "stage": "回避",
+      "change24h": -13.021,
+      "heatScore": 2326,
+      "note": "高位风险",
+      "searchUrl": "https://x.com/search?q=%24B2%20crypto&src=typed_query&f=live"
+    },
+    {
+      "ticker": "UB",
+      "posts": 20,
+      "section": "riskWinnersReview",
+      "stage": "回避",
+      "change24h": 22.458,
+      "heatScore": 2305,
+      "note": "观察中",
+      "searchUrl": "https://x.com/search?q=%24UB%20crypto&src=typed_query&f=live"
+    },
+    {
+      "ticker": "ZEREBRO",
+      "posts": 20,
+      "section": "earlyEntryRadar",
+      "stage": "等待回踩",
+      "change24h": 7.76,
+      "heatScore": 1776,
+      "note": "合约启动",
+      "searchUrl": "https://x.com/search?q=%24ZEREBRO%20crypto&src=typed_query&f=live"
+    },
     {
       "ticker": "TAG",
       "posts": 20,
       "section": "riskWinnersReview",
       "stage": "回避",
-      "change24h": 25.137,
-      "heatScore": 2345,
+      "change24h": -6.44,
+      "heatScore": 1310,
       "note": "高位风险",
       "searchUrl": "https://x.com/search?q=%24TAG%20crypto&src=typed_query&f=live"
     },
     {
-      "ticker": "UB",
-      "posts": 20,
-      "section": "earlyRadar",
-      "stage": "等待回踩",
-      "change24h": 16.019,
-      "heatScore": 2204,
-      "note": "合约启动",
-      "searchUrl": "https://x.com/search?q=%24UB%20crypto&src=typed_query&f=live"
-    },
-    {
-      "ticker": "DASH",
-      "posts": 20,
-      "section": "risingAttention",
-      "stage": "回避",
-      "change24h": -4.758,
-      "heatScore": 2173,
-      "note": "高位风险",
-      "searchUrl": "https://x.com/search?q=%24DASH%20crypto&src=typed_query&f=live"
-    },
-    {
-      "ticker": "B2",
-      "posts": 20,
-      "section": "earlyEntryRadar",
-      "stage": "回避",
-      "change24h": 9.477,
-      "heatScore": 1628,
-      "note": "扩散接力",
-      "searchUrl": "https://x.com/search?q=%24B2%20crypto&src=typed_query&f=live"
-    },
-    {
       "ticker": "SKYAI",
       "posts": 18,
-      "section": "riskWinnersReview",
-      "stage": "回避",
-      "change24h": 24.707,
-      "heatScore": 1830,
-      "note": "观察中",
+      "section": "earlyRadar",
+      "stage": "等待回踩",
+      "change24h": 6.323,
+      "heatScore": 1695,
+      "note": "合约启动",
       "searchUrl": "https://x.com/search?q=%24SKYAI%20crypto&src=typed_query&f=live"
     }
   ],

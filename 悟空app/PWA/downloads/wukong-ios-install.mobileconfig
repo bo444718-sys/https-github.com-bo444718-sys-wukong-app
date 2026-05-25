@@ -112,13 +112,13 @@
 			<key>PayloadType</key>
 			<string>com.apple.webClip.managed</string>
 			<key>PayloadUUID</key>
-			<string>A67C3F21-062A-4CE5-889B-4D05C5A18275</string>
+			<string>94BBECD8-3A6D-43DC-A1A6-67230CE063E3</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>Precomposed</key>
 			<true/>
 			<key>URL</key>
-			<string>https://memphis-assist-nor-charleston.trycloudflare.com/index.html?v=121</string>
+			<string>https://translated-metadata-biological-louis.trycloudflare.com/index.html?v=122</string>
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
@@ -134,7 +134,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>83C4AE37-966A-42E2-B431-4524A164AD04</string>
+	<string>22C64BF0-B7B3-4E00-A754-B0A21E2617E0</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>

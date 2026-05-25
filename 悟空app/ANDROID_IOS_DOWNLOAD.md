@@ -7,15 +7,15 @@
 
 当前安装中心：
 
-https://stays-luxury-location-firm.trycloudflare.com/install.html?v=121
+https://stays-luxury-location-firm.trycloudflare.com/install.html?v=122
 
 iPhone / Apple 安装：
 
-https://stays-luxury-location-firm.trycloudflare.com/install.html?v=121
+https://stays-luxury-location-firm.trycloudflare.com/install.html?v=122
 
 Android APK 直接下载：
 
-https://stays-luxury-location-firm.trycloudflare.com/downloads/wukong-android-release.apk?v=121
+https://stays-luxury-location-firm.trycloudflare.com/downloads/wukong-android-release.apk?v=122
 
 Android APK 构建：
 
@@ -41,5 +41,5 @@ Apple 原生安装：
 
 - Android/iOS/PWA 都共用 `PWA/` 前端。
 - `sync_wukong_files.py` 会同步悟空文件清单到 App 与网页下载端。
-- PWA、Telegram 和原生 App 继续每分钟读取实时数据与快照。
-- 下载链接统一带 `v=121`，避免手机或浏览器拿到旧缓存。
+- PWA、Telegram 和原生 App 继续每 30 秒读取实时数据与快照。
+- 下载链接统一带 `v=122`，避免手机或浏览器拿到旧缓存。

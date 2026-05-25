@@ -44,8 +44,8 @@ def write_qr(value: str, path: Path) -> None:
 
 def main() -> int:
     pwa_url = current_pwa_url()
-    ios_url = f"{pwa_url}/install.html?v=121"
-    android_url = f"{pwa_url}/downloads/wukong-android-release.apk?v=121"
+    ios_url = f"{pwa_url}/install.html?v=122"
+    android_url = f"{pwa_url}/downloads/wukong-android-release.apk?v=122"
     write_qr(ios_url, QR_DIR / "wukong-ios-qr.png")
     write_qr(android_url, QR_DIR / "wukong-android-qr.png")
     (QR_DIR / "download-links.txt").write_text(

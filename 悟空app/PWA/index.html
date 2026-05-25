@@ -11,11 +11,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="悟空">
   <title>悟空</title>
-  <link rel="manifest" href="./manifest.webmanifest?v=121">
+  <link rel="manifest" href="./manifest.webmanifest?v=122">
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="./icons/wukong-192.png">
   <link rel="apple-touch-icon" href="./icons/wukong-180.png">
-  <link rel="stylesheet" href="./styles.css?v=121">
+  <link rel="stylesheet" href="./styles.css?v=122">
 </head>
 <body>
   <div class="global-refresh-line" aria-hidden="true"><span id="globalRefreshLine"></span></div>
@@ -55,7 +55,7 @@
         <article data-tone="waiting"><span>合约</span><strong>等待</strong><small>OI / Alpha</small></article>
         <article data-tone="waiting"><span>风险</span><strong>监控</strong><small>实盘关闭</small></article>
         <article data-tone="waiting"><span>分发</span><strong>Telegram</strong><small>等待回执</small></article>
-        <article data-tone="waiting"><span>版本</span><strong>v121</strong><small>缓存检查</small></article>
+        <article data-tone="waiting"><span>版本</span><strong>v122</strong><small>缓存检查</small></article>
       </div>
     </section>
     <section class="entry-checklist" aria-label="入场复核清单" hidden>
@@ -212,7 +212,7 @@
       </div>
       <div>
         <span>版本守卫</span>
-        <strong id="releaseGuard">v121</strong>
+        <strong id="releaseGuard">v122</strong>
         <small id="releaseGuardNote">缓存和二维码同步</small>
       </div>
     </section>
@@ -247,7 +247,7 @@
         </article>
         <article>
           <span>版本一致</span>
-          <strong id="opsMatrixVersion">v121</strong>
+          <strong id="opsMatrixVersion">v122</strong>
           <small id="opsMatrixVersionNote">缓存与二维码同步</small>
         </article>
       </div>
@@ -482,7 +482,7 @@
         <button id="forceUpdateButton" class="mini-button" type="button">刷新到最新版</button>
       </div>
       <div class="update-grid">
-        <div><strong id="appVersion">v121</strong><span>当前版本</span></div>
+        <div><strong id="appVersion">v122</strong><span>当前版本</span></div>
         <div><strong id="cacheStatus">检查中</strong><span>缓存状态</span></div>
         <div><strong id="pageMode">在线</strong><span>页面状态</span></div>
       </div>
@@ -494,10 +494,10 @@
           <h2>版本日志</h2>
           <p>最近更新一眼看懂，便于确认手机端是否已经同步。</p>
         </div>
-        <span id="releaseVersion">v121</span>
+        <span id="releaseVersion">v122</span>
       </div>
       <div class="release-list">
-        <article><strong>v121</strong><span>新增 Binance / OKX / Gate 交易所 API 版块，现货、合约、资金费率和同步状态集中查看。</span></article>
+        <article><strong>v122</strong><span>新增 Binance / OKX / Gate 交易所 API 版块，现货、合约、资金费率和同步状态集中查看。</span></article>
         <article><strong>v119</strong><span>界面整理：总览改成职业交易台，主机会、观察队列、风险和执行状态一屏读完。</span></article>
         <article><strong>v118</strong><span>自检修复：本地文件打开不再拦截脚本，顶部 6 个版块点击后只显示当前版块。</span></article>
         <article><strong>v117</strong><span>自检修复：健康报告直接执行公网深度自检并显示结果，不再只提示手动命令。</span></article>
@@ -751,7 +751,7 @@
       <div class="section-heading">
         <div>
           <h2>交易所 API</h2>
-          <p>Binance / OKX / Gate 公开行情，现货、合约与资金费率每分钟同步。</p>
+          <p>Binance / OKX / Gate 公开行情，现货、合约与资金费率每 30 秒同步。</p>
         </div>
         <span id="exchangeApiStatus">同步中</span>
       </div>
@@ -876,7 +876,7 @@
       <div class="section-heading">
         <div>
           <h2>Gate API</h2>
-          <p>现货 + USDT 合约公开行情，每分钟同步。</p>
+          <p>现货 + USDT 合约公开行情，每 30 秒同步。</p>
         </div>
         <span id="gateStatus">连接中</span>
       </div>
@@ -889,7 +889,7 @@
         <span>04</span>
         <div>
           <h2 id="telegramGroupTitle">Telegram 同步</h2>
-          <p>推送回执、机器人指令和每分钟队列集中管理。</p>
+          <p>推送回执、机器人指令和每 30 秒队列集中管理。</p>
         </div>
       </div>
 
@@ -941,7 +941,7 @@
       <div class="section-heading">
         <div>
           <h2>Telegram 推送队列</h2>
-          <p>入场、合约启动、风险和优先级会随每分钟同步推送。</p>
+          <p>入场、合约启动、风险和优先级会随每 30 秒同步推送。</p>
         </div>
         <span id="telegramQueueCount">--</span>
       </div>
@@ -993,8 +993,8 @@
         <div><strong id="installAssistState">--</strong><span>安装状态</span></div>
       </div>
       <div class="install-assist-actions">
-        <a id="installAssistPrimary" class="text-button" href="./install.html?v=121">推荐安装</a>
-        <a class="text-button secondary" href="./install.html?v=121">下载中心</a>
+        <a id="installAssistPrimary" class="text-button" href="./install.html?v=122">推荐安装</a>
+        <a class="text-button secondary" href="./install.html?v=122">下载中心</a>
       </div>
     </section>
 
@@ -1004,10 +1004,10 @@
         <p>安卓直接安装 APK；苹果用 Safari 添加到主屏幕。</p>
       </div>
       <div class="download-actions">
-        <a class="text-button" href="./downloads/wukong-android-release.apk?v=121" download>Android</a>
+        <a class="text-button" href="./downloads/wukong-android-release.apk?v=122" download>Android</a>
         <button id="iosInstallHelp" class="text-button" type="button">iPhone</button>
-        <a class="text-button secondary" href="./install.html?v=121">下载页</a>
-        <a class="text-button secondary" href="./privacy.html?v=121">隐私</a>
+        <a class="text-button secondary" href="./install.html?v=122">下载页</a>
+        <a class="text-button secondary" href="./privacy.html?v=122">隐私</a>
       </div>
     </section>
 
@@ -1032,7 +1032,7 @@
       <div class="section-heading">
         <div>
           <h2>下载自检</h2>
-          <p>每分钟检查安装文件和二维码是否在线。</p>
+          <p>每 30 秒检查安装文件和二维码是否在线。</p>
         </div>
         <span id="downloadHealthStatus">检查中</span>
       </div>
@@ -1047,13 +1047,13 @@
         </div>
       </div>
       <div class="qr-grid">
-        <a class="qr-card" href="./install.html?v=121">
-          <img src="./qr/wukong-ios-qr.png?v=121" alt="悟空苹果下载二维码">
+        <a class="qr-card" href="./install.html?v=122">
+          <img src="./qr/wukong-ios-qr.png?v=122" alt="悟空苹果下载二维码">
           <strong>苹果 / iPhone</strong>
           <span>Safari 添加到主屏幕</span>
         </a>
-        <a class="qr-card" href="./downloads/wukong-android-release.apk?v=121" download>
-          <img src="./qr/wukong-android-qr.png?v=121" alt="悟空安卓下载二维码">
+        <a class="qr-card" href="./downloads/wukong-android-release.apk?v=122" download>
+          <img src="./qr/wukong-android-qr.png?v=122" alt="悟空安卓下载二维码">
           <strong>安卓 / Android</strong>
           <span>扫码直接下载 APK</span>
         </a>
@@ -1103,7 +1103,7 @@
       <strong>我的</strong>
     </button>
   </nav>
-  <script src="./ema_cross_4h_bootstrap.js?v=121"></script>
-  <script src="./app.js?v=121"></script>
+  <script src="./ema_cross_4h_bootstrap.js?v=122"></script>
+  <script src="./app.js?v=122"></script>
 </body>
 </html>

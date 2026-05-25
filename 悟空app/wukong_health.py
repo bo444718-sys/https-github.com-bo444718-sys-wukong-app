@@ -17,7 +17,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 HERMES = Path("/Users/wangbo/.hermes")
-PWA_VERSION = "121"
+PWA_VERSION = "122"
 MAX_FRESH_SECONDS = 30 * 60
 PWA_URL_PATHS = [HERMES / "wukong_pwa" / "wukong_pwa_url.txt", ROOT / "wukong_pwa_url.txt"]
 SNAPSHOT_PATHS = [HERMES / "wukong_telegram" / "wukong_latest_snapshot.json", ROOT / "wukong_latest_snapshot.json"]

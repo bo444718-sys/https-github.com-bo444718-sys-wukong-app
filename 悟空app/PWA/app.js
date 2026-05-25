@@ -14,7 +14,7 @@ const TELEGRAM_STATUS_URL = "./telegram_status.json";
 const REFRESH_MS = 30_000;
 const GATE_PAIRS = ["BTC_USDT", "ETH_USDT", "SOL_USDT", "BNB_USDT"];
 const WATCHLIST_KEY = "wukong.watchlist.v1";
-const APP_VERSION = "121";
+const APP_VERSION = "122";
 const LOCAL_FILE_MODE = window.location.protocol === "file:";
 const REMOTE_BROWSER_FETCH = false;
 const DOWNLOAD_CHECKS = [
@@ -761,7 +761,15 @@ function renderExchangeCenter() {
   const signalRows = (signalGate.queue || []).map((item) => `
     <div class="gate-readiness-item ${signalGate.signalActive ? "ok" : "blocked"}">
       <strong>${safeText(item.ticker || "--")}</strong>
-      <span>${safeText(item.stage || item.section || "--")} · 分 ${Math.round(Number(item.score) || 0)}</span>
+      <span>${safeText(item.stage || item.section || "--")} · 分 ${Math.round(Number(item.score) || 0)} · 准备 ${Math.round(Number(item.readiness) || 0)}</span>
+    </div>
+  `).join("");
+  const strategyAudit = preflight.strategyAudit || state.professionalSystem?.strategyAudit || {};
+  const strategyCounts = strategyAudit.counts || {};
+  const rejectedRows = (strategyAudit.rejected || []).slice(0, 6).map((item) => `
+    <div class="gate-readiness-item blocked">
+      <strong>${safeText(item.ticker || "--")}</strong>
+      <span>${safeText((item.reasons || []).slice(0, 2).join("；") || "未通过策略闸门")}</span>
     </div>
   `).join("");
   const systemRows = (state.professionalSystem?.modules || []).map((item) => `
@@ -810,6 +818,23 @@ function renderExchangeCenter() {
     </article>
     <div class="gate-readiness-grid">
       ${signalRows || '<div class="empty compact">入仓信号消失，交易闸门已关闭。</div>'}
+    </div>
+    <article class="gate-private-row ${strategyCounts.allowed ? "good" : "watch"}">
+      <div>
+        <strong>专业策略闸门</strong>
+        <span>候选 ${strategyCounts.candidates || 0} · 通过 ${strategyCounts.allowed || 0} · 拒绝 ${strategyCounts.rejected || 0}</span>
+      </div>
+      <div>
+        <strong>${strategyAudit.dashboardFresh ? "新鲜" : "等待"}</strong>
+        <span>数据状态</span>
+      </div>
+      <div>
+        <strong>${strategyCounts.allowed ? "允许纸仓" : "只观察"}</strong>
+        <span>执行结论</span>
+      </div>
+    </article>
+    <div class="gate-readiness-grid">
+      ${rejectedRows || '<div class="empty compact">暂无拒绝项或等待策略审计。</div>'}
     </div>
     <article class="gate-private-row watch">
       <div>
@@ -878,7 +903,7 @@ function renderMyApiPanel() {
     {
       name: "Binance / OKX / Gate 公开源",
       state: `${onlineVenues || 0}/3 在线`,
-      detail: "行情、合约、资金费率每分钟同步",
+      detail: "行情、合约、资金费率每 30 秒同步",
       tone: onlineVenues >= 3 ? "good" : "watch",
     },
     {
@@ -1174,9 +1199,26 @@ function renderContractLaunchRadar() {
 function renderEntrySignals() {
   const signalGate = state.gatePreflight?.signalTradeGate || {};
   const rows = signalGate.queue || [];
+  const rejected = signalGate.rejected || state.gatePreflight?.strategyAudit?.rejected || [];
   setText("#entrySignalStatus", signalGate.signalActive ? `${rows.length} 个信号` : "无入仓信号");
   if (!rows.length) {
-    setHTML("#entrySignalList", '<div class="empty compact">当前没有入仓信号，交易闸门自动关闭。</div>');
+    const rejectedHtml = rejected.slice(0, 4).map((item) => `
+      <article class="entry-signal-row">
+        <div>
+          <strong>${safeText(item.ticker || "--")}</strong>
+          <span>${safeText(item.stage || "候选")}</span>
+        </div>
+        <div>
+          <strong>${Math.round(Number(item.readiness) || 0)}</strong>
+          <span>准备度</span>
+        </div>
+        <div>
+          <strong>拒绝</strong>
+          <span>${safeText((item.reasons || []).slice(0, 1).join("；") || "未过闸门")}</span>
+        </div>
+      </article>
+    `).join("");
+    setHTML("#entrySignalList", rejectedHtml || '<div class="empty compact">当前没有入仓信号，交易闸门自动关闭。</div>');
     return;
   }
   setHTML("#entrySignalList", rows.slice(0, 8).map((item, index) => {
@@ -1196,7 +1238,7 @@ function renderEntrySignals() {
         </div>
         <div>
           <strong>${position ? "已开纸仓" : isPrimary ? "待确认" : "观察"}</strong>
-          <span>${safeText(item.section || "signal")}</span>
+          <span>准备 ${Math.round(Number(item.readiness) || 0)} · ${safeText(item.section || "signal")}</span>
         </div>
       </article>
     `;
@@ -1212,6 +1254,7 @@ function renderOpenOrders() {
   }
   setHTML("#openOrderList", positions.map((item) => {
     const tiers = (item.takeProfitTiers || []).map((tier, index) => `T${index + 1} +${tier.triggerPct}%/${tier.closePct}%`).join(" · ");
+    const filled = item.filledTakeProfits || [];
     return `
       <article class="open-order-row">
         <div>
@@ -1238,7 +1281,7 @@ function renderOpenOrders() {
           <strong class="${scoreClass(item.unrealizedPct)}">${fmtSignedPct(item.unrealizedPct)}</strong>
           <span>${Number(item.unrealizedUsdt || 0).toFixed(4)}U</span>
         </div>
-        <p>止损 ${item.stopLossPct || "--"}%-${item.maxStopLossPct || "--"}% · ${tiers || "等待止盈计划"} · 真实订单关闭</p>
+        <p>剩余 ${Number(item.remainingPct ?? 100).toFixed(0)}% · 已止盈 ${filled.length}/${(item.takeProfitTiers || []).length} · 止损 ${item.stopLossPct || "--"}%-${item.maxStopLossPct || "--"}% · ${tiers || "等待止盈计划"} · 真实订单关闭</p>
       </article>
     `;
   }).join(""));
@@ -2415,7 +2458,7 @@ function renderFileSync() {
 async function refreshFileSync() {
   if (LOCAL_FILE_MODE) {
     setText("#fileSyncCount", "网页端同步");
-    setHTML("#fileSyncList", '<div class="empty">请用公网下载链接打开，文件清单会每分钟同步。</div>');
+    setHTML("#fileSyncList", '<div class="empty">请用公网下载链接打开，文件清单会每 30 秒同步。</div>');
     renderNavMeta();
     return;
   }
@@ -2535,7 +2578,7 @@ async function refreshGateMarkets() {
   $("#gateStatus").textContent = "同步中";
   if (LOCAL_FILE_MODE) {
     setText("#gateStatus", "网页端");
-    setHTML("#gateList", '<div class="empty">请用公网下载链接打开，Gate 快照会每分钟同步。</div>');
+    setHTML("#gateList", '<div class="empty">请用公网下载链接打开，Gate 快照会每 30 秒同步。</div>');
     renderSources();
     return;
   }
@@ -2581,7 +2624,7 @@ async function refreshExchangeMarkets() {
   setText("#exchangeApiStatus", "同步中");
   if (LOCAL_FILE_MODE) {
     setText("#exchangeApiStatus", "网页端");
-    setHTML("#exchangeApiList", '<div class="empty compact">请用下载链接打开，Binance / OKX / Gate 快照会每分钟同步。</div>');
+    setHTML("#exchangeApiList", '<div class="empty compact">请用下载链接打开，Binance / OKX / Gate 快照会每 30 秒同步。</div>');
     return;
   }
   try {

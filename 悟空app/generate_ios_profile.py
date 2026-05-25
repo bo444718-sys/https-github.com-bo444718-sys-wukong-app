@@ -30,7 +30,7 @@ def current_pwa_url() -> str:
 
 
 def main() -> int:
-    app_url = f"{current_pwa_url()}/index.html?v=121"
+    app_url = f"{current_pwa_url()}/index.html?v=122"
     icon = (PWA / "icons" / "wukong-180.png").read_bytes()
     webclip_uuid = str(uuid.uuid4()).upper()
     profile_uuid = str(uuid.uuid4()).upper()

@@ -2,7 +2,7 @@
 """Telegram control plane for Wukong.
 
 Features:
-- Pushes Wukong market/review summaries to Telegram every minute.
+- Pushes Wukong market/review summaries to Telegram every 30 seconds.
 - Accepts Telegram commands for refresh, sections, ticker search, watchlist, and AI Q&A.
 - Uses only the Python standard library.
 
@@ -38,7 +38,7 @@ from typing import Any
 
 MICHILL_BASE_URL = "https://michill.ai"
 TELEGRAM_LIMIT = 3900
-PWA_VERSION = "121"
+PWA_VERSION = "122"
 STATE_PATH = Path(".wukong_telegram_state.json")
 SNAPSHOT_PATH = Path("wukong_latest_snapshot.json")
 TELEGRAM_STATUS_PATH = Path("telegram_status.json")
@@ -48,6 +48,10 @@ CONTEXT_PATH = Path("WUKONG_TELEGRAM_BRIDGE.md")
 GATE_SYNC_SCRIPT = Path("sync_exchange_api.py")
 GATE_PRIVATE_STATUS_SCRIPT = Path("gate_private_status.py")
 GATE_TRADE_PREFLIGHT_SCRIPT = Path("gate_trade_preflight.py")
+PAPER_ENGINE_SCRIPT = Path("wukong_paper_engine.py")
+PROFESSIONAL_AUDIT_SCRIPT = Path("wukong_professional_audit.py")
+EMA_CROSS_SCRIPT = Path("sync_ema_cross_4h.py")
+FILE_SYNC_SCRIPT = Path("sync_wukong_files.py")
 GATE_TRADE_PREFLIGHT_PATHS = [
     Path("/Users/wangbo/.hermes/wukong_pwa/PWA/gate_trade_preflight.json"),
     PROJECT_ROOT / "PWA" / "gate_trade_preflight.json",
@@ -687,12 +691,22 @@ def write_snapshot(
         subprocess.run([sys.executable, str(GATE_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if GATE_PRIVATE_STATUS_SCRIPT.exists():
         subprocess.run([sys.executable, str(GATE_PRIVATE_STATUS_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+    if GATE_TRADE_PREFLIGHT_SCRIPT.exists():
+        subprocess.run([sys.executable, str(GATE_TRADE_PREFLIGHT_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+    if PAPER_ENGINE_SCRIPT.exists():
+        subprocess.run([sys.executable, str(PAPER_ENGINE_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+    if PROFESSIONAL_AUDIT_SCRIPT.exists():
+        subprocess.run([sys.executable, str(PROFESSIONAL_AUDIT_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+    if EMA_CROSS_SCRIPT.exists():
+        subprocess.run([sys.executable, str(EMA_CROSS_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if QR_SYNC_SCRIPT.exists():
         subprocess.run([sys.executable, str(QR_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if X_SYNC_SCRIPT.exists():
         subprocess.run([sys.executable, str(X_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if ALPHA_SYNC_SCRIPT.exists():
         subprocess.run([sys.executable, str(ALPHA_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+    if FILE_SYNC_SCRIPT.exists():
+        subprocess.run([sys.executable, str(FILE_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
 
 
 def write_bridge_context(push_interval: int) -> None:
@@ -1455,7 +1469,7 @@ def process_update(client: TelegramClient, update: dict[str, Any], state: Wukong
         client.chat_id = chat_id
         state.chat_id = chat_id
         state.save()
-        client.send("悟空已绑定这个 Telegram 对话。之后会每分钟推送实时摘要。", reply_markup=keyboard(), chat_id=chat_id)
+        client.send("悟空已绑定这个 Telegram 对话。之后会每 30 秒推送实时摘要。", reply_markup=keyboard(), chat_id=chat_id)
     reply, reply_markup = handle_command(text, state)
     client.send(reply, reply_markup=reply_markup, chat_id=chat_id)
 

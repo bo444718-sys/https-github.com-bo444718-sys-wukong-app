@@ -69,9 +69,12 @@ def main() -> int:
     file_sync = load_json(ROOT / "PWA" / "wukong_file_sync.json", {})
 
     blockers = preflight.get("blockers") or []
+    strategy_audit = preflight.get("strategyAudit") or {}
+    strategy_counts = strategy_audit.get("counts") or {}
     modules = [
         module("市场数据", bool(exchange.get("markets")), "ready" if exchange.get("markets") else "waiting", "Binance / OKX / Gate 公开行情快照"),
         module("信号引擎", bool((preflight.get("signalTradeGate") or {}).get("queue")), (preflight.get("signalTradeGate") or {}).get("state", "waiting"), (preflight.get("signalTradeGate") or {}).get("reason", "等待信号")),
+        module("策略闸门", bool(strategy_counts.get("candidates")), "ready" if strategy_counts.get("allowed") else "filtering", f"候选 {strategy_counts.get('candidates', 0)} · 通过 {strategy_counts.get('allowed', 0)} · 拒绝 {strategy_counts.get('rejected', 0)}"),
         module("自动纸交易", paper.get("state") == "running", paper.get("state", "waiting"), paper.get("reason", "等待纸交易引擎")),
         module("Gate 私有 API", bool(private_status.get("authenticated")), "authenticated" if private_status.get("authenticated") else "waiting", private_status.get("message", "等待验证")),
         module("风控预算", bool((preflight.get("riskBudget") or {}).get("maxNotionalUsdt")), "ready", "100U / 10X / 5U 保证金 / 50U 名义仓位"),
@@ -115,12 +118,16 @@ def main() -> int:
             "blockers": blockers,
         },
         "riskBudget": preflight.get("riskBudget") or {},
+        "strategyAudit": strategy_audit,
         "paperSummary": paper.get("summary") or {},
     }
     encoded = json.dumps(payload, ensure_ascii=False, indent=2)
     for path in OUTPUT_PATHS:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(encoded, encoding="utf-8")
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(encoded, encoding="utf-8")
+        except PermissionError:
+            print(f"Skip protected path: {path}")
     print(f"Wukong professional audit: files={len(files)} blockers={len(blockers)}")
     return 0
 

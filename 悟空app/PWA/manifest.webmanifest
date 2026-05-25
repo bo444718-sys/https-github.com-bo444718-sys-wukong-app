@@ -5,7 +5,7 @@
   "description": "悟空实时机会、市场信号、Telegram 同步与风险工作台",
   "lang": "zh-CN",
   "dir": "ltr",
-  "start_url": "./index.html?v=121",
+  "start_url": "./index.html?v=122",
   "scope": "./",
   "display": "standalone",
   "display_override": ["standalone", "browser"],
@@ -32,19 +32,19 @@
     {
       "name": "实时总览",
       "short_name": "总览",
-      "url": "./index.html?v=121#overviewGroup",
+      "url": "./index.html?v=122#overviewGroup",
       "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "市场信号",
       "short_name": "信号",
-      "url": "./index.html?v=121#marketGroup",
+      "url": "./index.html?v=122#marketGroup",
       "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "下载安装",
       "short_name": "下载",
-      "url": "./install.html?v=121",
+      "url": "./install.html?v=122",
       "icons": [{ "src": "./icons/wukong-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]

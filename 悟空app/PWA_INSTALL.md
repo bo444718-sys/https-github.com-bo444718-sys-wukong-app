@@ -2,7 +2,7 @@
 
 当前可用链接：
 
-https://conferences-engines-cope-foundation.trycloudflare.com/install.html?v=121
+https://conferences-engines-cope-foundation.trycloudflare.com/install.html?v=122
 
 iPhone 安装方式：
 
@@ -16,7 +16,7 @@ iPhone 安装方式：
 
 - 这是 PWA 版本，可以像 App 一样从主屏幕打开。
 - 数据每 30 秒从 Michill、Gate、本地同步快照和 Telegram 状态更新。
-- 当前安装链接带 `v=121`，用于强制刷新手机端缓存和安装配置。
+- 当前安装链接带 `v=122`，用于强制刷新手机端缓存和安装配置。
 - 这个链接由 Cloudflare Quick Tunnel 提供，适合当前装机测试；终端里的 tunnel 进程停止后链接会失效。
 - App Store/TestFlight 真正下载地址仍需要完整 Xcode、Apple Developer 签名和 Apple 审核流程。
 

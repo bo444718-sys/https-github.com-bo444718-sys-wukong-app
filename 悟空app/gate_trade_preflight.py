@@ -11,6 +11,9 @@ from typing import Any
 from gate_private_status import build_status
 from gate_private_status import EXIT_RULE
 from gate_private_status import PROTECTION_LAYERS
+from wukong_strategy import build_strategy_audit
+from wukong_strategy import token_score
+from wukong_strategy import unique_signal_tokens
 
 
 ROOT = Path(__file__).resolve().parent
@@ -40,45 +43,18 @@ def load_dashboard() -> dict[str, Any]:
     return {}
 
 
-def token_score(item: dict[str, Any]) -> float:
-    signal = item.get("entryWindowSignal") or item.get("earlyEntrySignal") or {}
-    for key in ("score", "primaryOpportunityScore", "heatScore"):
-        try:
-            value = float(signal.get(key) if key == "score" else item.get(key))
-        except (TypeError, ValueError):
-            continue
-        if value > 0:
-            return value
-    return 0.0
-
-
-def unique_signal_tokens(dashboard: dict[str, Any]) -> list[dict[str, Any]]:
-    rows = []
-    for section in ("entryWindow", "opportunities", "contractLaunch", "earlyEntryRadar"):
-        for item in dashboard.get(section) or []:
-            if not isinstance(item, dict):
-                continue
-            ticker = str(item.get("ticker") or "").upper()
-            if not ticker:
-                continue
-            rows.append({**item, "_signalSection": section})
-    by_ticker: dict[str, dict[str, Any]] = {}
-    for item in rows:
-        ticker = str(item.get("ticker") or "").upper()
-        previous = by_ticker.get(ticker)
-        if not previous or token_score(item) > token_score(previous):
-            by_ticker[ticker] = item
-    return sorted(by_ticker.values(), key=token_score, reverse=True)
-
-
-def build_signal_gate(dashboard: dict[str, Any], blockers: list[str]) -> dict[str, Any]:
+def build_signal_gate(dashboard: dict[str, Any], blockers: list[str], strategy_audit: dict[str, Any]) -> dict[str, Any]:
     tokens = unique_signal_tokens(dashboard)
-    primary = tokens[0] if tokens else None
+    allowed = strategy_audit.get("allowed") or []
+    primary_eval = allowed[0] if allowed else None
+    primary_ticker = str((primary_eval or {}).get("ticker") or "").upper()
+    primary = next((item for item in tokens if str(item.get("ticker") or "").upper() == primary_ticker), None) if primary_ticker else None
     signal_active = bool(primary)
     blocked = bool(blockers)
     if not signal_active:
         state = "auto-closed"
-        reason = "入仓信号已消失，交易闸门自动关闭"
+        rejected_count = (strategy_audit.get("counts") or {}).get("rejected", 0)
+        reason = "没有候选通过专业策略闸门，交易闸门自动关闭" if rejected_count else "入仓信号已消失，交易闸门自动关闭"
     elif blocked:
         state = "armed-blocked"
         reason = "入仓信号存在，但实盘订单提交被风控阻断"
@@ -98,16 +74,21 @@ def build_signal_gate(dashboard: dict[str, Any], blockers: list[str]) -> dict[st
             "section": primary.get("_signalSection"),
             "stage": primary.get("currentStage") or primary.get("stage"),
             "score": token_score(primary),
+            "readiness": primary_eval.get("readiness") if primary_eval else None,
+            "warnings": primary_eval.get("warnings") if primary_eval else [],
         } if primary else None,
         "queue": [
             {
                 "ticker": item.get("ticker"),
-                "section": item.get("_signalSection"),
-                "stage": item.get("currentStage") or item.get("stage"),
-                "score": token_score(item),
+                "section": item.get("section"),
+                "stage": item.get("stage"),
+                "score": item.get("score"),
+                "readiness": item.get("readiness"),
+                "warnings": item.get("warnings") or [],
             }
-            for item in tokens[:8]
+            for item in allowed[:8]
         ],
+        "rejected": (strategy_audit.get("rejected") or [])[:8],
     }
 
 
@@ -167,7 +148,8 @@ def build_preflight() -> dict[str, Any]:
         *([] if next((item.get("ok") for item in status.get("manualLiveReadiness", []) if item.get("name") == "手动确认"), False) else ["未配置手动确认签名"]),
     ])
     dashboard = load_dashboard()
-    signal_gate = build_signal_gate(dashboard, blockers)
+    strategy_audit = build_strategy_audit(dashboard)
+    signal_gate = build_signal_gate(dashboard, blockers, strategy_audit)
     risk_budget = status.get("riskBudget", {})
     paper_trade = build_paper_trade_plan(signal_gate, risk_budget)
     return {
@@ -182,6 +164,7 @@ def build_preflight() -> dict[str, Any]:
         "manualLiveReadiness": status.get("manualLiveReadiness", []),
         "riskBudget": risk_budget,
         "orderEndpointEnabled": False,
+        "strategyAudit": strategy_audit,
         "signalTradeGate": signal_gate,
         "paperTrade": paper_trade,
         "telegramConfirm": {
@@ -229,8 +212,11 @@ def main() -> int:
     payload = build_preflight()
     encoded = json.dumps(payload, ensure_ascii=False, indent=2)
     for path in OUTPUT_PATHS:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(encoded, encoding="utf-8")
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(encoded, encoding="utf-8")
+        except PermissionError:
+            print(f"Skip protected path: {path}")
     print(f"Gate trade preflight: dry-run · blockers={len(payload['blockers'])}")
     return 0
 

@@ -1,7 +1,7 @@
 {
   "app": "悟空",
   "exchange": "gate",
-  "generatedAt": "2026-05-23T10:06:55.194320+00:00",
+  "generatedAt": "2026-05-24T09:43:31.429157+00:00",
   "configured": true,
   "authenticated": true,
   "keyMasked": "2e56...ad5c",
@@ -156,7 +156,7 @@
   "balances": [
     {
       "currency": "USDT",
-      "available": "0",
+      "available": "0.000000005",
       "locked": "0"
     }
   ],

@@ -160,7 +160,7 @@ python3 wukong_health.py --send-telegram
 
 同一个悟空下载端支持 Android 和 Apple：
 
-- Android：网页端点击 `Android` 下载 APK，或直接访问 `/downloads/wukong-android-release.apk?v=121`。
+- Android：网页端点击 `Android` 下载 APK，或直接访问 `/downloads/wukong-android-release.apk?v=122`。
 - iPhone：网页端点击 `iPhone` 查看安装提示，在 Safari 里“添加到主屏幕”。
 
 当前下载入口记录在 `ANDROID_IOS_DOWNLOAD.md`。

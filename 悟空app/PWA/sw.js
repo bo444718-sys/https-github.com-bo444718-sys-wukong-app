@@ -1,4 +1,4 @@
-const CACHE = "wukong-pwa-v121";
+const CACHE = "wukong-pwa-v122";
 const ASSETS = [
   "./",
   "./index.html",

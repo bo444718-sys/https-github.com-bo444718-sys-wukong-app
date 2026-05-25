@@ -2,19 +2,19 @@
   "app": "悟空",
   "status": "sent",
   "mode": "once",
-  "updatedAt": "2026-05-23T10:06:56.973523+00:00",
-  "marketGeneratedAt": "2026-05-23T10:06:35.908Z",
+  "updatedAt": "2026-05-24T09:43:48.375406+00:00",
+  "marketGeneratedAt": "2026-05-24T09:42:59.736Z",
   "chatIdMasked": "...1522",
   "sentTypes": [
     "summary"
   ],
   "messageChunks": 1,
   "queueCounts": {
-    "entry": 1,
-    "contractLaunch": 22,
-    "priority": 4,
+    "entry": 0,
+    "contractLaunch": 24,
+    "priority": 5,
     "risk": 6
   },
-  "queueTotal": 33,
+  "queueTotal": 35,
   "error": ""
 }
