@@ -1,9 +1,9 @@
 {
   "app": "悟空",
-  "generatedAt": "2026-05-24T09:54:32.754319+00:00",
+  "generatedAt": "2026-05-26T06:17:40.709167+00:00",
   "root": "/Users/wangbo/Documents/New project/悟空app",
   "fileCount": 113,
-  "totalBytes": 92037925,
+  "totalBytes": 91994456,
   "roles": {
     "资源": 20,
     "Telegram": 10,
@@ -215,11 +215,11 @@
     {
       "path": "PWA/exchange_markets.json",
       "role": "网页下载端",
-      "bytes": 24818,
-      "modifiedAt": "2026-05-24T09:43:31.337862+00:00",
-      "sha256": "e2e6bdfd2b80fd75084ce050c488b40138d673ff39fac8b0fd3c6c0f9ff322e6",
+      "bytes": 5236,
+      "modifiedAt": "2026-05-26T06:17:40.077313+00:00",
+      "sha256": "901cd017e28591ca178da26d675ceafa048404bfe31d19d121aadc4abd94413a",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-24T09:43:22.468591+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "PWA/favicon.ico",
@@ -233,11 +233,11 @@
     {
       "path": "PWA/gate_markets.json",
       "role": "网页下载端",
-      "bytes": 4770,
-      "modifiedAt": "2026-05-24T09:43:31.338850+00:00",
-      "sha256": "a0b638e09dc912648eaab35da90e1ae0046c9058641f8d9838cfc54c04024bcc",
+      "bytes": 458,
+      "modifiedAt": "2026-05-26T06:17:40.077734+00:00",
+      "sha256": "c9dba74710fe6baa9fd814274a708abb6358924e61288acd5cf92f0e4acd394d",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-24T09:43:22.468591+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {\n        \"currency_pair\": \"BTC_USDT\",\n        \"last\": \"76983.9\",\n        \"lowest_ask\": \"76988.2\",\n        \"lowest_size\": \"2.697159\",\n        \"highest_bid\": \"76988.1\",\n        \"highest_size\": \"0.042347\",\n        \"change_percentage\": \"3\",\n        \"base_volume\": \"4991.026196\",\n        \"quote_volume\": \"380736209.0584233\",\n        \"high_24h\": \"77425.1\",\n        \"low_24h\": \"74654.4\"\n      },\n      \"futures\": {\n        \"last\": \"76951\",\n        \"low_24h\": \"74620\",\n        \"high_24h\": \"77366.5\",\n        \"volume_24h\": \"542329520\",\n        \"change_percentage\": \"3.00\",\n        \"change_price\": \"2241.1\",\n        \"funding_rate_indicative\": \"0.000047\","
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"ETH_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"SOL_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"BNB_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    }\n  ]\n}"
     },
     {
       "path": "PWA/gate_private_status.json",
@@ -665,11 +665,11 @@
     {
       "path": "exchange_markets.json",
       "role": "同步数据",
-      "bytes": 24818,
-      "modifiedAt": "2026-05-24T09:43:31.337279+00:00",
-      "sha256": "e2e6bdfd2b80fd75084ce050c488b40138d673ff39fac8b0fd3c6c0f9ff322e6",
+      "bytes": 5236,
+      "modifiedAt": "2026-05-26T06:17:40.077176+00:00",
+      "sha256": "901cd017e28591ca178da26d675ceafa048404bfe31d19d121aadc4abd94413a",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-24T09:43:22.468591+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "gate_private_status.py",
@@ -980,11 +980,11 @@
     {
       "path": "wukong_pwa_url.txt",
       "role": "同步数据",
-      "bytes": 56,
-      "modifiedAt": "2026-05-23T08:42:14.618213+00:00",
-      "sha256": "f17eb53d04f6783317a50bdd1a2f8b814a2774c9d6cf574b14708e60e2ff242d",
+      "bytes": 63,
+      "modifiedAt": "2026-05-24T09:55:59.982323+00:00",
+      "sha256": "7dda726cc6c00c12518dc58136796734bc9c3ff9da9bf2398b8fbb53a36e3f5b",
       "mime": "text/plain",
-      "preview": "https://memphis-assist-nor-charleston.trycloudflare.com"
+      "preview": "https://translated-metadata-biological-louis.trycloudflare.com"
     },
     {
       "path": "wukong_screen_mirror.json",

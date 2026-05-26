@@ -1,159 +1,27 @@
 {
   "app": "悟空",
   "source": "Gate.io API v4 public market data",
-  "generatedAt": "2026-05-24T09:43:22.468591+00:00",
+  "generatedAt": "2026-05-26T06:17:39.986923+00:00",
   "markets": [
     {
       "symbol": "BTC_USDT",
-      "spot": {
-        "currency_pair": "BTC_USDT",
-        "last": "76983.9",
-        "lowest_ask": "76988.2",
-        "lowest_size": "2.697159",
-        "highest_bid": "76988.1",
-        "highest_size": "0.042347",
-        "change_percentage": "3",
-        "base_volume": "4991.026196",
-        "quote_volume": "380736209.0584233",
-        "high_24h": "77425.1",
-        "low_24h": "74654.4"
-      },
-      "futures": {
-        "last": "76951",
-        "low_24h": "74620",
-        "high_24h": "77366.5",
-        "volume_24h": "542329520",
-        "change_percentage": "3.00",
-        "change_price": "2241.1",
-        "funding_rate_indicative": "0.000047",
-        "index_price": "76990.26",
-        "volume_24h_base": "54232",
-        "volume_24h_quote": "4128582037",
-        "contract": "BTC_USDT",
-        "volume_24h_settle": "4128582037",
-        "funding_rate": "0.000047",
-        "mark_price": "76953.06",
-        "total_size": "620038410",
-        "highest_bid": "76951.4",
-        "highest_size": "31012",
-        "lowest_ask": "76951.5",
-        "lowest_size": "29345",
-        "quanto_multiplier": "0.0001"
-      }
+      "spot": {},
+      "futures": {}
     },
     {
       "symbol": "ETH_USDT",
-      "spot": {
-        "currency_pair": "ETH_USDT",
-        "last": "2123.76",
-        "lowest_ask": "2123.96",
-        "lowest_size": "5.1269",
-        "highest_bid": "2123.95",
-        "highest_size": "52.5993",
-        "change_percentage": "4.64",
-        "base_volume": "153421.8912",
-        "quote_volume": "321757542.647684",
-        "high_24h": "2149.48",
-        "low_24h": "2027.18"
-      },
-      "futures": {
-        "last": "2122.51",
-        "low_24h": "2025.87",
-        "high_24h": "2148.56",
-        "volume_24h": "225012152",
-        "change_percentage": "4.63",
-        "change_price": "93.9",
-        "funding_rate_indicative": "0.000054",
-        "index_price": "2123.73",
-        "volume_24h_base": "2250121",
-        "volume_24h_quote": "4704818588",
-        "contract": "ETH_USDT",
-        "volume_24h_settle": "4704818588",
-        "funding_rate": "0.000054",
-        "mark_price": "2122.69",
-        "total_size": "216544562",
-        "highest_bid": "2122.85",
-        "highest_size": "45765.4",
-        "lowest_ask": "2122.86",
-        "lowest_size": "18254.2",
-        "quanto_multiplier": "0.01"
-      }
+      "spot": {},
+      "futures": {}
     },
     {
       "symbol": "SOL_USDT",
-      "spot": {
-        "currency_pair": "SOL_USDT",
-        "last": "86.68",
-        "lowest_ask": "86.7",
-        "lowest_size": "342.471",
-        "highest_bid": "86.69",
-        "highest_size": "175.662",
-        "change_percentage": "5.53",
-        "base_volume": "1080930.366",
-        "quote_volume": "92103828.056",
-        "high_24h": "87.52",
-        "low_24h": "81.98"
-      },
-      "futures": {
-        "last": "86.64",
-        "low_24h": "81.93",
-        "high_24h": "87.47",
-        "volume_24h": "5334035",
-        "change_percentage": "5.57",
-        "change_price": "4.57",
-        "funding_rate_indicative": "0.000055",
-        "index_price": "86.66",
-        "volume_24h_base": "5334035",
-        "volume_24h_quote": "453580316",
-        "contract": "SOL_USDT",
-        "volume_24h_settle": "453580316",
-        "funding_rate": "0.000055",
-        "mark_price": "86.64",
-        "total_size": "6438254",
-        "highest_bid": "86.64",
-        "highest_size": "2808.9",
-        "lowest_ask": "86.65",
-        "lowest_size": "14.6",
-        "quanto_multiplier": "1"
-      }
+      "spot": {},
+      "futures": {}
     },
     {
       "symbol": "BNB_USDT",
-      "spot": {
-        "currency_pair": "BNB_USDT",
-        "last": "660.2",
-        "lowest_ask": "660.1",
-        "lowest_size": "14.412",
-        "highest_bid": "660",
-        "highest_size": "14.044",
-        "change_percentage": "3.15",
-        "base_volume": "15592.19489514",
-        "quote_volume": "10170606.565318496",
-        "high_24h": "663.8",
-        "low_24h": "638.5"
-      },
-      "futures": {
-        "last": "659.65",
-        "low_24h": "638.1",
-        "high_24h": "663.6",
-        "volume_24h": "35373890",
-        "change_percentage": "3.18",
-        "change_price": "20.35",
-        "funding_rate_indicative": "0.000073",
-        "index_price": "660.085",
-        "volume_24h_base": "35373",
-        "volume_24h_quote": "23085116",
-        "contract": "BNB_USDT",
-        "volume_24h_settle": "23085116",
-        "funding_rate": "0.000073",
-        "mark_price": "659.75",
-        "total_size": "37991722",
-        "highest_bid": "659.7",
-        "highest_size": "65046",
-        "lowest_ask": "659.75",
-        "lowest_size": "6184",
-        "quanto_multiplier": "0.001"
-      }
+      "spot": {},
+      "futures": {}
     }
   ]
 }
