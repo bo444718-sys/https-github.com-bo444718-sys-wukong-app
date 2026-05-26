@@ -1,9 +1,9 @@
 {
   "app": "悟空",
-  "generatedAt": "2026-05-26T06:17:40.709167+00:00",
+  "generatedAt": "2026-05-26T07:11:54.642091+00:00",
   "root": "/Users/wangbo/Documents/New project/悟空app",
   "fileCount": 113,
-  "totalBytes": 91994456,
+  "totalBytes": 91836876,
   "roles": {
     "资源": 20,
     "Telegram": 10,
@@ -152,9 +152,9 @@
     {
       "path": "PWA/app.js",
       "role": "网页下载端",
-      "bytes": 122246,
-      "modifiedAt": "2026-05-24T09:21:34.140332+00:00",
-      "sha256": "7c9851ae928ae87181904e650d337e9d6b93571b912bb430cbb0d8a09e283c2d",
+      "bytes": 122263,
+      "modifiedAt": "2026-05-26T06:46:07.074524+00:00",
+      "sha256": "ae7a0a2a9a3a0af13216acd89a5065b4cf8069a348958ea300ab17f994ceed4c",
       "mime": "text/javascript",
       "preview": "const API_BASE = \"https://michill.ai\";\nconst GATE_BASE = \"https://api.gateio.ws/api/v4\";\nconst SNAPSHOT_URL = \"./wukong_latest_snapshot.json\";\nconst EXCHANGE_SNAPSHOT_URL = \"./exchange_markets.json\";\nconst GATE_PRIVATE_STATUS_URL = \"./gate_private_status.json\";\nconst GATE_TRADE_PREFLIGHT_URL = \"./gate_trade_preflight.json\";\nconst PAPER_TRADING_STATE_URL = \"./paper_trading_state.json\";\nconst PROFESSIONAL_SYSTEM_URL = \"./professional_trade_system.json\";\nconst EMA_CROSS_4H_URL = \"./ema_cross_4h.json\";\nconst GATE_SNAPSHOT_URL = \"./gate_markets.json\";\nconst X_SOCIAL_URL = \"./x_social.json\";\nconst ALPHA_URL = \"./binance_alpha.json\";\nconst TELEGRAM_STATUS_URL = \"./telegram_status.json\";\nconst REFRESH_MS = 30_000;\nconst GATE_PAIRS = [\"BTC_USDT\", \"ETH_USDT\", \"SOL_USDT\", \"BNB_USDT\"];\nconst WATCHLIST_KEY = \"wukong.watchlist.v1\";\nconst APP_VERSION = \"122\";\nconst LOCAL_FILE_MODE = window.location.pro"
     },
@@ -197,29 +197,29 @@
     {
       "path": "PWA/ema_cross_4h.json",
       "role": "网页下载端",
-      "bytes": 1754,
-      "modifiedAt": "2026-05-24T09:43:46.582640+00:00",
-      "sha256": "83637096d082b577daf52b8f67a2068739a335a9280ff5d4f4a18a7a989c5413",
+      "bytes": 663,
+      "modifiedAt": "2026-05-26T07:10:21.139606+00:00",
+      "sha256": "8c8aaa2472d0ef0d1e95ccee20853602d75ab641ff1c3dcdb625a06aef56a62b",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-24T09:43:46.580538+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 4,\n  \"durationSeconds\": 13.5,\n  \"items\": [\n    {\n      \"ticker\": \"RAYSOL\",\n      \"symbol\": \"RAYSOLUSDT\",\n      \"pair\": \"RAYSOL/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.78,\n      \"changeLastCandlePct\": 1.0494,\n      \"ema21\": 0.7595775731,\n      \"ema55\": 0.75847926,\n      \"emaSpreadPct\": 0.1448,\n      \"candleCloseTime\": \"2026-05-24T11:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    },\n    {\n      \"ticker\": \"BNT\",\n      \"symbol\": \"BNTUSDT\",\n      \"pair\": \"BNT/USDT\","
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-26T07:05:04.328630+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 1,\n  \"durationSeconds\": 21.61,\n  \"items\": [\n    {\n      \"ticker\": \"ESP\",\n      \"symbol\": \"ESPUSDT\",\n      \"pair\": \"ESP/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.06924,\n      \"changeLastCandlePct\": 0.1302,\n      \"ema21\": 0.0676532528,\n      \"ema55\": 0.067587659,\n      \"emaSpreadPct\": 0.097,\n      \"candleCloseTime\": \"2026-05-26T07:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    }\n  ],\n  \"errors\": []\n}"
     },
     {
       "path": "PWA/ema_cross_4h_bootstrap.js",
       "role": "网页下载端",
-      "bytes": 1345,
-      "modifiedAt": "2026-05-24T09:43:46.583205+00:00",
-      "sha256": "f3ba6bf92c37754c2cf4f0553d5f823067bbbebf79e6e8a1870b13a9e74cd751",
+      "bytes": 548,
+      "modifiedAt": "2026-05-26T07:10:21.139582+00:00",
+      "sha256": "642f45e9108eb5b7e7b290bbafe5042f237c21c136bc5f594ff240f743bdf5c2",
       "mime": "text/javascript",
-      "preview": "window.WUKONG_EMA_CROSS_4H = {\"app\":\"悟空\",\"source\":\"Binance USDT perpetual klines\",\"mode\":\"public-readonly\",\"generatedAt\":\"2026-05-24T09:43:46.580538+00:00\",\"interval\":\"4h\",\"rule\":\"EMA21 上穿 EMA55\",\"symbolsScanned\":527,\"matches\":4,\"durationSeconds\":13.5,\"items\":[{\"ticker\":\"RAYSOL\",\"symbol\":\"RAYSOLUSDT\",\"pair\":\"RAYSOL/USDT\",\"interval\":\"4h\",\"close\":0.78,\"changeLastCandlePct\":1.0494,\"ema21\":0.7595775731,\"ema55\":0.75847926,\"emaSpreadPct\":0.1448,\"candleCloseTime\":\"2026-05-24T11:59:59.999000+00:00\",\"signal\":\"4H EMA21 上穿 EMA55\"},{\"ticker\":\"BNT\",\"symbol\":\"BNTUSDT\",\"pair\":\"BNT/USDT\",\"interval\":\"4h\",\"close\":0.3401,\"changeLastCandlePct\":0.2358,\"ema21\":0.3356893133,\"ema55\":0.3354996689,\"emaSpreadPct\":0.0565,\"candleCloseTime\":\"2026-05-24T11:59:59.999000+00:00\",\"signal\":\"4H EMA21 上穿 EMA55\"},{\"ticker\":\"ID\",\"symbol\":\"IDUSDT\",\"pair\":\"ID/USDT\",\"interval\":\"4h\",\"close\":0.03126,\"changeLastCandlePct\":-0.7304,\"e"
+      "preview": "window.WUKONG_EMA_CROSS_4H = {\"app\":\"悟空\",\"source\":\"Binance USDT perpetual klines\",\"mode\":\"public-readonly\",\"generatedAt\":\"2026-05-26T07:05:04.328630+00:00\",\"interval\":\"4h\",\"rule\":\"EMA21 上穿 EMA55\",\"symbolsScanned\":527,\"matches\":1,\"durationSeconds\":21.61,\"items\":[{\"ticker\":\"ESP\",\"symbol\":\"ESPUSDT\",\"pair\":\"ESP/USDT\",\"interval\":\"4h\",\"close\":0.06924,\"changeLastCandlePct\":0.1302,\"ema21\":0.0676532528,\"ema55\":0.067587659,\"emaSpreadPct\":0.097,\"candleCloseTime\":\"2026-05-26T07:59:59.999000+00:00\",\"signal\":\"4H EMA21 上穿 EMA55\"}],\"errors\":[]};"
     },
     {
       "path": "PWA/exchange_markets.json",
       "role": "网页下载端",
       "bytes": 5236,
-      "modifiedAt": "2026-05-26T06:17:40.077313+00:00",
-      "sha256": "901cd017e28591ca178da26d675ceafa048404bfe31d19d121aadc4abd94413a",
+      "modifiedAt": "2026-05-26T07:11:33.359862+00:00",
+      "sha256": "bdff9a1a0230296b63d166635370a1113f88df311ca0ba218f6f936045a26404",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T07:11:33.117452+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "PWA/favicon.ico",
@@ -234,10 +234,10 @@
       "path": "PWA/gate_markets.json",
       "role": "网页下载端",
       "bytes": 458,
-      "modifiedAt": "2026-05-26T06:17:40.077734+00:00",
-      "sha256": "c9dba74710fe6baa9fd814274a708abb6358924e61288acd5cf92f0e4acd394d",
+      "modifiedAt": "2026-05-26T07:11:33.361647+00:00",
+      "sha256": "5385c996153a6def9bea8457508c5a25fd877d1bd210f2c56bf01c262e41dd77",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"ETH_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"SOL_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"BNB_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    }\n  ]\n}"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-26T07:11:33.117452+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"ETH_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"SOL_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"BNB_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    }\n  ]\n}"
     },
     {
       "path": "PWA/gate_private_status.json",
@@ -287,9 +287,9 @@
     {
       "path": "PWA/index.html",
       "role": "网页下载端",
-      "bytes": 54426,
-      "modifiedAt": "2026-05-24T09:21:34.140583+00:00",
-      "sha256": "079eed41755fef32c0d8b5db1ff9876652860b24a929d8464400f09cdd3863c3",
+      "bytes": 54447,
+      "modifiedAt": "2026-05-26T06:45:45.608293+00:00",
+      "sha256": "5bcff7a71bc22b4852704ccab2ab890e50a94950e933e784524bc4db55cab924",
       "mime": "text/html",
       "preview": "<!doctype html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\n  <meta name=\"theme-color\" content=\"#070b12\">\n  <meta name=\"description\" content=\"悟空实时机会、市场信号、Telegram 同步与风险工作台\">\n  <meta name=\"format-detection\" content=\"telephone=no\">\n  <meta name=\"mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n  <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black-translucent\">\n  <meta name=\"apple-mobile-web-app-title\" content=\"悟空\">\n  <title>悟空</title>\n  <link rel=\"manifest\" href=\"./manifest.webmanifest?v=122\">\n  <link rel=\"icon\" href=\"./favicon.ico\" sizes=\"any\">\n  <link rel=\"icon\" type=\"image/png\" href=\"./icons/wukong-192.png\">\n  <link rel=\"apple-touch-icon\" href=\"./icons/wukong-180.png\">\n  <link rel=\"stylesheet\" href=\"./styles.css?v=122\">\n</head>"
     },
@@ -404,11 +404,11 @@
     {
       "path": "PWA/wukong_latest_snapshot.json",
       "role": "网页下载端",
-      "bytes": 1471995,
-      "modifiedAt": "2026-05-24T09:43:22.423460+00:00",
-      "sha256": "bb860b07f90d33b62da34ff491be68418876c0f4fbbc45a50d0957aa4ccdeaae",
+      "bytes": 1394367,
+      "modifiedAt": "2026-05-26T07:11:33.087745+00:00",
+      "sha256": "d29cc041d907706bfb06781368d2f4bf046ea7bef27ca04d6662f22a72df2294",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"once\",\n  \"updatedAt\": \"2026-05-24T09:43:22.378114+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-24T09:42:59.736Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-24 17:42\\nApp推送：05-24 17:43:22\\n\\n币种数：8185\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：11\\n风险样本：6\\nBinance Alpha：CA 646 · 已映射 604\\nAI纸面日历：-49.0% · 175笔\\n\\nAI复盘：进入视野 624 · 可复盘 240 · 涨超30% 90\\n\\n今日系统看见 624 个币，可复盘样本 240 个，涨超 10% 的样本 185 个，涨超 30% 的样本 90 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. TRUST | 重点候选 | 合约启动\\n   24h +11.2% · OI1h +0.7% · OI6h +5.8% · 费率 5e-05 · 分 55 · 价 0.07215\\n2. ARKM | 重点候选 | 合约启动\\n   24h +17.6% · OI1h -2.8% · OI6h +8.6% · 费率 -0.00033587 · 分 61 · 价 0.14637333\\n3. MORPHO | 重点候选 | 合约启动\\n   24h +13.3% · OI1h +0.5% · OI6h +3.3% · 费率 1.097e-05 · 分 50 · 价 2.1785\\n4. ASTER | 等待回踩 | 合约启动\\n   24h +4.8% · OI1h +8.7% · OI6h +12.1% · 费率 5e-05 · 分 86 · 价 0.69930833\\n5. POLYX | 等待回踩 | 合约启动\\n   24h +6.7% · OI1h +0.1% · OI6h +8.5% "
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-26T07:11:29.470880+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-26T06:58:14.344Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-26 14:58\\nApp推送：05-26 15:11:29\\n\\n币种数：8530\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：9\\n风险样本：6\\nBinance Alpha：CA 647 · 已映射 604\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 592 · 可复盘 187 · 涨超30% 83\\n\\n今日系统看见 592 个币，可复盘样本 187 个，涨超 10% 的样本 143 个，涨超 30% 的样本 83 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. GRASS | 重点候选 | 合约启动\\n   24h +9.5% · OI1h +0.2% · OI6h -1.1% · 费率 5e-05 · 分 59 · 价 0.5745\\n2. BAN | 重点候选 | 合约启动\\n   24h +10.6% · OI1h -1.8% · OI6h +9.7% · 费率 5e-05 · 分 62 · 价 0.09966389\\n3. RENDER | 重点候选 | 合约启动\\n   24h +14.5% · OI1h +0.4% · OI6h +8.2% · 费率 4.225e-05 · 分 64 · 价 2.31\\n4. EIGEN | 重点候选 | 合约启动\\n   24h +15.4% · OI1h +1.8% · OI6h +6.8% · 费率 2.039e-05 · 分 57 · 价 0.25926088\\n5. SEI | 等待回踩 | 合约启动\\n   24h +2.9% · OI1h +2.0% · OI6h +10.8% · 费率"
     },
     {
       "path": "PWA/x_social.json",
@@ -656,20 +656,20 @@
     {
       "path": "ema_cross_4h.json",
       "role": "同步数据",
-      "bytes": 1754,
-      "modifiedAt": "2026-05-24T09:43:46.582404+00:00",
-      "sha256": "83637096d082b577daf52b8f67a2068739a335a9280ff5d4f4a18a7a989c5413",
+      "bytes": 663,
+      "modifiedAt": "2026-05-26T07:10:21.139575+00:00",
+      "sha256": "8c8aaa2472d0ef0d1e95ccee20853602d75ab641ff1c3dcdb625a06aef56a62b",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-24T09:43:46.580538+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 4,\n  \"durationSeconds\": 13.5,\n  \"items\": [\n    {\n      \"ticker\": \"RAYSOL\",\n      \"symbol\": \"RAYSOLUSDT\",\n      \"pair\": \"RAYSOL/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.78,\n      \"changeLastCandlePct\": 1.0494,\n      \"ema21\": 0.7595775731,\n      \"ema55\": 0.75847926,\n      \"emaSpreadPct\": 0.1448,\n      \"candleCloseTime\": \"2026-05-24T11:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    },\n    {\n      \"ticker\": \"BNT\",\n      \"symbol\": \"BNTUSDT\",\n      \"pair\": \"BNT/USDT\","
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance USDT perpetual klines\",\n  \"mode\": \"public-readonly\",\n  \"generatedAt\": \"2026-05-26T07:05:04.328630+00:00\",\n  \"interval\": \"4h\",\n  \"rule\": \"EMA21 上穿 EMA55\",\n  \"symbolsScanned\": 527,\n  \"matches\": 1,\n  \"durationSeconds\": 21.61,\n  \"items\": [\n    {\n      \"ticker\": \"ESP\",\n      \"symbol\": \"ESPUSDT\",\n      \"pair\": \"ESP/USDT\",\n      \"interval\": \"4h\",\n      \"close\": 0.06924,\n      \"changeLastCandlePct\": 0.1302,\n      \"ema21\": 0.0676532528,\n      \"ema55\": 0.067587659,\n      \"emaSpreadPct\": 0.097,\n      \"candleCloseTime\": \"2026-05-26T07:59:59.999000+00:00\",\n      \"signal\": \"4H EMA21 上穿 EMA55\"\n    }\n  ],\n  \"errors\": []\n}"
     },
     {
       "path": "exchange_markets.json",
       "role": "同步数据",
       "bytes": 5236,
-      "modifiedAt": "2026-05-26T06:17:40.077176+00:00",
-      "sha256": "901cd017e28591ca178da26d675ceafa048404bfe31d19d121aadc4abd94413a",
+      "modifiedAt": "2026-05-26T07:11:33.359704+00:00",
+      "sha256": "bdff9a1a0230296b63d166635370a1113f88df311ca0ba218f6f936045a26404",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T06:17:39.986923+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-26T07:11:33.117452+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "gate_private_status.py",
@@ -899,9 +899,9 @@
     {
       "path": "telegram_wukong_bot.py",
       "role": "Telegram",
-      "bytes": 61648,
-      "modifiedAt": "2026-05-24T09:21:34.139892+00:00",
-      "sha256": "e0cc95cf8e226b0be9bd14f9919dfe3668fbbfbd9f42126d92278028f334d193",
+      "bytes": 62275,
+      "modifiedAt": "2026-05-26T06:45:14.322512+00:00",
+      "sha256": "330f40c2b63a979324d7a1687a0a62c44fdb73ca9e4b3e8bcceb74c134387991",
       "mime": "text/x-python",
       "preview": "#!/usr/bin/env python3\n\"\"\"Telegram control plane for Wukong.\n\nFeatures:\n- Pushes Wukong market/review summaries to Telegram every 30 seconds.\n- Accepts Telegram commands for refresh, sections, ticker search, watchlist, and AI Q&A.\n- Uses only the Python standard library.\n\nRequired environment:\n- TELEGRAM_BOT_TOKEN\n- TELEGRAM_CHAT_ID\n\nOptional environment:\n- OPENAI_API_KEY or CODEX_API_KEY\n- WUKONG_OPENAI_MODEL, defaults to gpt-4.1-mini\n- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 30\n\nWhen an existing Hermes Telegram gateway is already polling the bot, run this\nscript with --push-only so it only sends messages and never calls getUpdates.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport sys\nimport time"
     },
@@ -944,11 +944,11 @@
     {
       "path": "wukong_latest_snapshot.json",
       "role": "同步数据",
-      "bytes": 1471995,
-      "modifiedAt": "2026-05-24T09:43:22.422174+00:00",
-      "sha256": "bb860b07f90d33b62da34ff491be68418876c0f4fbbc45a50d0957aa4ccdeaae",
+      "bytes": 1394367,
+      "modifiedAt": "2026-05-26T07:11:32.876275+00:00",
+      "sha256": "d29cc041d907706bfb06781368d2f4bf046ea7bef27ca04d6662f22a72df2294",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"once\",\n  \"updatedAt\": \"2026-05-24T09:43:22.378114+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-24T09:42:59.736Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-24 17:42\\nApp推送：05-24 17:43:22\\n\\n币种数：8185\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：11\\n风险样本：6\\nBinance Alpha：CA 646 · 已映射 604\\nAI纸面日历：-49.0% · 175笔\\n\\nAI复盘：进入视野 624 · 可复盘 240 · 涨超30% 90\\n\\n今日系统看见 624 个币，可复盘样本 240 个，涨超 10% 的样本 185 个，涨超 30% 的样本 90 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. TRUST | 重点候选 | 合约启动\\n   24h +11.2% · OI1h +0.7% · OI6h +5.8% · 费率 5e-05 · 分 55 · 价 0.07215\\n2. ARKM | 重点候选 | 合约启动\\n   24h +17.6% · OI1h -2.8% · OI6h +8.6% · 费率 -0.00033587 · 分 61 · 价 0.14637333\\n3. MORPHO | 重点候选 | 合约启动\\n   24h +13.3% · OI1h +0.5% · OI6h +3.3% · 费率 1.097e-05 · 分 50 · 价 2.1785\\n4. ASTER | 等待回踩 | 合约启动\\n   24h +4.8% · OI1h +8.7% · OI6h +12.1% · 费率 5e-05 · 分 86 · 价 0.69930833\\n5. POLYX | 等待回踩 | 合约启动\\n   24h +6.7% · OI1h +0.1% · OI6h +8.5% "
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-26T07:11:29.470880+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-26T06:58:14.344Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-26 14:58\\nApp推送：05-26 15:11:29\\n\\n币种数：8530\\n入场窗口：0\\n早发现雷达：12\\n确认/回踩候选：0\\nOI异动：9\\n风险样本：6\\nBinance Alpha：CA 647 · 已映射 604\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 592 · 可复盘 187 · 涨超30% 83\\n\\n今日系统看见 592 个币，可复盘样本 187 个，涨超 10% 的样本 143 个，涨超 30% 的样本 83 个。\\n\\n入场币种 Top 0\\n\\n合约启动币种 Top 8\\n1. GRASS | 重点候选 | 合约启动\\n   24h +9.5% · OI1h +0.2% · OI6h -1.1% · 费率 5e-05 · 分 59 · 价 0.5745\\n2. BAN | 重点候选 | 合约启动\\n   24h +10.6% · OI1h -1.8% · OI6h +9.7% · 费率 5e-05 · 分 62 · 价 0.09966389\\n3. RENDER | 重点候选 | 合约启动\\n   24h +14.5% · OI1h +0.4% · OI6h +8.2% · 费率 4.225e-05 · 分 64 · 价 2.31\\n4. EIGEN | 重点候选 | 合约启动\\n   24h +15.4% · OI1h +1.8% · OI6h +6.8% · 费率 2.039e-05 · 分 57 · 价 0.25926088\\n5. SEI | 等待回踩 | 合约启动\\n   24h +2.9% · OI1h +2.0% · OI6h +10.8% · 费率"
     },
     {
       "path": "wukong_paper_engine.py",
@@ -980,11 +980,11 @@
     {
       "path": "wukong_pwa_url.txt",
       "role": "同步数据",
-      "bytes": 63,
-      "modifiedAt": "2026-05-24T09:55:59.982323+00:00",
-      "sha256": "7dda726cc6c00c12518dc58136796734bc9c3ff9da9bf2398b8fbb53a36e3f5b",
+      "bytes": 53,
+      "modifiedAt": "2026-05-26T06:17:58.639071+00:00",
+      "sha256": "4cc4478dfe13efedfb43a0ac4f9001b3bf7748b14d8b7552e53f73f9920b0df8",
       "mime": "text/plain",
-      "preview": "https://translated-metadata-biological-louis.trycloudflare.com"
+      "preview": "https://closest-personals-ssl-step.trycloudflare.com"
     },
     {
       "path": "wukong_screen_mirror.json",

@@ -1290,7 +1290,7 @@ function renderOpenOrders() {
 function renderEmaCross4h() {
   const snapshot = state.emaCross4h || {};
   const rows = snapshot.items || [];
-  setText("#emaCrossStatus", snapshot.generatedAt ? `${rows.length} 个 · ${fmtAge(snapshot.generatedAt)}` : "等待扫描");
+  setText("#emaCrossStatus", snapshot.generatedAt ? `${rows.length} 个 · ${fmtAge(snapshot.generatedAt)} · 5分钟扫描` : "等待扫描");
   if (!rows.length) {
     setHTML("#emaCrossList", '<div class="empty compact">当前没有 4H EMA21 上穿 EMA55 的币种。</div>');
     return;

@@ -39,6 +39,7 @@ from typing import Any
 MICHILL_BASE_URL = "https://michill.ai"
 TELEGRAM_LIMIT = 3900
 PWA_VERSION = "122"
+EMA_SCAN_INTERVAL_SECONDS = 5 * 60
 STATE_PATH = Path(".wukong_telegram_state.json")
 SNAPSHOT_PATH = Path("wukong_latest_snapshot.json")
 TELEGRAM_STATUS_PATH = Path("telegram_status.json")
@@ -57,6 +58,12 @@ GATE_TRADE_PREFLIGHT_PATHS = [
     PROJECT_ROOT / "PWA" / "gate_trade_preflight.json",
     PROJECT_ROOT / "gate_trade_preflight.json",
     Path("PWA/gate_trade_preflight.json"),
+]
+EMA_CROSS_PATHS = [
+    PROJECT_ROOT / "PWA" / "ema_cross_4h.json",
+    PROJECT_ROOT / "ema_cross_4h.json",
+    Path("/Users/wangbo/.hermes/wukong_pwa/PWA/ema_cross_4h.json"),
+    Path("/Users/wangbo/.hermes/wukong_telegram/ema_cross_4h.json"),
 ]
 PAPER_TRADING_STATE_PATHS = [
     Path("/Users/wangbo/.hermes/wukong_pwa/PWA/paper_trading_state.json"),
@@ -697,7 +704,7 @@ def write_snapshot(
         subprocess.run([sys.executable, str(PAPER_ENGINE_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if PROFESSIONAL_AUDIT_SCRIPT.exists():
         subprocess.run([sys.executable, str(PROFESSIONAL_AUDIT_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
-    if EMA_CROSS_SCRIPT.exists():
+    if EMA_CROSS_SCRIPT.exists() and ema_scan_due():
         subprocess.run([sys.executable, str(EMA_CROSS_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if QR_SYNC_SCRIPT.exists():
         subprocess.run([sys.executable, str(QR_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
@@ -707,6 +714,18 @@ def write_snapshot(
         subprocess.run([sys.executable, str(ALPHA_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
     if FILE_SYNC_SCRIPT.exists():
         subprocess.run([sys.executable, str(FILE_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+
+
+def ema_scan_due() -> bool:
+    newest_mtime = 0.0
+    for path in EMA_CROSS_PATHS:
+        try:
+            newest_mtime = max(newest_mtime, path.stat().st_mtime)
+        except OSError:
+            continue
+    if newest_mtime <= 0:
+        return True
+    return (time.time() - newest_mtime) >= EMA_SCAN_INTERVAL_SECONDS
 
 
 def write_bridge_context(push_interval: int) -> None:
