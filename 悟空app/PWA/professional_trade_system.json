@@ -1,6 +1,6 @@
 {
   "app": "悟空",
-  "generatedAt": "2026-05-24T09:43:33.030504+00:00",
+  "generatedAt": "2026-05-26T09:12:27.101577+00:00",
   "profile": "professional-auto-trading-framework",
   "fileScan": {
     "count": 204,
@@ -90,6 +90,7 @@
     "orderEndpointEnabled": false,
     "manualConfirmationRequired": true,
     "blockers": [
+      "Gate 私有 API 未验证",
       "未配置 Gate IP 白名单"
     ]
   },
@@ -106,8 +107,8 @@
     "maxStopLossPct": 5.5
   },
   "strategyAudit": {
-    "dashboardAgeSeconds": 32.6,
-    "dashboardFresh": true,
+    "dashboardAgeSeconds": 256.3,
+    "dashboardFresh": false,
     "rules": {
       "maxDashboardAgeSeconds": 180,
       "minScore": 70,
@@ -136,48 +137,20 @@
     "allowed": [],
     "rejected": [
       {
-        "ticker": "ASTER",
+        "ticker": "ARKM",
         "section": "earlyEntryRadar",
         "stage": "等待回踩",
-        "score": 86.0,
-        "confirmScore": 126.0,
-        "priceChange24hPct": 4.826,
-        "fundingRate": 5e-05,
-        "quoteVolume": 70918240.2364,
-        "oi1hPct": 8.684448756415838,
-        "oi6hPct": 12.1072108814259,
-        "readiness": 54,
-        "allowed": false,
-        "reasons": [
-          "硬风险命中：blocked, overheated",
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed"
-        ],
-        "warnings": [
-          "软风险提示：social_only"
-        ],
-        "riskCodes": [
-          "blocked",
-          "overheated",
-          "social_only",
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "FIDA",
-        "section": "earlyEntryRadar",
-        "stage": "等待回踩",
-        "score": 83.0,
-        "confirmScore": 81.0,
-        "priceChange24hPct": 11.688,
-        "fundingRate": -0.00245678,
-        "quoteVolume": 100588863.34422,
-        "oi1hPct": 15.682786374012617,
-        "oi6hPct": 26.702214162525443,
+        "score": 92.0,
+        "confirmScore": 86.0,
+        "priceChange24hPct": 10.942,
+        "fundingRate": -0.00011531,
+        "quoteVolume": 14248754.5513,
+        "oi1hPct": 6.679331614998676,
+        "oi6hPct": 21.258702877518846,
         "readiness": 57,
         "allowed": false,
         "reasons": [
-          "硬风险命中：blocked, overheated",
+          "数据超过 180 秒，禁止生成新计划",
           "来源层级为 watch-only，未允许进入纸交易",
           "源信号未给出 paperEligibility.allowed"
         ],
@@ -185,26 +158,26 @@
           "软风险提示：social_only"
         ],
         "riskCodes": [
-          "blocked",
-          "overheated",
+          "alert_only",
           "social_only",
           "watch_only"
         ]
       },
       {
-        "ticker": "POLYX",
+        "ticker": "SEI",
         "section": "earlyEntryRadar",
         "stage": "等待回踩",
-        "score": 76.0,
-        "confirmScore": 92.0,
-        "priceChange24hPct": 6.655,
-        "fundingRate": 5.98e-06,
-        "quoteVolume": 4952198.8497,
-        "oi1hPct": 0.14625501613456138,
-        "oi6hPct": 8.477484763803268,
-        "readiness": 31,
+        "score": 85.0,
+        "confirmScore": 111.0,
+        "priceChange24hPct": 2.081,
+        "fundingRate": 6.094e-05,
+        "quoteVolume": 21603171.70255,
+        "oi1hPct": -0.4495797353908269,
+        "oi6hPct": 13.889807881343346,
+        "readiness": 40,
         "allowed": false,
         "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
           "硬风险命中：blocked, overheated",
           "来源层级为 watch-only，未允许进入纸交易",
           "源信号未给出 paperEligibility.allowed"
@@ -220,19 +193,49 @@
         ]
       },
       {
-        "ticker": "VVV",
+        "ticker": "TAO",
         "section": "earlyEntryRadar",
         "stage": "等待回踩",
-        "score": 76.0,
+        "score": 83.0,
+        "confirmScore": 121.0,
+        "priceChange24hPct": 3.293,
+        "fundingRate": 1.42e-05,
+        "quoteVolume": 191850783.47,
+        "oi1hPct": 4.127931902677983,
+        "oi6hPct": 11.680133971573184,
+        "readiness": 39,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "硬风险命中：blocked, overheated",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed"
+        ],
+        "warnings": [
+          "软风险提示：social_only"
+        ],
+        "riskCodes": [
+          "blocked",
+          "overheated",
+          "social_only",
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "GRT",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 82.0,
         "confirmScore": 101.0,
-        "priceChange24hPct": 10.84,
-        "fundingRate": 5e-05,
-        "quoteVolume": 91257959.31384,
-        "oi1hPct": 7.668119862729579,
-        "oi6hPct": 10.661735258968614,
-        "readiness": 43,
+        "priceChange24hPct": 7.853,
+        "fundingRate": -6.329e-05,
+        "quoteVolume": 14250151.51891,
+        "oi1hPct": 3.1748504191182345,
+        "oi6hPct": 15.367813304204766,
+        "readiness": 38,
         "allowed": false,
         "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
           "硬风险命中：blocked, overheated",
           "来源层级为 watch-only，未允许进入纸交易",
           "源信号未给出 paperEligibility.allowed"
@@ -248,28 +251,113 @@
         ]
       },
       {
-        "ticker": "ZEREBRO",
+        "ticker": "TIA",
         "section": "earlyEntryRadar",
         "stage": "等待回踩",
-        "score": 72.0,
-        "confirmScore": 88.0,
-        "priceChange24hPct": 7.76,
-        "fundingRate": 5e-05,
-        "quoteVolume": 4745981.00473,
-        "oi1hPct": 5.876332624114862,
-        "oi6hPct": 8.293748837372302,
-        "readiness": 28,
+        "score": 74.0,
+        "confirmScore": 98.0,
+        "priceChange24hPct": 9.234,
+        "fundingRate": -1.839e-05,
+        "quoteVolume": 86554044.7857,
+        "oi1hPct": -0.5515243649052448,
+        "oi6hPct": 5.1774863827019,
+        "readiness": 11,
         "allowed": false,
         "reasons": [
-          "硬风险命中：blocked, overheated, replay_risk_veto",
+          "数据超过 180 秒，禁止生成新计划",
+          "硬风险命中：blocked, overheated",
           "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed"
+          "源信号未给出 paperEligibility.allowed",
+          "OI 未确认：1h -0.551524% / 6h 5.17749%"
         ],
         "warnings": [
           "软风险提示：social_only"
         ],
         "riskCodes": [
           "blocked",
+          "overheated",
+          "social_only",
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "LAB",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 73.0,
+        "confirmScore": 121.0,
+        "priceChange24hPct": 6.561,
+        "fundingRate": 5e-05,
+        "quoteVolume": 73151789.54872,
+        "oi1hPct": 1.083313295172452,
+        "oi6hPct": 6.111562217942976,
+        "readiness": 17,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "硬风险命中：blocked, overheated",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed",
+          "OI 未确认：1h 1.08331% / 6h 6.11156%"
+        ],
+        "warnings": [
+          "软风险提示：social_only"
+        ],
+        "riskCodes": [
+          "blocked",
+          "overheated",
+          "social_only",
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "VIRTUAL",
+        "section": "entryWindow",
+        "stage": "小仓试错",
+        "score": 68.0,
+        "confirmScore": 116.0,
+        "priceChange24hPct": 5.932,
+        "fundingRate": 4.548e-05,
+        "quoteVolume": 43798791.76834,
+        "oi1hPct": 4.759645739788985,
+        "oi6hPct": 11.05302008243678,
+        "readiness": 56,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "综合分 68 < 70"
+        ],
+        "warnings": [],
+        "riskCodes": []
+      },
+      {
+        "ticker": "LIT",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
+        "score": 66.0,
+        "confirmScore": 113.0,
+        "priceChange24hPct": -3.899,
+        "fundingRate": 5e-05,
+        "quoteVolume": 64348591.55063,
+        "oi1hPct": 1.7346232794793526,
+        "oi6hPct": 3.526283432132301,
+        "readiness": 0,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "硬风险命中：blocked, field_gap, first_sl, overheated, replay_risk_veto",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed",
+          "综合分 66 < 70",
+          "OI 未确认：1h 1.73462% / 6h 3.52628%"
+        ],
+        "warnings": [
+          "软风险提示：social_only"
+        ],
+        "riskCodes": [
+          "blocked",
+          "field_gap",
+          "first_sl",
           "overheated",
           "replay_risk_veto",
           "social_only",
@@ -277,171 +365,108 @@
         ]
       },
       {
-        "ticker": "ARKM",
+        "ticker": "GRASS",
         "section": "earlyEntryRadar",
         "stage": "重点候选",
+        "score": 62.0,
+        "confirmScore": 93.0,
+        "priceChange24hPct": 8.407,
+        "fundingRate": 5e-05,
+        "quoteVolume": 99851561.89851,
+        "oi1hPct": 1.6497885561892884,
+        "oi6hPct": -2.4816909884964793,
+        "readiness": 1,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed",
+          "综合分 62 < 70",
+          "OI 未确认：1h 1.64979% / 6h -2.48169%"
+        ],
+        "warnings": [
+          "软风险提示：social_only"
+        ],
+        "riskCodes": [
+          "social_only",
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "PLUME",
+        "section": "earlyEntryRadar",
+        "stage": "等待回踩",
         "score": 61.0,
-        "confirmScore": 81.0,
-        "priceChange24hPct": 17.605,
-        "fundingRate": -0.00033587,
-        "quoteVolume": 14900095.218,
-        "oi1hPct": -2.8406104394318255,
-        "oi6hPct": 8.592222856518255,
-        "readiness": 19,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 61 < 70"
-        ],
-        "warnings": [],
-        "riskCodes": [
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "QNT",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 55.0,
-        "confirmScore": 76.0,
-        "priceChange24hPct": 9.869,
-        "fundingRate": 0.0001,
-        "quoteVolume": 8047631.554,
-        "oi1hPct": 1.365112108037656,
-        "oi6hPct": 9.182858214356946,
-        "readiness": 25,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 55 < 70"
-        ],
-        "warnings": [],
-        "riskCodes": [
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "TRUST",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 55.0,
-        "confirmScore": 77.0,
-        "priceChange24hPct": 11.171,
-        "fundingRate": 5e-05,
-        "quoteVolume": 4047398.69588,
-        "oi1hPct": 0.6757493525779009,
-        "oi6hPct": 5.807916200039666,
-        "readiness": 3,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 55 < 70",
-          "OI 未确认：1h 0.675749% / 6h 5.80792%"
-        ],
-        "warnings": [],
-        "riskCodes": [
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "HANA",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 55.0,
-        "confirmScore": 78.0,
-        "priceChange24hPct": 13.91,
-        "fundingRate": 0.00036609,
-        "quoteVolume": 46115037.93538,
-        "oi1hPct": 2.743595404540342,
-        "oi6hPct": -7.416361169667438,
-        "readiness": 4,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 55 < 70",
-          "OI 未确认：1h 2.7436% / 6h -7.41636%"
-        ],
-        "warnings": [
-          "软风险提示：social_only"
-        ],
-        "riskCodes": [
-          "social_only",
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "GMT",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 50.0,
-        "confirmScore": 98.0,
-        "priceChange24hPct": -7.547,
-        "fundingRate": -0.00110918,
-        "quoteVolume": 218889328.25069,
-        "oi1hPct": -2.0759685556210585,
-        "oi6hPct": -0.2597615124809103,
-        "readiness": 8,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 50 < 70",
-          "OI 未确认：1h -2.07597% / 6h -0.259762%"
-        ],
-        "warnings": [],
-        "riskCodes": [
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "MORPHO",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 50.0,
-        "confirmScore": 82.0,
-        "priceChange24hPct": 13.287,
-        "fundingRate": 1.097e-05,
-        "quoteVolume": 8813194.03232,
-        "oi1hPct": 0.45497020960650797,
-        "oi6hPct": 3.2921948120265707,
-        "readiness": 4,
-        "allowed": false,
-        "reasons": [
-          "来源层级为 watch-only，未允许进入纸交易",
-          "源信号未给出 paperEligibility.allowed",
-          "综合分 50 < 70",
-          "OI 未确认：1h 0.45497% / 6h 3.29219%"
-        ],
-        "warnings": [
-          "软风险提示：social_only"
-        ],
-        "riskCodes": [
-          "social_only",
-          "watch_only"
-        ]
-      },
-      {
-        "ticker": "HEI",
-        "section": "earlyEntryRadar",
-        "stage": "重点候选",
-        "score": 45.0,
-        "confirmScore": 80.0,
-        "priceChange24hPct": -5.894,
-        "fundingRate": 5e-05,
-        "quoteVolume": 5117668.830635,
-        "oi1hPct": 0.46598380874321477,
-        "oi6hPct": 1.1894637452951096,
+        "confirmScore": 113.0,
+        "priceChange24hPct": -7.798,
+        "fundingRate": 4.516e-05,
+        "quoteVolume": 15726123.06267,
+        "oi1hPct": 1.6424741041647828,
+        "oi6hPct": 2.8431591858707734,
         "readiness": 0,
         "allowed": false,
         "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "硬风险命中：blocked, overheated",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed",
+          "综合分 61 < 70",
+          "OI 未确认：1h 1.64247% / 6h 2.84316%"
+        ],
+        "warnings": [
+          "软风险提示：social_only"
+        ],
+        "riskCodes": [
+          "blocked",
+          "overheated",
+          "social_only",
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "EIGEN",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 59.0,
+        "confirmScore": 106.0,
+        "priceChange24hPct": 13.106,
+        "fundingRate": 4.587e-05,
+        "quoteVolume": 50137011.55254,
+        "oi1hPct": 3.7014306860598665,
+        "oi6hPct": 5.872509319694066,
+        "readiness": 6,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
+          "来源层级为 watch-only，未允许进入纸交易",
+          "源信号未给出 paperEligibility.allowed",
+          "综合分 59 < 70",
+          "OI 未确认：1h 3.70143% / 6h 5.87251%"
+        ],
+        "warnings": [],
+        "riskCodes": [
+          "watch_only"
+        ]
+      },
+      {
+        "ticker": "SUPER",
+        "section": "earlyEntryRadar",
+        "stage": "重点候选",
+        "score": 45.0,
+        "confirmScore": 94.0,
+        "priceChange24hPct": -3.479,
+        "fundingRate": -0.00010123,
+        "quoteVolume": 17477525.0185,
+        "oi1hPct": 0.5038643392096553,
+        "oi6hPct": -0.5359432780070231,
+        "readiness": 0,
+        "allowed": false,
+        "reasons": [
+          "数据超过 180 秒，禁止生成新计划",
           "来源层级为 watch-only，未允许进入纸交易",
           "源信号未给出 paperEligibility.allowed",
           "综合分 45 < 70",
-          "OI 未确认：1h 0.465984% / 6h 1.18946%"
+          "OI 未确认：1h 0.503864% / 6h -0.535943%"
         ],
         "warnings": [],
         "riskCodes": [
