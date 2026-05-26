@@ -1,7 +1,7 @@
 {
   "app": "悟空",
   "mode": "auto-paper-trading",
-  "generatedAt": "2026-05-26T09:12:26.541499+00:00",
+  "generatedAt": "2026-05-26T18:11:48.955786+00:00",
   "state": "flat",
   "reason": "入仓信号消失，纸交易已自动清仓",
   "realTradingEnabled": false,
