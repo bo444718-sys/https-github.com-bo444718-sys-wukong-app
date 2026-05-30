@@ -2,22 +2,32 @@
   "app": "悟空",
   "source": "X / Twitter",
   "mode": "snapshot",
-  "updatedAt": "2026-05-24T09:43:46.734633+00:00",
+  "updatedAt": "2026-05-30T17:22:06.905081+00:00",
   "snapshotFetchedAt": "2026-05-01T14:23:27.147Z",
   "summary": {
     "posts": 390,
     "tickers": 24,
-    "topTicker": "B2",
+    "topTicker": "NFP",
     "message": "未配置 X_BEARER_TOKEN，当前使用悟空已有公开快照。"
   },
   "topTickers": [
     {
-      "ticker": "B2",
+      "ticker": "NFP",
       "posts": 20,
       "section": "risingAttention",
       "stage": "回避",
-      "change24h": -13.021,
-      "heatScore": 2326,
+      "change24h": 16.633,
+      "heatScore": 2023,
+      "note": "观察中",
+      "searchUrl": "https://x.com/search?q=%24NFP%20crypto&src=typed_query&f=live"
+    },
+    {
+      "ticker": "B2",
+      "posts": 20,
+      "section": "accumulationWatch",
+      "stage": "回避",
+      "change24h": -0.102,
+      "heatScore": 1764,
       "note": "高位风险",
       "searchUrl": "https://x.com/search?q=%24B2%20crypto&src=typed_query&f=live"
     },
@@ -26,39 +36,19 @@
       "posts": 20,
       "section": "riskWinnersReview",
       "stage": "回避",
-      "change24h": 22.458,
-      "heatScore": 2305,
-      "note": "观察中",
-      "searchUrl": "https://x.com/search?q=%24UB%20crypto&src=typed_query&f=live"
-    },
-    {
-      "ticker": "ZEREBRO",
-      "posts": 20,
-      "section": "earlyEntryRadar",
-      "stage": "等待回踩",
-      "change24h": 7.76,
-      "heatScore": 1776,
-      "note": "合约启动",
-      "searchUrl": "https://x.com/search?q=%24ZEREBRO%20crypto&src=typed_query&f=live"
-    },
-    {
-      "ticker": "TAG",
-      "posts": 20,
-      "section": "riskWinnersReview",
-      "stage": "回避",
-      "change24h": -6.44,
-      "heatScore": 1310,
+      "change24h": 0.043,
+      "heatScore": 1137,
       "note": "高位风险",
-      "searchUrl": "https://x.com/search?q=%24TAG%20crypto&src=typed_query&f=live"
+      "searchUrl": "https://x.com/search?q=%24UB%20crypto&src=typed_query&f=live"
     },
     {
       "ticker": "SKYAI",
       "posts": 18,
-      "section": "earlyRadar",
-      "stage": "等待回踩",
-      "change24h": 6.323,
-      "heatScore": 1695,
-      "note": "合约启动",
+      "section": "riskWinnersReview",
+      "stage": "回避",
+      "change24h": -6.475,
+      "heatScore": 1821,
+      "note": "观察中",
       "searchUrl": "https://x.com/search?q=%24SKYAI%20crypto&src=typed_query&f=live"
     }
   ],

@@ -1,18 +1,22 @@
 {
   "app": "悟空",
-  "status": "error",
+  "status": "sent",
   "mode": "push-only",
-  "updatedAt": "2026-05-30T16:49:57.446891+00:00",
-  "marketGeneratedAt": null,
+  "updatedAt": "2026-05-30T17:23:23.590074+00:00",
+  "marketGeneratedAt": "2026-05-30T17:21:57.313Z",
   "chatIdMasked": "...1522",
-  "sentTypes": [],
-  "messageChunks": 0,
+  "sentTypes": [
+    "summary",
+    "signal",
+    "priority"
+  ],
+  "messageChunks": 3,
   "queueCounts": {
-    "entry": 0,
-    "contractLaunch": 0,
-    "priority": 0,
-    "risk": 0
+    "entry": 4,
+    "contractLaunch": 25,
+    "priority": 5,
+    "risk": 4
   },
-  "queueTotal": 0,
-  "error": "Command '['/Library/Developer/CommandLineTools/usr/bin/python3', 'sync_ema_cross_4h.py']' timed out after 29.999948042 seconds"
+  "queueTotal": 38,
+  "error": ""
 }
