@@ -1,7 +1,7 @@
 {
   "app": "悟空",
   "mode": "auto-paper-trading",
-  "generatedAt": "2026-05-30T17:21:01.248802+00:00",
+  "generatedAt": "2026-05-30T17:44:26.929723+00:00",
   "state": "running",
   "reason": "入仓信号存在，纸交易引擎自动运行；真实订单提交关闭",
   "realTradingEnabled": false,
@@ -13,9 +13,9 @@
       "side": "long-watch",
       "state": "open",
       "openedAt": "2026-05-30T16:49:25.751255+00:00",
-      "updatedAt": "2026-05-30T17:21:01.248802+00:00",
+      "updatedAt": "2026-05-30T17:44:26.929723+00:00",
       "entryPrice": 31.46648315,
-      "lastPrice": 32.04123045,
+      "lastPrice": 31.57826458,
       "leverage": 10.0,
       "maxMarginUsdt": 5.0,
       "maxNotionalUsdt": 50.0,
@@ -44,8 +44,8 @@
       "trailingGivebackPct": 3.0,
       "maxAgeSeconds": 21600,
       "reentryCooldownSeconds": 1800,
-      "unrealizedPct": 1.8265,
-      "unrealizedUsdt": 0.9133,
+      "unrealizedPct": 0.3552,
+      "unrealizedUsdt": 0.1776,
       "submitRealOrder": false
     }
   ],
@@ -90,7 +90,7 @@
   "summary": {
     "openPositions": 1,
     "closedTrades": 1,
-    "totalUnrealizedUsdt": 0.9133,
+    "totalUnrealizedUsdt": 0.1776,
     "totalRealizedUsdt": 0.0,
     "maxPositionAgeSeconds": 21600,
     "trailingActivationPct": 7.5,

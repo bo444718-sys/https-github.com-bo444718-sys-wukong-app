@@ -27,6 +27,28 @@ OUTPUT_PATHS = [
     Path("/Users/wangbo/.hermes/wukong_pwa/PWA/gate_trade_preflight.json"),
     Path("/Users/wangbo/.hermes/wukong_telegram/gate_trade_preflight.json"),
 ]
+ENTRY_DYNAMICS_OUTPUT_PATHS = [
+    ROOT / "PWA" / "entry_signal_dynamics.json",
+    ROOT / "entry_signal_dynamics.json",
+    Path("/Users/wangbo/.hermes/wukong_pwa/PWA/entry_signal_dynamics.json"),
+    Path("/Users/wangbo/.hermes/wukong_telegram/entry_signal_dynamics.json"),
+]
+
+
+def parse_time(value: str | None) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def signal_age_seconds(dashboard: dict[str, Any]) -> int | None:
+    generated = parse_time(str(dashboard.get("generatedAt") or ""))
+    if not generated:
+        return None
+    return int((datetime.now(timezone.utc) - generated).total_seconds())
 
 
 def load_dashboard() -> dict[str, Any]:
@@ -152,7 +174,7 @@ def build_preflight() -> dict[str, Any]:
     signal_gate = build_signal_gate(dashboard, blockers, strategy_audit)
     risk_budget = status.get("riskBudget", {})
     paper_trade = build_paper_trade_plan(signal_gate, risk_budget)
-    return {
+    payload = {
         "app": "悟空",
         "exchange": "gate",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
@@ -206,6 +228,55 @@ def build_preflight() -> dict[str, Any]:
             "risk": "只生成计划，不发送到 Gate",
         },
     }
+    payload["entrySignalDynamics"] = build_entry_signal_dynamics(dashboard, payload)
+    return payload
+
+
+def build_entry_signal_dynamics(dashboard: dict[str, Any], preflight: dict[str, Any]) -> dict[str, Any]:
+    signal_gate = preflight.get("signalTradeGate") or {}
+    audit = preflight.get("strategyAudit") or {}
+    entry_rows = dashboard.get("entryWindow") or []
+    allowed = audit.get("allowed") or []
+    rejected = audit.get("rejected") or []
+    age = signal_age_seconds(dashboard)
+    return {
+        "app": "悟空",
+        "status": "active" if signal_gate.get("signalActive") else "closed",
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "dashboardGeneratedAt": dashboard.get("generatedAt"),
+        "dashboardAgeSeconds": age,
+        "fresh": age is not None and age <= 180,
+        "updatePolicy": {
+            "hermesPushSeconds": 60,
+            "freshnessLimitSeconds": 180,
+            "onlyTradeWhenEntrySignalActive": True,
+            "realOrderSubmitEnabled": False,
+        },
+        "gate": {
+            "state": signal_gate.get("state"),
+            "reason": signal_gate.get("reason"),
+            "signalActive": signal_gate.get("signalActive"),
+            "primary": signal_gate.get("primary"),
+            "canSubmitOrder": preflight.get("canSubmitOrder"),
+            "orderEndpointEnabled": preflight.get("orderEndpointEnabled"),
+            "blockers": preflight.get("blockers") or [],
+        },
+        "entryWindow": [
+            {
+                "ticker": item.get("ticker"),
+                "stage": item.get("currentStage") or item.get("stage"),
+                "score": token_score(item),
+                "priceChange24hPct": item.get("priceChange24hPct"),
+                "fundingRate": item.get("fundingRate"),
+                "quoteVolume": item.get("quoteVolume"),
+                "oi1hPct": item.get("oi1hPct"),
+                "oi6hPct": item.get("oi6hPct"),
+            }
+            for item in entry_rows[:20]
+        ],
+        "allowed": allowed[:8],
+        "rejected": rejected[:12],
+    }
 
 
 def main() -> int:
@@ -215,6 +286,14 @@ def main() -> int:
         try:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(encoded, encoding="utf-8")
+        except PermissionError:
+            print(f"Skip protected path: {path}")
+    dynamics = payload.get("entrySignalDynamics") or {}
+    dynamics_encoded = json.dumps(dynamics, ensure_ascii=False, indent=2)
+    for path in ENTRY_DYNAMICS_OUTPUT_PATHS:
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(dynamics_encoded, encoding="utf-8")
         except PermissionError:
             print(f"Skip protected path: {path}")
     print(f"Gate trade preflight: dry-run · blockers={len(payload['blockers'])}")

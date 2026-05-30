@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent
 PID_PATH = ROOT / ".wukong_telegram_bot.pid"
 LOG_PATH = ROOT / "wukong_telegram_bot.log"
 ERROR_LOG_PATH = ROOT / "wukong_telegram_bot.error.log"
+DEFAULT_INTERVAL_SECONDS = int(os.getenv("WUKONG_PUSH_INTERVAL_SECONDS", "60"))
 
 
 def pid_is_running(pid: int) -> bool:
@@ -43,7 +44,7 @@ def main() -> int:
     stdout = LOG_PATH.open("ab")
     stderr = ERROR_LOG_PATH.open("ab")
     process = subprocess.Popen(
-        [python, str(ROOT / "telegram_wukong_bot.py"), "--push-only", "--interval", "300"],
+        [python, str(ROOT / "telegram_wukong_bot.py"), "--push-only", "--interval", str(DEFAULT_INTERVAL_SECONDS)],
         cwd=str(ROOT),
         stdin=subprocess.DEVNULL,
         stdout=stdout,
