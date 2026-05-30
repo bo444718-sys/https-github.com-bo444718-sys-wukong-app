@@ -1,9 +1,9 @@
 {
   "app": "悟空",
-  "generatedAt": "2026-05-30T15:38:41.200129+00:00",
+  "generatedAt": "2026-05-30T16:13:00.665797+00:00",
   "root": "/Users/wangbo/Documents/New project/悟空app",
   "fileCount": 114,
-  "totalBytes": 92038883,
+  "totalBytes": 92082494,
   "roles": {
     "资源": 20,
     "Telegram": 10,
@@ -224,11 +224,11 @@
     {
       "path": "PWA/exchange_markets.json",
       "role": "网页下载端",
-      "bytes": 5236,
-      "modifiedAt": "2026-05-27T06:17:44.555160+00:00",
-      "sha256": "ec38494b02bb7eaa5323fc728fdb4933ae7cf2592e4a12df236b39b535ea13a7",
+      "bytes": 24867,
+      "modifiedAt": "2026-05-30T15:38:55.623584+00:00",
+      "sha256": "236ea706b7d6f253f6e67294c40b547e216993cf8f50045a78c85327cb8291a7",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-27T06:17:44.469180+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "PWA/favicon.ico",
@@ -242,11 +242,11 @@
     {
       "path": "PWA/gate_markets.json",
       "role": "网页下载端",
-      "bytes": 458,
-      "modifiedAt": "2026-05-27T06:17:44.555549+00:00",
-      "sha256": "cfe4ca20400a16c08ec8d7f5abab1bf3b4b3b5fb5c272e3c23eaed8b86c48757",
+      "bytes": 4807,
+      "modifiedAt": "2026-05-30T15:38:55.624695+00:00",
+      "sha256": "e8fde85c6d3ed79ac60731bc6eef83912f6854eb5e4dcfb9f3733ea3da6422c9",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-27T06:17:44.469180+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"ETH_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"SOL_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    },\n    {\n      \"symbol\": \"BNB_USDT\",\n      \"spot\": {},\n      \"futures\": {}\n    }\n  ]\n}"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {\n        \"currency_pair\": \"BTC_USDT\",\n        \"last\": \"73902.1\",\n        \"lowest_ask\": \"73902.2\",\n        \"lowest_size\": \"3.095481\",\n        \"highest_bid\": \"73902.1\",\n        \"highest_size\": \"2.346469\",\n        \"change_percentage\": \"-0.24\",\n        \"base_volume\": \"7351.0103759378\",\n        \"quote_volume\": \"542324354.09111024535\",\n        \"high_24h\": \"74408.7\",\n        \"low_24h\": \"73188.4\"\n      },\n      \"futures\": {\n        \"last\": \"73858.9\",\n        \"low_24h\": \"73150\",\n        \"high_24h\": \"74285.9\",\n        \"volume_24h\": \"366003637\",\n        \"change_percentage\": \"-0.30\",\n        \"change_price\": \"-219.7\",\n        \"funding_rate_indicative\": \"-0.000012\","
     },
     {
       "path": "PWA/gate_private_status.json",
@@ -674,11 +674,11 @@
     {
       "path": "exchange_markets.json",
       "role": "同步数据",
-      "bytes": 5236,
-      "modifiedAt": "2026-05-27T06:17:44.555020+00:00",
-      "sha256": "ec38494b02bb7eaa5323fc728fdb4933ae7cf2592e4a12df236b39b535ea13a7",
+      "bytes": 24867,
+      "modifiedAt": "2026-05-30T15:38:55.623123+00:00",
+      "sha256": "236ea706b7d6f253f6e67294c40b547e216993cf8f50045a78c85327cb8291a7",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-27T06:17:44.469180+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": false,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "gate_private_status.py",

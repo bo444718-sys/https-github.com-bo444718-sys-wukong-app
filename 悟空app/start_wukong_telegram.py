@@ -43,7 +43,7 @@ def main() -> int:
     stdout = LOG_PATH.open("ab")
     stderr = ERROR_LOG_PATH.open("ab")
     process = subprocess.Popen(
-        [python, str(ROOT / "telegram_wukong_bot.py"), "--push-only", "--interval", "30"],
+        [python, str(ROOT / "telegram_wukong_bot.py"), "--push-only", "--interval", "300"],
         cwd=str(ROOT),
         stdin=subprocess.DEVNULL,
         stdout=stdout,

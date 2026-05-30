@@ -13,7 +13,7 @@ Required environment:
 Optional environment:
 - OPENAI_API_KEY or CODEX_API_KEY
 - WUKONG_OPENAI_MODEL, defaults to gpt-4.1-mini
-- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 30
+- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 300
 
 When an existing Hermes Telegram gateway is already polling the bot, run this
 script with --push-only so it only sends messages and never calls getUpdates.
@@ -1488,7 +1488,7 @@ def process_update(client: TelegramClient, update: dict[str, Any], state: Wukong
         client.chat_id = chat_id
         state.chat_id = chat_id
         state.save()
-        client.send("悟空已绑定这个 Telegram 对话。之后会每 30 秒推送实时摘要。", reply_markup=keyboard(), chat_id=chat_id)
+        client.send("悟空已绑定这个 Telegram 对话。之后会每 300 秒推送实时摘要。", reply_markup=keyboard(), chat_id=chat_id)
     reply, reply_markup = handle_command(text, state)
     client.send(reply, reply_markup=reply_markup, chat_id=chat_id)
 
@@ -1497,7 +1497,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the Wukong Telegram bot.")
     parser.add_argument("--once", action="store_true", help="Send one summary and exit.")
     parser.add_argument("--push-only", action="store_true", help="Only send scheduled pushes; do not call getUpdates.")
-    parser.add_argument("--interval", type=int, default=int(os.getenv("WUKONG_PUSH_INTERVAL_SECONDS", "30")))
+    parser.add_argument("--interval", type=int, default=int(os.getenv("WUKONG_PUSH_INTERVAL_SECONDS", "300")))
     return parser.parse_args()
 
 
