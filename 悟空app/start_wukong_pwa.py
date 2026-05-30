@@ -204,7 +204,22 @@ def current_url() -> str:
         return ""
 
 
+def pending_url() -> str:
+    try:
+        return PENDING_URL_PATH.read_text(encoding="utf-8").strip()
+    except Exception:
+        return ""
+
+
 def ensure_healthy_tunnel(pids: dict[str, int]) -> tuple[int, str, bool]:
+    pending = pending_url()
+    if pending and url_is_healthy(pending):
+        URL_PATH.write_text(pending + "\n", encoding="utf-8")
+        PENDING_URL_PATH.unlink(missing_ok=True)
+        existing_pid = pids.get("tunnel")
+        active = matching_pid(r"cloudflared tunnel .*--url http://127\.0\.0\.1:%d" % PORT)
+        return active or existing_pid or ensure_tunnel(pids), pending, False
+
     existing_url = current_url()
     existing_pid = pids.get("tunnel")
     if existing_pid and pid_running(existing_pid) and url_is_healthy(existing_url):
@@ -224,7 +239,7 @@ def ensure_healthy_tunnel(pids: dict[str, int]) -> tuple[int, str, bool]:
         log=LOG_PATH,
     )
     url = wait_for_url()
-    deadline = time.time() + 75
+    deadline = time.time() + 180
     healthy = False
     while url and time.time() < deadline:
         if url_is_healthy(url):
@@ -290,14 +305,16 @@ def send_telegram(url: str) -> None:
         {"chat_id": chat_id, "text": text, "disable_web_page_preview": False},
         ensure_ascii=False,
     ).encode("utf-8")
-    req = urllib.request.Request(
-        f"https://api.telegram.org/bot{token}/sendMessage",
-        data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=20) as response:
-        response.read()
+    endpoint = f"https://api.telegram.org/bot{token}/sendMessage"
+    req = urllib.request.Request(endpoint, data=payload, headers={"Content-Type": "application/json"}, method="POST")
+    try:
+        with urllib.request.urlopen(req, timeout=20) as response:
+            response.read()
+    except Exception:
+        proxy = os.getenv("HTTPS_PROXY") or os.getenv("HTTP_PROXY") or "http://127.0.0.1:7892"
+        opener = urllib.request.build_opener(urllib.request.ProxyHandler({"http": proxy, "https": proxy}))
+        with opener.open(req, timeout=20) as response:
+            response.read()
     LAST_SENT_URL_PATH.write_text(url + "\n", encoding="utf-8")
 
 

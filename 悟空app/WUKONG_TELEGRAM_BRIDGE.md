@@ -3,7 +3,7 @@
 这个目录是悟空 Apple App 和现有 Telegram/Codex 机器人的共享工作区。
 
 - 悟空推送模式：push-only，不调用 Telegram getUpdates。
-- 推送频率：每 30 秒。
+- 推送频率：每 300 秒。
 - 最新快照：`wukong_latest_snapshot.json`。
 - Telegram 接收和继续操作由现有 Hermes/Codex 网关负责。
 

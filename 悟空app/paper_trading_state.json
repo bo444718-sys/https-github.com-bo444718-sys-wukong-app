@@ -1,13 +1,54 @@
 {
   "app": "悟空",
   "mode": "auto-paper-trading",
-  "generatedAt": "2026-05-26T18:11:48.955786+00:00",
-  "state": "flat",
-  "reason": "入仓信号消失，纸交易已自动清仓",
+  "generatedAt": "2026-05-30T16:49:25.751255+00:00",
+  "state": "running",
+  "reason": "入仓信号存在，纸交易引擎自动运行；真实订单提交关闭",
   "realTradingEnabled": false,
   "canSubmitOrder": false,
   "orderEndpointEnabled": false,
-  "positions": [],
+  "positions": [
+    {
+      "market": "GIGGLE_USDT",
+      "side": "long-watch",
+      "state": "open",
+      "openedAt": "2026-05-30T16:49:25.751255+00:00",
+      "updatedAt": "2026-05-30T16:49:25.751255+00:00",
+      "entryPrice": 31.46648315,
+      "lastPrice": 31.46648315,
+      "leverage": 10.0,
+      "maxMarginUsdt": 5.0,
+      "maxNotionalUsdt": 50.0,
+      "riskPerTradeUsdt": 2.75,
+      "stopLossPct": 2.4,
+      "maxStopLossPct": 5.5,
+      "takeProfitTiers": [
+        {
+          "triggerPct": 3.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 7.5,
+          "closePct": 25
+        },
+        {
+          "triggerPct": 12.0,
+          "closePct": 50
+        }
+      ],
+      "remainingPct": 100.0,
+      "filledTakeProfits": [],
+      "realizedUsdt": 0.0,
+      "maxPnlPct": 0.0,
+      "trailingActivationPct": 7.5,
+      "trailingGivebackPct": 3.0,
+      "maxAgeSeconds": 21600,
+      "reentryCooldownSeconds": 1800,
+      "unrealizedPct": 0.0,
+      "unrealizedUsdt": 0.0,
+      "submitRealOrder": false
+    }
+  ],
   "history": [
     {
       "market": "ONDO_USDT",
@@ -47,9 +88,9 @@
     }
   ],
   "summary": {
-    "openPositions": 0,
+    "openPositions": 1,
     "closedTrades": 1,
-    "totalUnrealizedUsdt": 0,
+    "totalUnrealizedUsdt": 0.0,
     "totalRealizedUsdt": 0.0,
     "maxPositionAgeSeconds": 21600,
     "trailingActivationPct": 7.5,

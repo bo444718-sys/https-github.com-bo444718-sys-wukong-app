@@ -1,9 +1,9 @@
 {
   "app": "悟空",
-  "generatedAt": "2026-05-30T16:13:00.665797+00:00",
+  "generatedAt": "2026-05-30T16:56:15.256709+00:00",
   "root": "/Users/wangbo/Documents/New project/悟空app",
   "fileCount": 114,
-  "totalBytes": 92082494,
+  "totalBytes": 92193271,
   "roles": {
     "资源": 20,
     "Telegram": 10,
@@ -72,8 +72,8 @@
       "path": ".wukong_telegram_bot.pid",
       "role": "Telegram",
       "bytes": 6,
-      "modifiedAt": "2026-05-22T11:12:30.986088+00:00",
-      "sha256": "ac079e60f7b9152fcbc55fef02ca5e48914e4ef911c1d5d28479571511f631c7",
+      "modifiedAt": "2026-05-30T16:49:03.087916+00:00",
+      "sha256": "409691412f2abde526ca140b09d704fe0e23e358db4824db3300d1ebb32fd20c",
       "mime": "application/octet-stream",
       "preview": ""
     },
@@ -224,11 +224,11 @@
     {
       "path": "PWA/exchange_markets.json",
       "role": "网页下载端",
-      "bytes": 24867,
-      "modifiedAt": "2026-05-30T15:38:55.623584+00:00",
-      "sha256": "236ea706b7d6f253f6e67294c40b547e216993cf8f50045a78c85327cb8291a7",
+      "bytes": 24889,
+      "modifiedAt": "2026-05-30T16:52:00.999267+00:00",
+      "sha256": "dc57380b73ecbf07d5d2efb000db03027d552639eadc3bcef797c31b2e607975",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T16:51:43.671002+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "PWA/favicon.ico",
@@ -242,29 +242,29 @@
     {
       "path": "PWA/gate_markets.json",
       "role": "网页下载端",
-      "bytes": 4807,
-      "modifiedAt": "2026-05-30T15:38:55.624695+00:00",
-      "sha256": "e8fde85c6d3ed79ac60731bc6eef83912f6854eb5e4dcfb9f3733ea3da6422c9",
+      "bytes": 4816,
+      "modifiedAt": "2026-05-30T16:52:01.000822+00:00",
+      "sha256": "01c2257293e0d5356b486b3c506975e15574d08f139c4d0cbb7b39c2dd76172b",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {\n        \"currency_pair\": \"BTC_USDT\",\n        \"last\": \"73902.1\",\n        \"lowest_ask\": \"73902.2\",\n        \"lowest_size\": \"3.095481\",\n        \"highest_bid\": \"73902.1\",\n        \"highest_size\": \"2.346469\",\n        \"change_percentage\": \"-0.24\",\n        \"base_volume\": \"7351.0103759378\",\n        \"quote_volume\": \"542324354.09111024535\",\n        \"high_24h\": \"74408.7\",\n        \"low_24h\": \"73188.4\"\n      },\n      \"futures\": {\n        \"last\": \"73858.9\",\n        \"low_24h\": \"73150\",\n        \"high_24h\": \"74285.9\",\n        \"volume_24h\": \"366003637\",\n        \"change_percentage\": \"-0.30\",\n        \"change_price\": \"-219.7\",\n        \"funding_rate_indicative\": \"-0.000012\","
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Gate.io API v4 public market data\",\n  \"generatedAt\": \"2026-05-30T16:51:43.671002+00:00\",\n  \"markets\": [\n    {\n      \"symbol\": \"BTC_USDT\",\n      \"spot\": {\n        \"currency_pair\": \"BTC_USDT\",\n        \"last\": \"73917.7\",\n        \"lowest_ask\": \"73917.7\",\n        \"lowest_size\": \"2.38813\",\n        \"highest_bid\": \"73917.6\",\n        \"highest_size\": \"2.576561\",\n        \"change_percentage\": \"-0.12\",\n        \"base_volume\": \"6121.3902547886\",\n        \"quote_volume\": \"451453446.30283236877\",\n        \"high_24h\": \"74408.7\",\n        \"low_24h\": \"73188.4\"\n      },\n      \"futures\": {\n        \"last\": \"73869.8\",\n        \"low_24h\": \"73150\",\n        \"high_24h\": \"74285.9\",\n        \"volume_24h\": \"323923178\",\n        \"change_percentage\": \"-0.10\",\n        \"change_price\": \"-70.4\",\n        \"funding_rate_indicative\": \"-0.000046\","
     },
     {
       "path": "PWA/gate_private_status.json",
       "role": "网页下载端",
       "bytes": 4228,
-      "modifiedAt": "2026-05-24T09:43:31.854346+00:00",
-      "sha256": "dfa67705d890b2fda805584010fe6d956ebdefc9f0c2ccacf4131fdf864f8e6e",
+      "modifiedAt": "2026-05-30T16:49:24.930918+00:00",
+      "sha256": "c565e757010f29078f00e9033aa87db22b63e8e610cad15bcae0679335321bf6",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-24T09:43:31.429157+00:00\",\n  \"configured\": true,\n  \"authenticated\": true,\n  \"keyMasked\": \"2e56...ad5c\",\n  \"keyFingerprint\": \"e366fb49a342\",\n  \"secretFingerprint\": \"aca6426bd754\",\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"secretRotationRequired\": false,\n  \"tradingMode\": \"paper\",\n  \"requestedTradingMode\": \"paper\",\n  \"liveTradingEnabled\": false,\n  \"liveTradingRequested\": false,\n  \"liveTradingUnlocked\": false,\n  \"liveTradingBlockedReason\": \"\",\n  \"orderEndpointEnabled\": false,\n  \"manualLiveCandidate\": true,\n  \"manualConfirmationRequired\": true,\n  \"riskBudget\": {\n    \"accountEquityUsdt\": 100.0,\n    \"leverage\": 10.0,\n    \"maxNotionalUsdt\": 50.0,\n    \"maxMarginUsdt\": 5.0,\n    \"riskPerTradeUsdt\": 2.75,\n    \"dailyMaxLossUsdt\": 5.0,"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-30T16:49:24.286015+00:00\",\n  \"configured\": true,\n  \"authenticated\": true,\n  \"keyMasked\": \"2e56...ad5c\",\n  \"keyFingerprint\": \"e366fb49a342\",\n  \"secretFingerprint\": \"aca6426bd754\",\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"secretRotationRequired\": false,\n  \"tradingMode\": \"paper\",\n  \"requestedTradingMode\": \"paper\",\n  \"liveTradingEnabled\": false,\n  \"liveTradingRequested\": false,\n  \"liveTradingUnlocked\": false,\n  \"liveTradingBlockedReason\": \"\",\n  \"orderEndpointEnabled\": false,\n  \"manualLiveCandidate\": true,\n  \"manualConfirmationRequired\": true,\n  \"riskBudget\": {\n    \"accountEquityUsdt\": 100.0,\n    \"leverage\": 10.0,\n    \"maxNotionalUsdt\": 50.0,\n    \"maxMarginUsdt\": 5.0,\n    \"riskPerTradeUsdt\": 2.75,\n    \"dailyMaxLossUsdt\": 5.0,"
     },
     {
       "path": "PWA/gate_trade_preflight.json",
       "role": "网页下载端",
-      "bytes": 23915,
-      "modifiedAt": "2026-05-26T18:11:48.848131+00:00",
-      "sha256": "ea1a4050bcabfc29cba554c1023b3e6d017d3a1aee9e2af3f519350cd7da7da4",
+      "bytes": 19065,
+      "modifiedAt": "2026-05-30T16:49:25.680155+00:00",
+      "sha256": "6aeeab858028f02558ca667065b38694316904d703a686cd576878f99a276873",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-26T18:11:48.847345+00:00\",\n  \"mode\": \"dry-run\",\n  \"canSubmitOrder\": false,\n  \"manualConfirmationRequired\": true,\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"manualLiveReadiness\": [\n    {\n      \"name\": \"新 Key\",\n      \"ok\": true,\n      \"detail\": \"必须撤销旧 Key 并换新 Key\"\n    },\n    {\n      \"name\": \"IP 白名单\",\n      \"ok\": false,\n      \"detail\": \"等待配置固定出口 IP 白名单\"\n    },\n    {\n      \"name\": \"单笔限额\",\n      \"ok\": true,\n      \"detail\": \"最大名义 50U，最大保证金 5U，单笔风险 2.75U\"\n    },\n    {\n      \"name\": \"每日熔断\",\n      \"ok\": true,"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"exchange\": \"gate\",\n  \"generatedAt\": \"2026-05-30T16:49:25.678191+00:00\",\n  \"mode\": \"dry-run\",\n  \"canSubmitOrder\": false,\n  \"manualConfirmationRequired\": true,\n  \"keySafetyState\": \"candidate\",\n  \"keyRotationRequired\": false,\n  \"manualLiveReadiness\": [\n    {\n      \"name\": \"新 Key\",\n      \"ok\": true,\n      \"detail\": \"必须撤销旧 Key 并换新 Key\"\n    },\n    {\n      \"name\": \"IP 白名单\",\n      \"ok\": false,\n      \"detail\": \"等待配置固定出口 IP 白名单\"\n    },\n    {\n      \"name\": \"单笔限额\",\n      \"ok\": true,\n      \"detail\": \"最大名义 50U，最大保证金 5U，单笔风险 2.75U\"\n    },\n    {\n      \"name\": \"每日熔断\",\n      \"ok\": true,"
     },
     {
       "path": "PWA/icons/wukong-180.png",
@@ -323,11 +323,11 @@
     {
       "path": "PWA/paper_trading_state.json",
       "role": "网页下载端",
-      "bytes": 1527,
-      "modifiedAt": "2026-05-26T18:11:48.956399+00:00",
-      "sha256": "f1c927bc8df4656cccfa435121fda563674af181dec2459cb3d682df17375e8e",
+      "bytes": 2601,
+      "modifiedAt": "2026-05-30T16:49:25.752643+00:00",
+      "sha256": "23f733d12f73f6e31e55df6048312ac33cf15255bb92bc5e5cac9e59d5a46230",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-26T18:11:48.955786+00:00\",\n  \"state\": \"flat\",\n  \"reason\": \"入仓信号消失，纸交易已自动清仓\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [],\n  \"history\": [\n    {\n      \"market\": \"ONDO_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"closed\",\n      \"openedAt\": \"2026-05-22T10:59:53.664004+00:00\",\n      \"updatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n      \"entryPrice\": 0.42583716,\n      \"lastPrice\": 0.42650345,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n  \"state\": \"running\",\n  \"reason\": \"入仓信号存在，纸交易引擎自动运行；真实订单提交关闭\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [\n    {\n      \"market\": \"GIGGLE_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"open\",\n      \"openedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n      \"updatedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n      \"entryPrice\": 31.46648315,\n      \"lastPrice\": 31.46648315,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,\n          \"closePct\": 25"
     },
     {
       "path": "PWA/privacy.html",
@@ -341,36 +341,36 @@
     {
       "path": "PWA/professional_trade_system.json",
       "role": "网页下载端",
-      "bytes": 14744,
-      "modifiedAt": "2026-05-26T18:11:49.656696+00:00",
-      "sha256": "472b240cf1f374c4dbfd347eefe3e7054b6b69a73cdd27ffe94c56461021abbe",
+      "bytes": 11441,
+      "modifiedAt": "2026-05-30T16:49:26.144573+00:00",
+      "sha256": "102e73714fbfead622c3a9f486a55877b4b99c7c8129af78a82c820fef5e8e9c",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"generatedAt\": \"2026-05-26T18:11:49.656165+00:00\",\n  \"profile\": \"professional-auto-trading-framework\",\n  \"fileScan\": {\n    \"count\": 203,\n    \"requiredReady\": true\n  },\n  \"executionModes\": [\n    {\n      \"name\": \"auto-paper\",\n      \"enabled\": true,\n      \"detail\": \"信号出现自动纸交易，信号消失自动关闭\"\n    },\n    {\n      \"name\": \"telegram-confirm-preflight\",\n      \"enabled\": true,\n      \"detail\": \"Telegram 一键确认只做预检，不提交订单\"\n    },\n    {\n      \"name\": \"live-api-ready-shell\",\n      \"enabled\": true,\n      \"detail\": \"Gate 私有 API 已可读，实盘提交端点保持锁定\"\n    },\n    {\n      \"name\": \"unattended-live-order\",\n      \"enabled\": false,\n      \"detail\": \"无人值守实盘自动下单关闭\""
+      "preview": "{\n  \"app\": \"悟空\",\n  \"generatedAt\": \"2026-05-30T16:49:26.143276+00:00\",\n  \"profile\": \"professional-auto-trading-framework\",\n  \"fileScan\": {\n    \"count\": 203,\n    \"requiredReady\": true\n  },\n  \"executionModes\": [\n    {\n      \"name\": \"auto-paper\",\n      \"enabled\": true,\n      \"detail\": \"信号出现自动纸交易，信号消失自动关闭\"\n    },\n    {\n      \"name\": \"telegram-confirm-preflight\",\n      \"enabled\": true,\n      \"detail\": \"Telegram 一键确认只做预检，不提交订单\"\n    },\n    {\n      \"name\": \"live-api-ready-shell\",\n      \"enabled\": true,\n      \"detail\": \"Gate 私有 API 已可读，实盘提交端点保持锁定\"\n    },\n    {\n      \"name\": \"unattended-live-order\",\n      \"enabled\": false,\n      \"detail\": \"无人值守实盘自动下单关闭\""
     },
     {
       "path": "PWA/qr/download-links.txt",
       "role": "网页下载端",
-      "bytes": 313,
-      "modifiedAt": "2026-05-24T09:54:15.200258+00:00",
-      "sha256": "d1b8aab063a65099b212646f18c40ab4ae72584b0c436d99422e0ccb5d9b6f5c",
+      "bytes": 289,
+      "modifiedAt": "2026-05-30T16:49:14.260655+00:00",
+      "sha256": "d83905416e0d401e4b20192332127d4d0d0379e15fb84afdbba9b852964dae7a",
       "mime": "text/plain",
-      "preview": "Apple/iPhone: https://translated-metadata-biological-louis.trycloudflare.com/install.html?v=122\nAndroid APK: https://translated-metadata-biological-louis.trycloudflare.com/downloads/wukong-android-release.apk?v=122\nInstall center: https://translated-metadata-biological-louis.trycloudflare.com/install.html?v=122"
+      "preview": "Apple/iPhone: https://subtle-accepted-rat-shoppers.trycloudflare.com/install.html?v=122\nAndroid APK: https://subtle-accepted-rat-shoppers.trycloudflare.com/downloads/wukong-android-release.apk?v=122\nInstall center: https://subtle-accepted-rat-shoppers.trycloudflare.com/install.html?v=122"
     },
     {
       "path": "PWA/qr/wukong-android-qr.png",
       "role": "网页下载端",
-      "bytes": 3376,
-      "modifiedAt": "2026-05-24T09:54:15.200004+00:00",
-      "sha256": "9e5b053d5a445c65b7b3be2f7c22e3b7f8a1a01819f266c25a0daf1e8b35bc81",
+      "bytes": 3375,
+      "modifiedAt": "2026-05-30T16:49:14.260445+00:00",
+      "sha256": "466af1cf11dc65e1389eec8d8096323e07255e796458b52b1988b73e93d9d0c6",
       "mime": "image/png",
       "preview": ""
     },
     {
       "path": "PWA/qr/wukong-ios-qr.png",
       "role": "网页下载端",
-      "bytes": 2633,
-      "modifiedAt": "2026-05-24T09:54:15.187074+00:00",
-      "sha256": "c439262d33a7eaeab09d53661213a31d3708dad54318be86064af35240371c9c",
+      "bytes": 2655,
+      "modifiedAt": "2026-05-30T16:49:14.249570+00:00",
+      "sha256": "a778cbb992ce6339437d566fc04696da68e4638c645c7ddf738b9c4f63682236",
       "mime": "image/png",
       "preview": ""
     },
@@ -404,20 +404,20 @@
     {
       "path": "PWA/telegram_status.json",
       "role": "网页下载端",
-      "bytes": 382,
-      "modifiedAt": "2026-05-24T09:43:48.376715+00:00",
-      "sha256": "b1a53c10c49efa7e49d37275c27c9d63c1f5ac63c54dc182d9dc1f5e9a0a2342",
+      "bytes": 473,
+      "modifiedAt": "2026-05-30T16:49:57.465703+00:00",
+      "sha256": "b092f545f33b8a8c545f13df50f68ac59638a6d92273dd7c0463c7b9b14a17b7",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"sent\",\n  \"mode\": \"once\",\n  \"updatedAt\": \"2026-05-24T09:43:48.375406+00:00\",\n  \"marketGeneratedAt\": \"2026-05-24T09:42:59.736Z\",\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [\n    \"summary\"\n  ],\n  \"messageChunks\": 1,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 24,\n    \"priority\": 5,\n    \"risk\": 6\n  },\n  \"queueTotal\": 35,\n  \"error\": \"\"\n}"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"error\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T16:49:57.446891+00:00\",\n  \"marketGeneratedAt\": null,\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [],\n  \"messageChunks\": 0,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 0,\n    \"priority\": 0,\n    \"risk\": 0\n  },\n  \"queueTotal\": 0,\n  \"error\": \"Command '['/Library/Developer/CommandLineTools/usr/bin/python3', 'sync_ema_cross_4h.py']' timed out after 29.999948042 seconds\"\n}"
     },
     {
       "path": "PWA/wukong_latest_snapshot.json",
       "role": "网页下载端",
-      "bytes": 1489760,
-      "modifiedAt": "2026-05-30T15:38:40.557713+00:00",
-      "sha256": "73c7ff74b5544141fac4f98dfca115ce8a26d40a39bf06e08bc4f1114fd2634e",
+      "bytes": 1547609,
+      "modifiedAt": "2026-05-30T16:49:06.956536+00:00",
+      "sha256": "552798e77d993e76b066ec63ef0a6c6ad9d9e7bca3599b329de182313094cd0c",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T15:38:12.830912+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-30T15:36:52.413Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-30 23:36\\nApp推送：05-30 23:38:12\\n\\n币种数：9291\\n入场窗口：6\\n早发现雷达：12\\n确认/回踩候选：3\\nOI异动：11\\n风险样本：3\\nBinance Alpha：CA 649 · 已映射 606\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 613 · 可复盘 223 · 涨超30% 92\\n\\n今日系统看见 613 个币，可复盘样本 223 个，涨超 10% 的样本 170 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 6\\n1. MEME | 小仓试错 | 合约启动\\n   24h +8.3% · OI1h +11.3% · OI6h +38.4% · 费率 -0.00080458 · 分 79 · 价 0.00054331\\n2. PRL | 小仓试错 | 合约启动\\n   24h +2.3% · OI1h +0.3% · OI6h +14.7% · 费率 5e-05 · 分 70 · 价 0.19178449\\n3. INIT | 小仓试错 | 合约启动\\n   24h +8.0% · OI1h +1.5% · OI6h +15.3% · 费率 5e-05 · 分 70 · 价 0.06961\\n4. CAKE | 小仓试错 | 合约启动\\n   24h +6.7% · OI1h +5.1% · OI6h +5.3% · 费率 5e-05 · 分 60 · 价 1.45402229\\n5. LQTY | 小仓试错 | 合约启动\\n   24h +3.9% · OI1h -0.4% · OI6h +7.5% · 费率 0.0001 · 分 5"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T16:49:06.911235+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-30T16:48:33.829Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-31 00:48\\nApp推送：05-31 00:49:06\\n\\n币种数：9290\\n入场窗口：5\\n早发现雷达：12\\n确认/回踩候选：6\\nOI异动：12\\n风险样本：4\\nBinance Alpha：CA 649 · 已映射 606\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 613 · 可复盘 223 · 涨超30% 92\\n\\n今日系统看见 613 个币，可复盘样本 223 个，涨超 10% 的样本 170 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 6\\n1. GIGGLE | 小仓试错 | 合约启动\\n   24h +6.8% · OI1h +4.9% · OI6h +8.8% · 费率 5e-05 · 分 77 · 价 31.46648315\\n2. CAKE | 小仓试错 | 合约启动\\n   24h +9.3% · OI1h +9.5% · OI6h +13.6% · 费率 5e-05 · 分 71 · 价 1.48607276\\n3. INIT | 小仓试错 | 合约启动\\n   24h +7.4% · OI1h +0.9% · OI6h +11.8% · 费率 5e-05 · 分 66 · 价 0.06927\\n4. 1MBABYDOGE | 小仓试错 | 合约启动\\n   24h +9.3% · OI1h +7.7% · OI6h +9.9% · 费率 5e-05 · 分 60 · 价 0.000423\\n5. BLESS | 小仓试错 | 合约启动\\n   24h +11.3% · OI1h +4.9% · OI6h +8.3% · 费率 0.00029543"
     },
     {
       "path": "PWA/x_social.json",
@@ -611,11 +611,11 @@
     {
       "path": "WUKONG_TELEGRAM_BRIDGE.md",
       "role": "Telegram",
-      "bytes": 593,
-      "modifiedAt": "2026-05-23T09:51:31.521487+00:00",
-      "sha256": "6ba338269ebdd8bf6d149eaab9a615456a8518eb62798fa97e9e35111f1bf108",
+      "bytes": 594,
+      "modifiedAt": "2026-05-30T16:49:03.149721+00:00",
+      "sha256": "587a3226335b1ac66fc634b2311bca8939c73ea68877cfa4faa2691c470fc195",
       "mime": "application/octet-stream",
-      "preview": "# 悟空 Telegram / Codex Bridge\n\n这个目录是悟空 Apple App 和现有 Telegram/Codex 机器人的共享工作区。\n\n- 悟空推送模式：push-only，不调用 Telegram getUpdates。\n- 推送频率：每 30 秒。\n- 最新快照：`wukong_latest_snapshot.json`。\n- Telegram 接收和继续操作由现有 Hermes/Codex 网关负责。\n\n当用户在 Telegram 里要求操作悟空时，优先读取 `wukong_latest_snapshot.json`，再根据用户问题给出摘要、风险、候选列表或下一步动作。\n所有内容只作为公开研究信号与复盘，不构成投资建议。"
+      "preview": "# 悟空 Telegram / Codex Bridge\n\n这个目录是悟空 Apple App 和现有 Telegram/Codex 机器人的共享工作区。\n\n- 悟空推送模式：push-only，不调用 Telegram getUpdates。\n- 推送频率：每 300 秒。\n- 最新快照：`wukong_latest_snapshot.json`。\n- Telegram 接收和继续操作由现有 Hermes/Codex 网关负责。\n\n当用户在 Telegram 里要求操作悟空时，优先读取 `wukong_latest_snapshot.json`，再根据用户问题给出摘要、风险、候选列表或下一步动作。\n所有内容只作为公开研究信号与复盘，不构成投资建议。"
     },
     {
       "path": "ai.wukong.pwa.plist",
@@ -674,11 +674,11 @@
     {
       "path": "exchange_markets.json",
       "role": "同步数据",
-      "bytes": 24867,
-      "modifiedAt": "2026-05-30T15:38:55.623123+00:00",
-      "sha256": "236ea706b7d6f253f6e67294c40b547e216993cf8f50045a78c85327cb8291a7",
+      "bytes": 24889,
+      "modifiedAt": "2026-05-30T16:52:00.998751+00:00",
+      "sha256": "dc57380b73ecbf07d5d2efb000db03027d552639eadc3bcef797c31b2e607975",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T15:38:40.486170+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"source\": \"Binance + OKX + Gate public market APIs\",\n  \"generatedAt\": \"2026-05-30T16:51:43.671002+00:00\",\n  \"refreshSeconds\": 60,\n  \"privateTrading\": \"disabled\",\n  \"venues\": {\n    \"binance\": {\n      \"name\": \"Binance\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"okx\": {\n      \"name\": \"OKX\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    },\n    \"gate\": {\n      \"name\": \"Gate\",\n      \"online\": true,\n      \"mode\": \"public-readonly\"\n    }\n  },\n  \"markets\": [\n    {\n      \"symbol\": \"BTC\",\n      \"pair\": \"BTC/USDT\",\n      \"venues\": {"
     },
     {
       "path": "gate_private_status.py",
@@ -755,11 +755,11 @@
     {
       "path": "paper_trading_state.json",
       "role": "同步数据",
-      "bytes": 1527,
-      "modifiedAt": "2026-05-26T18:11:48.956242+00:00",
-      "sha256": "f1c927bc8df4656cccfa435121fda563674af181dec2459cb3d682df17375e8e",
+      "bytes": 2601,
+      "modifiedAt": "2026-05-30T16:49:25.752296+00:00",
+      "sha256": "23f733d12f73f6e31e55df6048312ac33cf15255bb92bc5e5cac9e59d5a46230",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-26T18:11:48.955786+00:00\",\n  \"state\": \"flat\",\n  \"reason\": \"入仓信号消失，纸交易已自动清仓\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [],\n  \"history\": [\n    {\n      \"market\": \"ONDO_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"closed\",\n      \"openedAt\": \"2026-05-22T10:59:53.664004+00:00\",\n      \"updatedAt\": \"2026-05-22T11:11:17.227147+00:00\",\n      \"entryPrice\": 0.42583716,\n      \"lastPrice\": 0.42650345,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"auto-paper-trading\",\n  \"generatedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n  \"state\": \"running\",\n  \"reason\": \"入仓信号存在，纸交易引擎自动运行；真实订单提交关闭\",\n  \"realTradingEnabled\": false,\n  \"canSubmitOrder\": false,\n  \"orderEndpointEnabled\": false,\n  \"positions\": [\n    {\n      \"market\": \"GIGGLE_USDT\",\n      \"side\": \"long-watch\",\n      \"state\": \"open\",\n      \"openedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n      \"updatedAt\": \"2026-05-30T16:49:25.751255+00:00\",\n      \"entryPrice\": 31.46648315,\n      \"lastPrice\": 31.46648315,\n      \"leverage\": 10.0,\n      \"maxMarginUsdt\": 5.0,\n      \"maxNotionalUsdt\": 50.0,\n      \"riskPerTradeUsdt\": 2.75,\n      \"stopLossPct\": 2.4,\n      \"maxStopLossPct\": 5.5,\n      \"takeProfitTiers\": [\n        {\n          \"triggerPct\": 3.5,\n          \"closePct\": 25"
     },
     {
       "path": "project.yml",
@@ -809,18 +809,18 @@
     {
       "path": "start_wukong_pwa.py",
       "role": "网页下载端",
-      "bytes": 10059,
-      "modifiedAt": "2026-05-21T17:29:44.566207+00:00",
-      "sha256": "8e5a4fce1c833836cf36bfdef70221605bb7a8c856d2bc5953c68a47f5451bb0",
+      "bytes": 10908,
+      "modifiedAt": "2026-05-30T16:55:31.702876+00:00",
+      "sha256": "6624e143ca224462df9a37747cb0ae7ef3ef09aaed7167888ede25d9ee512ae2",
       "mime": "text/x-python",
       "preview": "#!/usr/bin/env python3\n\"\"\"Start the Wukong PWA server and a Cloudflare quick tunnel.\"\"\"\n\nfrom __future__ import annotations\n\nimport json\nimport ipaddress\nimport os\nimport re\nimport signal\nimport shutil\nimport subprocess\nimport sys\nimport time\nimport urllib.error\nimport urllib.parse\nimport urllib.request\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPWA_ROOT = ROOT / \"PWA\"\nPID_PATH = ROOT / \".wukong_pwa.pid.json\"\nLOG_PATH = ROOT / \"wukong_pwa_tunnel.log\"\nURL_PATH = ROOT / \"wukong_pwa_url.txt\"\nPENDING_URL_PATH = ROOT / \".wukong_pwa_pending_url\"\nLAST_SENT_URL_PATH = ROOT / \".wukong_pwa_last_sent_url\"\nPORT = int(os.getenv(\"WUKONG_PWA_PORT\", \"8088\"))"
     },
     {
       "path": "start_wukong_telegram.py",
       "role": "Telegram",
-      "bytes": 1506,
-      "modifiedAt": "2026-05-23T09:51:18.218005+00:00",
-      "sha256": "5e931d4da47321ab36e730a7a39a408106e6fef69d95c2af6561168c430c5cbc",
+      "bytes": 1507,
+      "modifiedAt": "2026-05-30T16:20:41.375819+00:00",
+      "sha256": "cd7b3ddf78704052cff9b7a8ba3b1c47543937dc8c6b5d1aaf055cab6627c735",
       "mime": "text/x-python",
       "preview": "#!/usr/bin/env python3\n\"\"\"Start Wukong Telegram push mode as a background process.\"\"\"\n\nfrom __future__ import annotations\n\nimport os\nimport signal\nimport subprocess\nimport sys\nfrom pathlib import Path\n\n\nROOT = Path(__file__).resolve().parent\nPID_PATH = ROOT / \".wukong_telegram_bot.pid\"\nLOG_PATH = ROOT / \"wukong_telegram_bot.log\"\nERROR_LOG_PATH = ROOT / \"wukong_telegram_bot.error.log\"\n\n\ndef pid_is_running(pid: int) -> bool:\n    try:\n        os.kill(pid, 0)\n    except ProcessLookupError:\n        return False\n    except PermissionError:\n        return True\n    return True\n\n"
     },
@@ -899,20 +899,20 @@
     {
       "path": "telegram_status.json",
       "role": "Telegram",
-      "bytes": 382,
-      "modifiedAt": "2026-05-24T09:43:48.376599+00:00",
-      "sha256": "b1a53c10c49efa7e49d37275c27c9d63c1f5ac63c54dc182d9dc1f5e9a0a2342",
+      "bytes": 473,
+      "modifiedAt": "2026-05-30T16:49:57.465542+00:00",
+      "sha256": "b092f545f33b8a8c545f13df50f68ac59638a6d92273dd7c0463c7b9b14a17b7",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"sent\",\n  \"mode\": \"once\",\n  \"updatedAt\": \"2026-05-24T09:43:48.375406+00:00\",\n  \"marketGeneratedAt\": \"2026-05-24T09:42:59.736Z\",\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [\n    \"summary\"\n  ],\n  \"messageChunks\": 1,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 24,\n    \"priority\": 5,\n    \"risk\": 6\n  },\n  \"queueTotal\": 35,\n  \"error\": \"\"\n}"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"status\": \"error\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T16:49:57.446891+00:00\",\n  \"marketGeneratedAt\": null,\n  \"chatIdMasked\": \"...1522\",\n  \"sentTypes\": [],\n  \"messageChunks\": 0,\n  \"queueCounts\": {\n    \"entry\": 0,\n    \"contractLaunch\": 0,\n    \"priority\": 0,\n    \"risk\": 0\n  },\n  \"queueTotal\": 0,\n  \"error\": \"Command '['/Library/Developer/CommandLineTools/usr/bin/python3', 'sync_ema_cross_4h.py']' timed out after 29.999948042 seconds\"\n}"
     },
     {
       "path": "telegram_wukong_bot.py",
       "role": "Telegram",
-      "bytes": 62275,
-      "modifiedAt": "2026-05-26T06:45:14.322512+00:00",
-      "sha256": "330f40c2b63a979324d7a1687a0a62c44fdb73ca9e4b3e8bcceb74c134387991",
+      "bytes": 62278,
+      "modifiedAt": "2026-05-30T16:21:03.425074+00:00",
+      "sha256": "162dc1d550a40444f4c8d8dc58ffd367c63c5ec29ba5dbf9f945c421c2968aaf",
       "mime": "text/x-python",
-      "preview": "#!/usr/bin/env python3\n\"\"\"Telegram control plane for Wukong.\n\nFeatures:\n- Pushes Wukong market/review summaries to Telegram every 30 seconds.\n- Accepts Telegram commands for refresh, sections, ticker search, watchlist, and AI Q&A.\n- Uses only the Python standard library.\n\nRequired environment:\n- TELEGRAM_BOT_TOKEN\n- TELEGRAM_CHAT_ID\n\nOptional environment:\n- OPENAI_API_KEY or CODEX_API_KEY\n- WUKONG_OPENAI_MODEL, defaults to gpt-4.1-mini\n- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 30\n\nWhen an existing Hermes Telegram gateway is already polling the bot, run this\nscript with --push-only so it only sends messages and never calls getUpdates.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport sys\nimport time"
+      "preview": "#!/usr/bin/env python3\n\"\"\"Telegram control plane for Wukong.\n\nFeatures:\n- Pushes Wukong market/review summaries to Telegram every 30 seconds.\n- Accepts Telegram commands for refresh, sections, ticker search, watchlist, and AI Q&A.\n- Uses only the Python standard library.\n\nRequired environment:\n- TELEGRAM_BOT_TOKEN\n- TELEGRAM_CHAT_ID\n\nOptional environment:\n- OPENAI_API_KEY or CODEX_API_KEY\n- WUKONG_OPENAI_MODEL, defaults to gpt-4.1-mini\n- WUKONG_PUSH_INTERVAL_SECONDS, defaults to 300\n\nWhen an existing Hermes Telegram gateway is already polling the bot, run this\nscript with --push-only so it only sends messages and never calls getUpdates.\n\"\"\"\n\nfrom __future__ import annotations\n\nimport argparse\nimport json\nimport os\nimport sys\nimport time"
     },
     {
       "path": "wukong-iphone-install-qr.png",
@@ -953,11 +953,11 @@
     {
       "path": "wukong_latest_snapshot.json",
       "role": "同步数据",
-      "bytes": 1489760,
-      "modifiedAt": "2026-05-30T15:38:40.441944+00:00",
-      "sha256": "73c7ff74b5544141fac4f98dfca115ce8a26d40a39bf06e08bc4f1114fd2634e",
+      "bytes": 1547609,
+      "modifiedAt": "2026-05-30T16:49:06.955807+00:00",
+      "sha256": "552798e77d993e76b066ec63ef0a6c6ad9d9e7bca3599b329de182313094cd0c",
       "mime": "application/json",
-      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T15:38:12.830912+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-30T15:36:52.413Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-30 23:36\\nApp推送：05-30 23:38:12\\n\\n币种数：9291\\n入场窗口：6\\n早发现雷达：12\\n确认/回踩候选：3\\nOI异动：11\\n风险样本：3\\nBinance Alpha：CA 649 · 已映射 606\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 613 · 可复盘 223 · 涨超30% 92\\n\\n今日系统看见 613 个币，可复盘样本 223 个，涨超 10% 的样本 170 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 6\\n1. MEME | 小仓试错 | 合约启动\\n   24h +8.3% · OI1h +11.3% · OI6h +38.4% · 费率 -0.00080458 · 分 79 · 价 0.00054331\\n2. PRL | 小仓试错 | 合约启动\\n   24h +2.3% · OI1h +0.3% · OI6h +14.7% · 费率 5e-05 · 分 70 · 价 0.19178449\\n3. INIT | 小仓试错 | 合约启动\\n   24h +8.0% · OI1h +1.5% · OI6h +15.3% · 费率 5e-05 · 分 70 · 价 0.06961\\n4. CAKE | 小仓试错 | 合约启动\\n   24h +6.7% · OI1h +5.1% · OI6h +5.3% · 费率 5e-05 · 分 60 · 价 1.45402229\\n5. LQTY | 小仓试错 | 合约启动\\n   24h +3.9% · OI1h -0.4% · OI6h +7.5% · 费率 0.0001 · 分 5"
+      "preview": "{\n  \"app\": \"悟空\",\n  \"mode\": \"push-only\",\n  \"updatedAt\": \"2026-05-30T16:49:06.911235+00:00\",\n  \"sourceGeneratedAt\": \"2026-05-30T16:48:33.829Z\",\n  \"summary\": \"悟空实时摘要\\n行情生成：05-31 00:48\\nApp推送：05-31 00:49:06\\n\\n币种数：9290\\n入场窗口：5\\n早发现雷达：12\\n确认/回踩候选：6\\nOI异动：12\\n风险样本：4\\nBinance Alpha：CA 649 · 已映射 606\\nAI纸面日历：-45.0% · 175笔\\n\\nAI复盘：进入视野 613 · 可复盘 223 · 涨超30% 92\\n\\n今日系统看见 613 个币，可复盘样本 223 个，涨超 10% 的样本 170 个，涨超 30% 的样本 92 个。\\n\\n入场币种 Top 6\\n1. GIGGLE | 小仓试错 | 合约启动\\n   24h +6.8% · OI1h +4.9% · OI6h +8.8% · 费率 5e-05 · 分 77 · 价 31.46648315\\n2. CAKE | 小仓试错 | 合约启动\\n   24h +9.3% · OI1h +9.5% · OI6h +13.6% · 费率 5e-05 · 分 71 · 价 1.48607276\\n3. INIT | 小仓试错 | 合约启动\\n   24h +7.4% · OI1h +0.9% · OI6h +11.8% · 费率 5e-05 · 分 66 · 价 0.06927\\n4. 1MBABYDOGE | 小仓试错 | 合约启动\\n   24h +9.3% · OI1h +7.7% · OI6h +9.9% · 费率 5e-05 · 分 60 · 价 0.000423\\n5. BLESS | 小仓试错 | 合约启动\\n   24h +11.3% · OI1h +4.9% · OI6h +8.3% · 费率 0.00029543"
     },
     {
       "path": "wukong_paper_engine.py",
@@ -989,11 +989,11 @@
     {
       "path": "wukong_pwa_url.txt",
       "role": "同步数据",
-      "bytes": 57,
-      "modifiedAt": "2026-05-30T15:38:40.436543+00:00",
-      "sha256": "424f6bd55b1053d1c9ca984342e56a1516c2f23a3df6f049f2ef46ba57b7c5fb",
+      "bytes": 55,
+      "modifiedAt": "2026-05-30T16:49:14.148278+00:00",
+      "sha256": "6857172af7afeec503d59bd8d4bd253c3a95c97e612a251198c6c95bb4a4e657",
       "mime": "text/plain",
-      "preview": "https://habits-consultancy-themes-tone.trycloudflare.com"
+      "preview": "https://subtle-accepted-rat-shoppers.trycloudflare.com"
     },
     {
       "path": "wukong_screen_mirror.json",
