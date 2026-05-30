@@ -40,9 +40,11 @@ MICHILL_BASE_URL = "https://michill.ai"
 TELEGRAM_LIMIT = 3900
 PWA_VERSION = "122"
 EMA_SCAN_INTERVAL_SECONDS = 5 * 60
+DEFAULT_PROXY = "http://127.0.0.1:7892"
 STATE_PATH = Path(".wukong_telegram_state.json")
 SNAPSHOT_PATH = Path("wukong_latest_snapshot.json")
 TELEGRAM_STATUS_PATH = Path("telegram_status.json")
+SYNC_WARNING_PATH = Path("telegram_sync_warnings.json")
 PROJECT_ROOT = Path("/Users/wangbo/Documents/New project/悟空app")
 ALPHA_PATH = Path("binance_alpha.json")
 CONTEXT_PATH = Path("WUKONG_TELEGRAM_BRIDGE.md")
@@ -183,6 +185,18 @@ def request_json(
         body = exc.read().decode("utf-8", errors="replace")
         raise HTTPError(f"{exc.code} {body}") from exc
     except urllib.error.URLError as exc:
+        if "api.telegram.org" in url:
+            proxy = os.getenv("WUKONG_TELEGRAM_PROXY", DEFAULT_PROXY).strip()
+            if proxy:
+                try:
+                    opener = urllib.request.build_opener(
+                        urllib.request.ProxyHandler({"http": proxy, "https": proxy})
+                    )
+                    with opener.open(req, timeout=timeout) as response:
+                        body = response.read()
+                        return json.loads(body.decode("utf-8"))
+                except Exception as proxy_exc:
+                    raise HTTPError(f"{exc}; proxy retry failed: {proxy_exc}") from proxy_exc
         raise HTTPError(str(exc)) from exc
 
 
@@ -695,25 +709,52 @@ def write_snapshot(
         except OSError:
             pass
     if GATE_SYNC_SCRIPT.exists():
-        subprocess.run([sys.executable, str(GATE_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(GATE_SYNC_SCRIPT, timeout=30)
     if GATE_PRIVATE_STATUS_SCRIPT.exists():
-        subprocess.run([sys.executable, str(GATE_PRIVATE_STATUS_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(GATE_PRIVATE_STATUS_SCRIPT, timeout=30)
     if GATE_TRADE_PREFLIGHT_SCRIPT.exists():
-        subprocess.run([sys.executable, str(GATE_TRADE_PREFLIGHT_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(GATE_TRADE_PREFLIGHT_SCRIPT, timeout=30)
     if PAPER_ENGINE_SCRIPT.exists():
-        subprocess.run([sys.executable, str(PAPER_ENGINE_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(PAPER_ENGINE_SCRIPT, timeout=30)
     if PROFESSIONAL_AUDIT_SCRIPT.exists():
-        subprocess.run([sys.executable, str(PROFESSIONAL_AUDIT_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(PROFESSIONAL_AUDIT_SCRIPT, timeout=30)
     if EMA_CROSS_SCRIPT.exists() and ema_scan_due():
-        subprocess.run([sys.executable, str(EMA_CROSS_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(EMA_CROSS_SCRIPT, timeout=90)
     if QR_SYNC_SCRIPT.exists():
-        subprocess.run([sys.executable, str(QR_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(QR_SYNC_SCRIPT, timeout=30)
     if X_SYNC_SCRIPT.exists():
-        subprocess.run([sys.executable, str(X_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(X_SYNC_SCRIPT, timeout=30)
     if ALPHA_SYNC_SCRIPT.exists():
-        subprocess.run([sys.executable, str(ALPHA_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(ALPHA_SYNC_SCRIPT, timeout=30)
     if FILE_SYNC_SCRIPT.exists():
-        subprocess.run([sys.executable, str(FILE_SYNC_SCRIPT)], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=30)
+        run_optional_sync(FILE_SYNC_SCRIPT, timeout=30)
+
+
+def run_optional_sync(script: Path, *, timeout: int) -> bool:
+    try:
+        subprocess.run(
+            [sys.executable, str(script)],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=timeout,
+            check=True,
+        )
+        return True
+    except Exception as exc:
+        warning = {
+            "app": "悟空",
+            "status": "warning",
+            "updatedAt": datetime.now(timezone.utc).isoformat(),
+            "script": str(script),
+            "error": str(exc)[:240],
+        }
+        for path in [SYNC_WARNING_PATH, PROJECT_ROOT / "PWA" / SYNC_WARNING_PATH.name]:
+            try:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps(warning, ensure_ascii=False, indent=2), encoding="utf-8")
+            except Exception:
+                continue
+        return False
 
 
 def ema_scan_due() -> bool:
